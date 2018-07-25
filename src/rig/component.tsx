@@ -59,10 +59,6 @@ interface State {
 type Props = RigProps & ReduxDispatchProps & ReduxStateProps;
 
 export class RigComponent extends React.Component<Props, State> {
-  public refs: {
-    extensionViewDialog: ExtensionViewDialog;
-  }
-
   public state: State = {
     apiHost: process.env.API_HOST || 'api.twitch.tv',
     clientId: process.env.EXT_CLIENT_ID,
@@ -206,43 +202,43 @@ export class RigComponent extends React.Component<Props, State> {
     });
   }
 
-  public getFrameSizeFromDialog(dialogRef: any) {
-    if (dialogRef.state.frameSize === 'Custom') {
+  public getFrameSizeFromDialog(extensionViewState: any) {
+    if (extensionViewState.frameSize === 'Custom') {
       return {
-        width: dialogRef.state.width,
-        height: dialogRef.state.height
+        width: extensionViewState.width,
+        height: extensionViewState.height
       };
     }
-    if (dialogRef.state.extensionViewType === ExtensionViewType.Mobile) {
-      return MobileSizes[dialogRef.state.frameSize];
+    if (extensionViewState.extensionViewType === ExtensionViewType.Mobile) {
+      return MobileSizes[extensionViewState.frameSize];
     }
 
-    return OverlaySizes[dialogRef.state.frameSize];
+    return OverlaySizes[extensionViewState.frameSize];
   }
 
-  public createExtensionView = () => {
+  public createExtensionView = (extensionViewState: any) => {
     const extensionViews = this.getExtensionViews();
-    const linked = this.refs.extensionViewDialog.state.identityOption === IdentityOptions.Linked;
+    const linked = extensionViewState.identityOption === IdentityOptions.Linked;
     const nextExtensionViewId = extensionViews.reduce((a: number, b: RigExtensionView) => Math.max(a, parseInt(b.id, 10)), 0) + 1;
     extensionViews.push({
       id: nextExtensionViewId.toString(),
-      type: this.refs.extensionViewDialog.state.extensionViewType,
+      type: extensionViewState.extensionViewType,
       extension: createExtensionObject(
         this.state.manifest,
         nextExtensionViewId.toString(),
-        this.refs.extensionViewDialog.state.viewerType,
+        extensionViewState.viewerType,
         linked,
         this.state.userName,
         this.state.channelId,
         this.state.secret,
-        this.refs.extensionViewDialog.state.opaqueId,
+        extensionViewState.opaqueId,
       ),
-      linked: linked,
-      role: this.refs.extensionViewDialog.state.viewerType,
-      x: this.refs.extensionViewDialog.state.x,
-      y: this.refs.extensionViewDialog.state.y,
-      orientation: this.refs.extensionViewDialog.state.orientation,
-      frameSize: this.getFrameSizeFromDialog(this.refs.extensionViewDialog),
+      linked,
+      role: extensionViewState.viewerType,
+      x: extensionViewState.x,
+      y: extensionViewState.y,
+      orientation: extensionViewState.orientation,
+      frameSize: this.getFrameSizeFromDialog(extensionViewState),
     });
     this.pushExtensionViews(extensionViews);
     this.closeExtensionViewDialog();
@@ -277,7 +273,6 @@ export class RigComponent extends React.Component<Props, State> {
           extension={this.state.extension} />
         {this.state.showExtensionsView &&
           <ExtensionViewDialog
-            ref="extensionViewDialog"
             extensionViews={this.state.manifest.views}
             show={this.state.showExtensionsView}
             closeHandler={this.closeExtensionViewDialog}

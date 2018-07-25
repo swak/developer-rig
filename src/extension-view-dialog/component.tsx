@@ -125,7 +125,7 @@ export class ExtensionViewDialog extends React.Component<ExtensionViewDialogProp
   }
 
   save = () => {
-    this.props.saveHandler();
+    this.props.saveHandler(this.state);
   }
 
   public render() {
