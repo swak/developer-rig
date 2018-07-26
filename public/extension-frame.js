@@ -15,7 +15,7 @@ function proxyIframeEvent(event) {
       event.source.postMessage({
         action: "extension-frame-authorize-response",
         response: {
-          channelId: parameters.extension.channelId,
+          channelId: parameters.channelId,
           clientId: parameters.extension.clientId,
           token: parameters.extension.token,
           userId: JSON.parse(atob(parameters.extension.token.split('.')[1])).opaque_user_id,

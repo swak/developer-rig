@@ -29,9 +29,9 @@ export const PanelViewDimensions = Object.freeze({
   height: "300",
 });
 
-
 interface ExtensionViewProps {
   id: string;
+  channelId: string;
   extension: RigExtension;
   type: string;
   mode: string;
@@ -48,7 +48,6 @@ interface State {
   mousedOver: boolean;
   iframe: HTMLIFrameElement;
 }
-
 
 interface ExtensionProps {
   viewStyles: React.CSSProperties;
@@ -91,6 +90,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           id={`component-${this.props.id}`}
           role={this.props.role}
           className="view"
+          channelId={this.props.channelId}
           extension={this.props.extension}
           frameSize={this.props.frameSize}
           position={this.props.position}
@@ -101,6 +101,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           bindIframeToParent={this.bindIframeToParent}
           id={`mobile-${this.props.id}`}
           className="view"
+          channelId={this.props.channelId}
           role={this.props.role}
           extension={this.props.extension}
           frameSize={this.props.frameSize}
@@ -115,6 +116,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           <ExtensionFrame
             bindIframeToParent={this.bindIframeToParent}
             className="view"
+            channelId={this.props.channelId}
             frameId={`frameid-${this.props.id}`}
             extension={this.props.extension}
             type={this.props.type}
@@ -154,7 +156,6 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
       viewStyles: {},
       viewWrapperStyles: {},
     };
-
     let panelHeight = PanelViewDimensions.height;
     if (this.props.extension.views.panel && this.props.extension.views.panel.height) {
       panelHeight = this.props.extension.views.panel.height + '';

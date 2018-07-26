@@ -21,7 +21,6 @@ export function mockGlobals() {
   globalAny.process.env.EXT_CLIENT_ID = 'test';
   globalAny.process.env.EXT_SECRET = 'test';
   globalAny.process.env.EXT_VERSION = 'test';
-  globalAny.process.env.EXT_CHANNEL_ID = 'test';
   globalAny.process.env.EXT_USER_NAME = 'test';
 
   globalAny.localStorage = new LocalStorage();

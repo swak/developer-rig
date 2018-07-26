@@ -22,7 +22,7 @@ describe('token', () => {
     }
 
     it('should leave userId out if it is not specified', () => {
-      const token = createSignedToken(role, ouid, '', channelId, secret);
+      const token = createSignedToken(role, ouid, '', secret, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(expected.opaqueUserId);
@@ -32,7 +32,7 @@ describe('token', () => {
     });
 
     it('should have userId if it is specified', () => {
-      const token = createSignedToken(role, ouid, uid, channelId, secret);
+      const token = createSignedToken(role, ouid, uid, secret, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(expected.opaqueUserId);
@@ -83,7 +83,7 @@ describe('token', () => {
     };
 
     it('should create a token for logged out unlinked users', () => {
-      const token = createToken(ViewerTypes.LoggedOut, isLinked, ownerId, channelId, secret, ouid);
+      const token = createToken(ViewerTypes.LoggedOut, isLinked, ownerId, secret, ouid, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(LOGGED_OUT_PAYLOAD.opaque_user_id);
@@ -93,7 +93,7 @@ describe('token', () => {
     });
 
     it('should create a token for logged in unlinked users', () => {
-      const token = createToken(ViewerTypes.LoggedIn, isLinked, ownerId, channelId, secret, ouid);
+      const token = createToken(ViewerTypes.LoggedIn, isLinked, ownerId, secret, ouid, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(LOGGED_IN_UNLINKED_PAYLOAD.opaque_user_id);
@@ -103,7 +103,7 @@ describe('token', () => {
     });
 
     it('should create a token for logged in linked users', () => {
-      const token = createToken(ViewerTypes.LoggedIn, !isLinked, ownerId, channelId, secret, ouid);
+      const token = createToken(ViewerTypes.LoggedIn, !isLinked, ownerId, secret, ouid, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(LOGGED_IN_LINKED_PAYLOAD.opaque_user_id);
@@ -114,7 +114,7 @@ describe('token', () => {
     });
 
     it('should create a token for broadcaster users', () => {
-      const token = createToken(ViewerTypes.Broadcaster, isLinked, ownerId, channelId, secret, ouid);
+      const token = createToken(ViewerTypes.Broadcaster, isLinked, ownerId, secret, ouid, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.opaque_user_id).toBe(BROADCASTER_PAYLOAD.opaque_user_id);
@@ -125,7 +125,7 @@ describe('token', () => {
     });
 
     it('should create a token for the rig', () => {
-      const token = createToken(RigRole, isLinked, ownerId, channelId, secret, ouid);
+      const token = createToken(RigRole, isLinked, ownerId, secret, ouid, channelId);
       const payload = verify(token, Buffer.from(secret, 'base64')) as TokenPayload;
 
       expect(payload.role).toBe(RigRole);

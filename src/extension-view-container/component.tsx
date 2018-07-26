@@ -6,6 +6,7 @@ import './component.sass';
 import { RigExtensionView, RigExtension } from '../core/models/rig';
 
 interface ExtensionViewContainerProps {
+  channelId: string;
   mode: string;
   extensionViews: RigExtensionView[];
   openEditViewHandler?: (id: string) => void;
@@ -26,6 +27,7 @@ export class ExtensionViewContainer extends React.Component<Props> {
       const configType = this.props.mode === ExtensionMode.Config ? ExtensionMode.Config : ExtensionMode.Dashboard;
       return (<ExtensionView
         id={this.props.mode}
+        channelId={this.props.channelId}
         type={configType}
         extension={this.props.extension}
         mode={this.props.mode}
@@ -39,6 +41,7 @@ export class ExtensionViewContainer extends React.Component<Props> {
         return <ExtensionView
           key={view.id}
           id={view.id}
+          channelId={this.props.channelId}
           extension={view.extension}
           type={view.type}
           mode={this.props.mode}

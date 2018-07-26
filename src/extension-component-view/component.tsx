@@ -7,6 +7,7 @@ const { getComponentPositionFromView, getComponentSizeFromView } = window['exten
 
 interface ExtensionComponentViewProps {
   id: string
+  channelId: string;
   extension: RigExtension;
   frameSize: FrameSize;
   position: Position;
@@ -65,6 +66,7 @@ export class ExtensionComponentView extends React.Component<Props> {
           <ExtensionFrame
             bindIframeToParent={this.props.bindIframeToParent}
             className="view"
+            channelId={this.props.channelId}
             frameId={`frameid-${this.props.id}`}
             extension={this.props.extension}
             type={ExtensionViewType.Component}

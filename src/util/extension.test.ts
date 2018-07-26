@@ -35,7 +35,6 @@ describe('extension', () => {
   const role = ViewerTypes.LoggedOut;
   const isLinked = false;
   const ownerID = 'test';
-  const channelId = 'test';
   const secret = 'test';
   const opaqueId = 'testOpaqueId';
 
@@ -51,16 +50,15 @@ describe('extension', () => {
       sku: manifest.sku,
       state: manifest.state,
       summary: manifest.summary,
-      token: createToken(role, isLinked, ownerID, channelId, secret, opaqueId),
+      token: createToken(role, isLinked, ownerID, secret, opaqueId),
       vendorCode: manifest.vendor_code,
       version: manifest.version,
       views: manifest.views,
       whitelistedConfigUrls: manifest.whitelisted_config_urls,
       whitelistedPanelUrls: manifest.whitelisted_panel_urls,
-      channelId: channelId,
       bitsEnabled: manifest.bits_enabled,
     };
-    const result = createExtensionObject(manifest, index, role, isLinked, ownerID, channelId, secret, opaqueId);
+    const result = createExtensionObject(manifest, index, role, isLinked, ownerID, secret, opaqueId);
     expect(result).toEqual(expected);
   });
 });

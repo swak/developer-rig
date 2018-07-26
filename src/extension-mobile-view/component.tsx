@@ -10,6 +10,7 @@ const AbsolutePosition = 'absolute';
 
 interface ExtensionMobileViewProps {
   id: string;
+  channelId: string;
   orientation: string;
   extension: RigExtension;
   frameSize: FrameSize;
@@ -69,6 +70,7 @@ export class ExtensionMobileView extends React.Component<Props> {
           <ExtensionFrame
             bindIframeToParent={this.props.bindIframeToParent}
             className="view"
+            channelId={this.props.channelId}
             frameId={`frameid-${this.props.id}`}
             extension={this.props.extension}
             type={ExtensionViewType.Mobile}

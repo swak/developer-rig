@@ -1,7 +1,6 @@
 export interface Configuration {
   EXT_CLIENT_ID: string;
   EXT_VERSION: string;
-  EXT_CHANNEL: string;
   EXT_SECRET: string;
   [key: string]: string;
 }
@@ -12,5 +11,5 @@ export function missingConfigurations(configurations: Configuration): string {
       msg += key + ','
     }
   }
-  return msg.slice(0,-1);
+  return msg.slice(0, -1);
 }

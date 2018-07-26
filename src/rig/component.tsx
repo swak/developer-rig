@@ -39,7 +39,6 @@ interface State {
   clientId: string;
   secret: string;
   version: string;
-  channelId: string;
   userName: string;
   mode: string;
   extensionViews: RigExtensionView[],
@@ -64,7 +63,6 @@ export class RigComponent extends React.Component<Props, State> {
     clientId: process.env.EXT_CLIENT_ID,
     secret: process.env.EXT_SECRET,
     version: process.env.EXT_VERSION,
-    channelId: process.env.EXT_CHANNEL_ID,
     userName: process.env.EXT_USER_NAME,
     mode: ExtensionMode.Viewer,
     extensionViews: [],
@@ -103,7 +101,7 @@ export class RigComponent extends React.Component<Props, State> {
     });
   }
 
-  public openEditViewHandler = (id:string) => {
+  public openEditViewHandler = (id: string) => {
     this.setState({
       showEditView: true,
       idToEdit: id,
@@ -135,7 +133,6 @@ export class RigComponent extends React.Component<Props, State> {
         ViewerTypes.Broadcaster,
         true,
         this.state.userName,
-        this.state.channelId,
         this.state.secret,
         ''),
     });
@@ -152,7 +149,6 @@ export class RigComponent extends React.Component<Props, State> {
         ViewerTypes.Broadcaster,
         true,
         this.state.userName,
-        this.state.channelId,
         this.state.secret,
         ''),
     });
@@ -185,7 +181,7 @@ export class RigComponent extends React.Component<Props, State> {
   }
 
   private refreshConfigurationsHandler = () => {
-    const token = createSignedToken(RigRole, '', this.state.userId, this.state.channelId, this.state.secret);
+    const token = createSignedToken(RigRole, '', this.state.userId, this.state.secret);
     fetchExtensionManifest(this.state.apiHost, this.state.clientId, this.state.version, token)
       .then(this.onConfigurationSuccess)
       .catch(this.onConfigurationError);
@@ -229,7 +225,6 @@ export class RigComponent extends React.Component<Props, State> {
         extensionViewState.viewerType,
         linked,
         this.state.userName,
-        this.state.channelId,
         this.state.secret,
         extensionViewState.opaqueId,
       ),
@@ -244,13 +239,13 @@ export class RigComponent extends React.Component<Props, State> {
     this.closeExtensionViewDialog();
   }
 
-  public deleteExtensionView = (id:string) => {
+  public deleteExtensionView = (id: string) => {
     this.pushExtensionViews(this.state.extensionViews.filter(element => element.id !== id));
   }
 
   public editViewHandler = (newViewState: EditViewProps) => {
     const views = this.getExtensionViews();
-    views.forEach((element: RigExtensionView)=> {
+    views.forEach((element: RigExtensionView) => {
       if (element.id === this.state.idToEdit) {
         element.x = newViewState.x;
         element.y = newViewState.y;
@@ -265,6 +260,7 @@ export class RigComponent extends React.Component<Props, State> {
     let view = (
       <div>
         <ExtensionViewContainer
+          channelId='TODO'
           mode={this.state.mode}
           extensionViews={this.state.extensionViews}
           deleteExtensionViewHandler={this.deleteExtensionView}
@@ -313,7 +309,7 @@ export class RigComponent extends React.Component<Props, State> {
           liveConfigHandler={this.liveConfigHandler}
           openConfigurationsHandler={this.openConfigurationsHandler}
           openProductManagementHandler={this.openProductManagementHandler}
-          error={this.state.error}/>
+          error={this.state.error} />
         {view}
       </div>
     );
@@ -338,7 +334,6 @@ export class RigComponent extends React.Component<Props, State> {
         this.state.clientId,
         this.state.userName,
         this.state.version,
-        this.state.channelId,
         this.state.secret
       )
       .then(this.onConfigurationSuccess)

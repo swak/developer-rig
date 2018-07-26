@@ -24,7 +24,7 @@ describe('api', () => {
     it('should return data', async function () {
       globalAny.fetch = jest.fn().mockImplementation(mockFetchForManifest);
       try {
-        const data = await fetchManifest('127.0.0.1:8080', 'clientId', 'username', 'version', 'channelId', 'secret');
+        const data = await fetchManifest('127.0.0.1:8080', 'clientId', 'username', 'version', 'secret');
         expect(data).toBeDefined();
       } catch (e) {}
     });
@@ -33,8 +33,8 @@ describe('api', () => {
       expect.assertions(1);
       const onError = jest.fn();
       globalAny.fetch = jest.fn().mockImplementation(mockFetchError);
-      fetchManifest('127.0.0.1:8080', 'clientId', '', '', '', '').catch((error) => {
-        expect(error).toEqual('Missing configurations for rig: EXT_VERSION,EXT_CHANNEL,EXT_SECRET');
+      fetchManifest('127.0.0.1:8080', 'clientId', '', '', '').catch((error) => {
+        expect(error).toEqual('Missing configurations for rig: EXT_VERSION,EXT_SECRET');
       });
     });
   })

@@ -34,10 +34,9 @@ if (cmdOptions.config) {
   try {
     const configFile = fs.readFileSync(configFileLocation, 'utf-8');
     // Pull config variables from file and set them to environment variables
-    const { clientID, version, channel, ownerName } = JSON.parse(configFile);
+    const { clientID, version, ownerName } = JSON.parse(configFile);
     if (clientID) { process.env.EXT_CLIENT_ID = clientID; }
     if (version) { process.env.EXT_VERSION = version; }
-    if (channel) { process.env.EXT_CHANNEL = channel; }
     if (ownerName) { process.env.EXT_OWNER_NAME = ownerName; }
   } catch (e) {
     console.log(e);
@@ -69,9 +68,6 @@ if (cmdOptions.local) {
   if (!process.env.EXT_VERSION) {
     process.env.EXT_VERSION = version;
   }
-  if (!process.env.EXT_CHANNEL) {
-    process.env.EXT_CHANNEL = "RIG" + ownerName;
-  }
   if (!process.env.EXT_OWNER_NAME) {
     process.env.EXT_OWNER_NAME = ownerName;
   }
@@ -84,7 +80,6 @@ if (cmdOptions.local) {
 }
 console.log('clientId:', process.env.EXT_CLIENT_ID);
 console.log('version:', process.env.EXT_VERSION);
-console.log('channel:', process.env.EXT_CHANNEL);
 console.log('owner name:', process.env.EXT_OWNER_NAME);
 console.log('secret:', process.env.EXT_SECRET);
 

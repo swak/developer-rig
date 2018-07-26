@@ -53,6 +53,5 @@ export interface RigExtension {
   views: ManifestViews;
   whitelistedConfigUrls: string[];
   whitelistedPanelUrls: string[];
-  channelId: string;
   bitsEnabled: boolean;
 }

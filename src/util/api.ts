@@ -102,17 +102,15 @@ export function fetchExtensionManifest(host: string, clientId: string, version: 
       manifest.views = convertViews(manifest.views);
       return Promise.resolve({ manifest });
     }
-
     return Promise.reject('Unable to retrieve extension manifest, please verify EXT_OWNER_NAME and EXT_SECRET');
   });
 }
 
-export function fetchManifest(host: string, clientId: string, username: string, version: string, channelId: string, secret: string) {
-  if (!username || !clientId || !version || !channelId || !secret) {
+export function fetchManifest(host: string, clientId: string, username: string, version: string, secret: string) {
+  if (!username || !clientId || !version || !secret) {
     return Promise.reject(missingConfigurations({
       'EXT_CLIENT_ID': clientId,
       'EXT_VERSION': version,
-      'EXT_CHANNEL': channelId,
       'EXT_SECRET': secret,
     }));
   }
@@ -144,7 +142,7 @@ export function fetchManifest(host: string, clientId: string, username: string, 
     }
 
     const userId = data[0]['id'];
-    const token = createSignedToken(RigRole, '', userId, channelId, secret);
+    const token = createSignedToken(RigRole, '', userId, secret);
     return fetchExtensionManifest(host, clientId, version, token);
   });
 }

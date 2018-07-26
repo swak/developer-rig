@@ -1,12 +1,13 @@
 import * as React from 'react';
 import './component.sass';
 import { RigExtension } from '../core/models/rig';
-import { ExtensionPlatform, ExtensionViewType} from '../constants/extension-coordinator';
+import { ExtensionPlatform, ExtensionViewType } from '../constants/extension-coordinator';
 
 const IFRAME_CLASS = 'extension-frame';
 const EXTENSION_FRAME_INIT_ACTION = 'extension-frame-init';
 
 interface ExtensionFrameProps {
+  channelId: string;
   className: string;
   frameId: string;
   extension: RigExtension;
@@ -29,11 +30,11 @@ export class ExtensionFrame extends React.Component<Props> {
   public render() {
     return (
       <iframe
-      ref={this.bindIframeRef}
+        ref={this.bindIframeRef}
         src={process.env.PUBLIC_URL + '/extension-frame.html'}
         frameBorder={0}
         className={'rig-frame ' + IFRAME_CLASS}
-        title={this.props.frameId}/>
+        title={this.props.frameId} />
     );
   }
 
@@ -45,7 +46,7 @@ export class ExtensionFrame extends React.Component<Props> {
   public extensionFrameInit = () => {
     const extension: any = {
       anchor: this.props.type,
-      channelId: this.props.extension.channelId,
+      channelId: this.props.channelId,
       loginId: null,
       extension: this.props.extension,
       mode: this.props.mode,
