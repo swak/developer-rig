@@ -5,11 +5,13 @@ import { NavItem } from '../constants/nav-items';
 import { RigComponent } from './component';
 import { ExtensionAnchors } from '../constants/extension-types';
 import { ViewerTypes } from '../constants/viewer-types';
-import { RigExtensionView } from '../core/models/rig';
+import { RigExtensionView, RigProject } from '../core/models/rig';
 import { ExtensionViewDialogState } from '../extension-view-dialog';
 import { ExtensionAnchor, ExtensionViewType } from '../constants/extension-coordinator';
 
 let globalAny = global as any;
+
+localStorage.setItem('projects', '[{}]');
 
 const setupShallow = setupShallowTest(RigComponent, () => ({
   session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
@@ -98,23 +100,12 @@ describe('<RigComponent />', () => {
     expect(instance.state.idToEdit).toBe('0');
   });
 
-  it('correctly toggles state when configuration dialog is opened/closed', () => {
-    setupViewsForTest(1);
-    const { wrapper } = setupShallow();
-    const instance = wrapper.instance() as RigComponent;
-
-    instance.openConfigurationsHandler();
-    expect(instance.state.showingConfigurations).toBe(true);
-
-    instance.closeConfigurationsHandler();
-    expect(instance.state.showingConfigurations).toBe(false);
-  });
-
   it('correctly toggles state when create extension view is opened/closed', () => {
     setupViewsForTest(1);
     const { wrapper } = setupShallow();
     const instance = wrapper.instance() as RigComponent;
-    instance.onConfigurationSuccess(createExtensionManifestForTest());
+    instance.state.manifest = createExtensionManifestForTest();
+    instance.state.currentProject = { manifest: instance.state.manifest } as RigProject;
 
     instance.openExtensionViewHandler();
     expect(instance.state.showingExtensionsView).toBe(true);
@@ -129,7 +120,7 @@ describe('<RigComponent />', () => {
     wrapper.setState({ manifest: createExtensionManifestForTest() });
 
     const instance = wrapper.instance() as RigComponent;
-    instance.viewerHandler();
+    instance.viewerHandler(NavItem.ExtensionViews);
     expect(instance.state.selectedView).toBe(NavItem.ExtensionViews);
   });
 
@@ -152,24 +143,6 @@ describe('<RigComponent />', () => {
 
     instance.state.extensionViews.push(createViewsForTest(1, ExtensionAnchors[ExtensionAnchor.Panel], ViewerTypes.LoggedOut)[0] as RigExtensionView);
     instance.pushExtensionViews(instance.state.extensionViews);
-  });
-
-  it('sets state correctly when onConfigurationSuccess invoked', () => {
-    const { wrapper } = setupShallow();
-    const fakeManifest = createExtensionManifestForTest();
-    const instance = wrapper.instance() as RigComponent;
-
-    instance.onConfigurationSuccess(fakeManifest);
-    expect(wrapper.instance().state.manifest).toBe(fakeManifest);
-  });
-
-  it('sets error state correctly when onConfigurationError invoked', () => {
-    const { wrapper } = setupShallow();
-    const testError = new Error('test error');
-    const instance = wrapper.instance() as RigComponent;
-
-    instance.onConfigurationError(testError);
-    expect(wrapper.instance().state.error).toBe(testError.message +'  Please verify EXT_CLIENT_ID, EXT_SECRET, and EXT_VERSION.');
   });
 
   describe('gets frame size from dialog ref correctly', () => {

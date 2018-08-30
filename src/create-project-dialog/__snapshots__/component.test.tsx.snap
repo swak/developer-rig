@@ -1,0 +1,3527 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreateProjectDialog /> renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateProjectDialog
+    closeHandler={[Function]}
+    saveHandler={[Function]}
+    userId="userId"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="project-dialog__background"
+/>,
+        <div
+          className="project-dialog__dialog"
+>
+          <div
+                    className="dialog__top-bar-container"
+          >
+                    <div
+                              className="top-bar-container__title"
+                    >
+                              Create New Extension Project
+                    </div>
+                    <div
+                              className="top-bar-container__escape"
+                              onClick={[Function]}
+                    >
+                              <img
+                                        alt="Close"
+                                        src="close_icon.png"
+                              />
+                    </div>
+          </div>
+          <hr
+                    className="dialog__divider"
+          />
+          <div
+                    className="project-dialog__content left"
+          >
+                    <label
+                              className="state-value__label"
+                    >
+                              <span>
+                                        Extension Project Name
+                              </span>
+                              <input
+                                        className="state-value__input"
+                                        name="name"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                              />
+                    </label>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <div>
+                                        Choose Extension
+                              </div>
+                              <label
+                                        className="state-value__label"
+                              >
+                                        <input
+                                                  checked={true}
+                                                  className="state-value__input"
+                                                  name="isLocal"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value={1}
+                                        />
+                                        <span>
+                                                  Create Local Extension
+                                        </span>
+                              </label>
+                              <div>
+                                        <div>
+                                                  Extension Type
+                                        </div>
+                                        <label
+                                                  className="state-value__label"
+                                        >
+                                                  <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="extensionTypes"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                            value={4}
+                                                  />
+                                                  <span>
+                                                            Video Overlay
+                                                  </span>
+                                        </label>
+                                        <label
+                                                  className="state-value__label"
+                                        >
+                                                  <input
+                                                            checked={true}
+                                                            className="state-value__input"
+                                                            name="extensionTypes"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                            value={1}
+                                                  />
+                                                  <span>
+                                                            Panel
+                                                  </span>
+                                        </label>
+                                        <label
+                                                  className="state-value__label"
+                                        >
+                                                  <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="extensionTypes"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                            value={2}
+                                                  />
+                                                  <span>
+                                                            Component
+                                                  </span>
+                                        </label>
+                                        <label
+                                                  className="state-value__label"
+                                        >
+                                                  <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="extensionTypes"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                            value={8}
+                                                  />
+                                                  <span>
+                                                            Mobile
+                                                  </span>
+                                        </label>
+                              </div>
+                              <label
+                                        className="state-value__label"
+                              >
+                                        <input
+                                                  checked={false}
+                                                  className="state-value__input"
+                                                  name="isLocal"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value={0}
+                                        />
+                                        <span>
+                                                  Use Already Created Online Extension
+                                        </span>
+                              </label>
+                    </div>
+                    <label
+                              className="state-value__label"
+                              title="This is the folder we will create to contain your project. You must have already created its parent folder."
+                    >
+                              <span>
+                                        Project Folder
+                              </span>
+                              <input
+                                        className="state-value__input"
+                                        name="projectFolderPath"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                              />
+                    </label>
+                    <div
+                              className="project-dialog__state-value"
+                    >
+                              <div>
+                                        Add Code to Project
+                              </div>
+                              <label
+                                        className="state-value__label"
+                              >
+                                        <input
+                                                  checked={true}
+                                                  className="state-value__input"
+                                                  name="codeGenerationOption"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value="none"
+                                        />
+                                        <span>
+                                                  None (Just Create Project Folder)
+                                        </span>
+                              </label>
+                              <label
+                                        className="state-value__label"
+                              >
+                                        <input
+                                                  checked={false}
+                                                  className="state-value__input"
+                                                  name="codeGenerationOption"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value="scaffolding"
+                                        />
+                                        <span>
+                                                  Generate Scaffolding
+                                        </span>
+                              </label>
+                              <label
+                                        className="state-value__label"
+                              >
+                                        <input
+                                                  checked={false}
+                                                  className="state-value__input"
+                                                  name="codeGenerationOption"
+                                                  onChange={[Function]}
+                                                  type="radio"
+                                                  value="template"
+                                        />
+                                        <span>
+                                                  Use Existing Sample Template
+                                        </span>
+                              </label>
+                    </div>
+          </div>
+          <div
+                    className="project-dialog__vertical-bar"
+          />
+          <div
+                    className="project-dialog__content right"
+          >
+                    <div>
+                              You’re all set!  Good luck on your extension!
+                    </div>
+          </div>
+          <hr
+                    className="dialog__divider"
+          />
+          <div
+                    className="dialog_bottom-bar"
+          >
+                    <div
+                              className="bottom-bar__save disabled"
+                              onClick={[Function]}
+                    >
+                              Save
+                    </div>
+                    <div
+                              className="bottom-bar__cancel"
+                              onClick={[Function]}
+                    >
+                              Cancel
+                    </div>
+          </div>
+</div>,
+      ],
+      "className": "project-dialog",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "project-dialog__background",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="dialog__top-bar-container"
+>
+              <div
+                            className="top-bar-container__title"
+              >
+                            Create New Extension Project
+              </div>
+              <div
+                            className="top-bar-container__escape"
+                            onClick={[Function]}
+              >
+                            <img
+                                          alt="Close"
+                                          src="close_icon.png"
+                            />
+              </div>
+</div>,
+            undefined,
+            <hr
+              className="dialog__divider"
+/>,
+            <div
+              className="project-dialog__content left"
+>
+              <label
+                            className="state-value__label"
+              >
+                            <span>
+                                          Extension Project Name
+                            </span>
+                            <input
+                                          className="state-value__input"
+                                          name="name"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </label>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <div>
+                                          Choose Extension
+                            </div>
+                            <label
+                                          className="state-value__label"
+                            >
+                                          <input
+                                                        checked={true}
+                                                        className="state-value__input"
+                                                        name="isLocal"
+                                                        onChange={[Function]}
+                                                        type="radio"
+                                                        value={1}
+                                          />
+                                          <span>
+                                                        Create Local Extension
+                                          </span>
+                            </label>
+                            <div>
+                                          <div>
+                                                        Extension Type
+                                          </div>
+                                          <label
+                                                        className="state-value__label"
+                                          >
+                                                        <input
+                                                                      checked={false}
+                                                                      className="state-value__input"
+                                                                      name="extensionTypes"
+                                                                      onChange={[Function]}
+                                                                      type="checkbox"
+                                                                      value={4}
+                                                        />
+                                                        <span>
+                                                                      Video Overlay
+                                                        </span>
+                                          </label>
+                                          <label
+                                                        className="state-value__label"
+                                          >
+                                                        <input
+                                                                      checked={true}
+                                                                      className="state-value__input"
+                                                                      name="extensionTypes"
+                                                                      onChange={[Function]}
+                                                                      type="checkbox"
+                                                                      value={1}
+                                                        />
+                                                        <span>
+                                                                      Panel
+                                                        </span>
+                                          </label>
+                                          <label
+                                                        className="state-value__label"
+                                          >
+                                                        <input
+                                                                      checked={false}
+                                                                      className="state-value__input"
+                                                                      name="extensionTypes"
+                                                                      onChange={[Function]}
+                                                                      type="checkbox"
+                                                                      value={2}
+                                                        />
+                                                        <span>
+                                                                      Component
+                                                        </span>
+                                          </label>
+                                          <label
+                                                        className="state-value__label"
+                                          >
+                                                        <input
+                                                                      checked={false}
+                                                                      className="state-value__input"
+                                                                      name="extensionTypes"
+                                                                      onChange={[Function]}
+                                                                      type="checkbox"
+                                                                      value={8}
+                                                        />
+                                                        <span>
+                                                                      Mobile
+                                                        </span>
+                                          </label>
+                            </div>
+                            <label
+                                          className="state-value__label"
+                            >
+                                          <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="isLocal"
+                                                        onChange={[Function]}
+                                                        type="radio"
+                                                        value={0}
+                                          />
+                                          <span>
+                                                        Use Already Created Online Extension
+                                          </span>
+                            </label>
+              </div>
+              <label
+                            className="state-value__label"
+                            title="This is the folder we will create to contain your project. You must have already created its parent folder."
+              >
+                            <span>
+                                          Project Folder
+                            </span>
+                            <input
+                                          className="state-value__input"
+                                          name="projectFolderPath"
+                                          onChange={[Function]}
+                                          type="text"
+                                          value=""
+                            />
+              </label>
+              <div
+                            className="project-dialog__state-value"
+              >
+                            <div>
+                                          Add Code to Project
+                            </div>
+                            <label
+                                          className="state-value__label"
+                            >
+                                          <input
+                                                        checked={true}
+                                                        className="state-value__input"
+                                                        name="codeGenerationOption"
+                                                        onChange={[Function]}
+                                                        type="radio"
+                                                        value="none"
+                                          />
+                                          <span>
+                                                        None (Just Create Project Folder)
+                                          </span>
+                            </label>
+                            <label
+                                          className="state-value__label"
+                            >
+                                          <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="codeGenerationOption"
+                                                        onChange={[Function]}
+                                                        type="radio"
+                                                        value="scaffolding"
+                                          />
+                                          <span>
+                                                        Generate Scaffolding
+                                          </span>
+                            </label>
+                            <label
+                                          className="state-value__label"
+                            >
+                                          <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="codeGenerationOption"
+                                                        onChange={[Function]}
+                                                        type="radio"
+                                                        value="template"
+                                          />
+                                          <span>
+                                                        Use Existing Sample Template
+                                          </span>
+                            </label>
+              </div>
+</div>,
+            <div
+              className="project-dialog__vertical-bar"
+/>,
+            <div
+              className="project-dialog__content right"
+>
+              <div>
+                            You’re all set!  Good luck on your extension!
+              </div>
+</div>,
+            <hr
+              className="dialog__divider"
+/>,
+            <div
+              className="dialog_bottom-bar"
+>
+              <div
+                            className="bottom-bar__save disabled"
+                            onClick={[Function]}
+              >
+                            Save
+              </div>
+              <div
+                            className="bottom-bar__cancel"
+                            onClick={[Function]}
+              >
+                            Cancel
+              </div>
+</div>,
+          ],
+          "className": "project-dialog__dialog",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="top-bar-container__title"
+>
+                  Create New Extension Project
+</div>,
+                <div
+                  className="top-bar-container__escape"
+                  onClick={[Function]}
+>
+                  <img
+                                    alt="Close"
+                                    src="close_icon.png"
+                  />
+</div>,
+              ],
+              "className": "dialog__top-bar-container",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Create New Extension Project",
+                  "className": "top-bar-container__title",
+                },
+                "ref": null,
+                "rendered": "Create New Extension Project",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <img
+                    alt="Close"
+                    src="close_icon.png"
+/>,
+                  "className": "top-bar-container__escape",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Close",
+                    "src": "close_icon.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "dialog__divider",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="state-value__label"
+>
+                  <span>
+                                    Extension Project Name
+                  </span>
+                  <input
+                                    className="state-value__input"
+                                    name="name"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</label>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <div>
+                                    Choose Extension
+                  </div>
+                  <label
+                                    className="state-value__label"
+                  >
+                                    <input
+                                                      checked={true}
+                                                      className="state-value__input"
+                                                      name="isLocal"
+                                                      onChange={[Function]}
+                                                      type="radio"
+                                                      value={1}
+                                    />
+                                    <span>
+                                                      Create Local Extension
+                                    </span>
+                  </label>
+                  <div>
+                                    <div>
+                                                      Extension Type
+                                    </div>
+                                    <label
+                                                      className="state-value__label"
+                                    >
+                                                      <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={4}
+                                                      />
+                                                      <span>
+                                                                        Video Overlay
+                                                      </span>
+                                    </label>
+                                    <label
+                                                      className="state-value__label"
+                                    >
+                                                      <input
+                                                                        checked={true}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={1}
+                                                      />
+                                                      <span>
+                                                                        Panel
+                                                      </span>
+                                    </label>
+                                    <label
+                                                      className="state-value__label"
+                                    >
+                                                      <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={2}
+                                                      />
+                                                      <span>
+                                                                        Component
+                                                      </span>
+                                    </label>
+                                    <label
+                                                      className="state-value__label"
+                                    >
+                                                      <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={8}
+                                                      />
+                                                      <span>
+                                                                        Mobile
+                                                      </span>
+                                    </label>
+                  </div>
+                  <label
+                                    className="state-value__label"
+                  >
+                                    <input
+                                                      checked={false}
+                                                      className="state-value__input"
+                                                      name="isLocal"
+                                                      onChange={[Function]}
+                                                      type="radio"
+                                                      value={0}
+                                    />
+                                    <span>
+                                                      Use Already Created Online Extension
+                                    </span>
+                  </label>
+</div>,
+                <label
+                  className="state-value__label"
+                  title="This is the folder we will create to contain your project. You must have already created its parent folder."
+>
+                  <span>
+                                    Project Folder
+                  </span>
+                  <input
+                                    className="state-value__input"
+                                    name="projectFolderPath"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value=""
+                  />
+</label>,
+                <div
+                  className="project-dialog__state-value"
+>
+                  <div>
+                                    Add Code to Project
+                  </div>
+                  <label
+                                    className="state-value__label"
+                  >
+                                    <input
+                                                      checked={true}
+                                                      className="state-value__input"
+                                                      name="codeGenerationOption"
+                                                      onChange={[Function]}
+                                                      type="radio"
+                                                      value="none"
+                                    />
+                                    <span>
+                                                      None (Just Create Project Folder)
+                                    </span>
+                  </label>
+                  <label
+                                    className="state-value__label"
+                  >
+                                    <input
+                                                      checked={false}
+                                                      className="state-value__input"
+                                                      name="codeGenerationOption"
+                                                      onChange={[Function]}
+                                                      type="radio"
+                                                      value="scaffolding"
+                                    />
+                                    <span>
+                                                      Generate Scaffolding
+                                    </span>
+                  </label>
+                  <label
+                                    className="state-value__label"
+                  >
+                                    <input
+                                                      checked={false}
+                                                      className="state-value__input"
+                                                      name="codeGenerationOption"
+                                                      onChange={[Function]}
+                                                      type="radio"
+                                                      value="template"
+                                    />
+                                    <span>
+                                                      Use Existing Sample Template
+                                    </span>
+                  </label>
+</div>,
+              ],
+              "className": "project-dialog__content left",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Extension Project Name
+</span>,
+                    <input
+                      className="state-value__input"
+                      name="name"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "state-value__label",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Extension Project Name",
+                    },
+                    "ref": null,
+                    "rendered": "Extension Project Name",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "name",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      Choose Extension
+</div>,
+                    <label
+                      className="state-value__label"
+>
+                      <input
+                                            checked={true}
+                                            className="state-value__input"
+                                            name="isLocal"
+                                            onChange={[Function]}
+                                            type="radio"
+                                            value={1}
+                      />
+                      <span>
+                                            Create Local Extension
+                      </span>
+</label>,
+                    <div>
+                      <div>
+                                            Extension Type
+                      </div>
+                      <label
+                                            className="state-value__label"
+                      >
+                                            <input
+                                                                  checked={false}
+                                                                  className="state-value__input"
+                                                                  name="extensionTypes"
+                                                                  onChange={[Function]}
+                                                                  type="checkbox"
+                                                                  value={4}
+                                            />
+                                            <span>
+                                                                  Video Overlay
+                                            </span>
+                      </label>
+                      <label
+                                            className="state-value__label"
+                      >
+                                            <input
+                                                                  checked={true}
+                                                                  className="state-value__input"
+                                                                  name="extensionTypes"
+                                                                  onChange={[Function]}
+                                                                  type="checkbox"
+                                                                  value={1}
+                                            />
+                                            <span>
+                                                                  Panel
+                                            </span>
+                      </label>
+                      <label
+                                            className="state-value__label"
+                      >
+                                            <input
+                                                                  checked={false}
+                                                                  className="state-value__input"
+                                                                  name="extensionTypes"
+                                                                  onChange={[Function]}
+                                                                  type="checkbox"
+                                                                  value={2}
+                                            />
+                                            <span>
+                                                                  Component
+                                            </span>
+                      </label>
+                      <label
+                                            className="state-value__label"
+                      >
+                                            <input
+                                                                  checked={false}
+                                                                  className="state-value__input"
+                                                                  name="extensionTypes"
+                                                                  onChange={[Function]}
+                                                                  type="checkbox"
+                                                                  value={8}
+                                            />
+                                            <span>
+                                                                  Mobile
+                                            </span>
+                      </label>
+</div>,
+                    <label
+                      className="state-value__label"
+>
+                      <input
+                                            checked={false}
+                                            className="state-value__input"
+                                            name="isLocal"
+                                            onChange={[Function]}
+                                            type="radio"
+                                            value={0}
+                      />
+                      <span>
+                                            Use Already Created Online Extension
+                      </span>
+</label>,
+                    false,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Choose Extension",
+                    },
+                    "ref": null,
+                    "rendered": "Choose Extension",
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          checked={true}
+                          className="state-value__input"
+                          name="isLocal"
+                          onChange={[Function]}
+                          type="radio"
+                          value={1}
+/>,
+                        <span>
+                          Create Local Extension
+</span>,
+                      ],
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "checked": true,
+                          "className": "state-value__input",
+                          "name": "isLocal",
+                          "onChange": [Function],
+                          "type": "radio",
+                          "value": 1,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Create Local Extension",
+                        },
+                        "ref": null,
+                        "rendered": "Create Local Extension",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <div>
+                          Extension Type
+</div>,
+                        <label
+                          className="state-value__label"
+>
+                          <input
+                                                    checked={false}
+                                                    className="state-value__input"
+                                                    name="extensionTypes"
+                                                    onChange={[Function]}
+                                                    type="checkbox"
+                                                    value={4}
+                          />
+                          <span>
+                                                    Video Overlay
+                          </span>
+</label>,
+                        <label
+                          className="state-value__label"
+>
+                          <input
+                                                    checked={true}
+                                                    className="state-value__input"
+                                                    name="extensionTypes"
+                                                    onChange={[Function]}
+                                                    type="checkbox"
+                                                    value={1}
+                          />
+                          <span>
+                                                    Panel
+                          </span>
+</label>,
+                        <label
+                          className="state-value__label"
+>
+                          <input
+                                                    checked={false}
+                                                    className="state-value__input"
+                                                    name="extensionTypes"
+                                                    onChange={[Function]}
+                                                    type="checkbox"
+                                                    value={2}
+                          />
+                          <span>
+                                                    Component
+                          </span>
+</label>,
+                        <label
+                          className="state-value__label"
+>
+                          <input
+                                                    checked={false}
+                                                    className="state-value__input"
+                                                    name="extensionTypes"
+                                                    onChange={[Function]}
+                                                    type="checkbox"
+                                                    value={8}
+                          />
+                          <span>
+                                                    Mobile
+                          </span>
+</label>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Extension Type",
+                        },
+                        "ref": null,
+                        "rendered": "Extension Type",
+                        "type": "div",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <input
+                              checked={false}
+                              className="state-value__input"
+                              name="extensionTypes"
+                              onChange={[Function]}
+                              type="checkbox"
+                              value={4}
+/>,
+                            <span>
+                              Video Overlay
+</span>,
+                          ],
+                          "className": "state-value__label",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "checked": false,
+                              "className": "state-value__input",
+                              "name": "extensionTypes",
+                              "onChange": [Function],
+                              "type": "checkbox",
+                              "value": 4,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Video Overlay",
+                            },
+                            "ref": null,
+                            "rendered": "Video Overlay",
+                            "type": "span",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <input
+                              checked={true}
+                              className="state-value__input"
+                              name="extensionTypes"
+                              onChange={[Function]}
+                              type="checkbox"
+                              value={1}
+/>,
+                            <span>
+                              Panel
+</span>,
+                          ],
+                          "className": "state-value__label",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "checked": true,
+                              "className": "state-value__input",
+                              "name": "extensionTypes",
+                              "onChange": [Function],
+                              "type": "checkbox",
+                              "value": 1,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Panel",
+                            },
+                            "ref": null,
+                            "rendered": "Panel",
+                            "type": "span",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <input
+                              checked={false}
+                              className="state-value__input"
+                              name="extensionTypes"
+                              onChange={[Function]}
+                              type="checkbox"
+                              value={2}
+/>,
+                            <span>
+                              Component
+</span>,
+                          ],
+                          "className": "state-value__label",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "checked": false,
+                              "className": "state-value__input",
+                              "name": "extensionTypes",
+                              "onChange": [Function],
+                              "type": "checkbox",
+                              "value": 2,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Component",
+                            },
+                            "ref": null,
+                            "rendered": "Component",
+                            "type": "span",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <input
+                              checked={false}
+                              className="state-value__input"
+                              name="extensionTypes"
+                              onChange={[Function]}
+                              type="checkbox"
+                              value={8}
+/>,
+                            <span>
+                              Mobile
+</span>,
+                          ],
+                          "className": "state-value__label",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "checked": false,
+                              "className": "state-value__input",
+                              "name": "extensionTypes",
+                              "onChange": [Function],
+                              "type": "checkbox",
+                              "value": 8,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "children": "Mobile",
+                            },
+                            "ref": null,
+                            "rendered": "Mobile",
+                            "type": "span",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                    ],
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          checked={false}
+                          className="state-value__input"
+                          name="isLocal"
+                          onChange={[Function]}
+                          type="radio"
+                          value={0}
+/>,
+                        <span>
+                          Use Already Created Online Extension
+</span>,
+                      ],
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "checked": false,
+                          "className": "state-value__input",
+                          "name": "isLocal",
+                          "onChange": [Function],
+                          "type": "radio",
+                          "value": 0,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Use Already Created Online Extension",
+                        },
+                        "ref": null,
+                        "rendered": "Use Already Created Online Extension",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                  false,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Project Folder
+</span>,
+                    <input
+                      className="state-value__input"
+                      name="projectFolderPath"
+                      onChange={[Function]}
+                      type="text"
+                      value=""
+/>,
+                  ],
+                  "className": "state-value__label",
+                  "title": "This is the folder we will create to contain your project. You must have already created its parent folder.",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Project Folder",
+                    },
+                    "ref": null,
+                    "rendered": "Project Folder",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "state-value__input",
+                      "name": "projectFolderPath",
+                      "onChange": [Function],
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      Add Code to Project
+</div>,
+                    <label
+                      className="state-value__label"
+>
+                      <input
+                                            checked={true}
+                                            className="state-value__input"
+                                            name="codeGenerationOption"
+                                            onChange={[Function]}
+                                            type="radio"
+                                            value="none"
+                      />
+                      <span>
+                                            None (Just Create Project Folder)
+                      </span>
+</label>,
+                    <label
+                      className="state-value__label"
+>
+                      <input
+                                            checked={false}
+                                            className="state-value__input"
+                                            name="codeGenerationOption"
+                                            onChange={[Function]}
+                                            type="radio"
+                                            value="scaffolding"
+                      />
+                      <span>
+                                            Generate Scaffolding
+                      </span>
+</label>,
+                    <label
+                      className="state-value__label"
+>
+                      <input
+                                            checked={false}
+                                            className="state-value__input"
+                                            name="codeGenerationOption"
+                                            onChange={[Function]}
+                                            type="radio"
+                                            value="template"
+                      />
+                      <span>
+                                            Use Existing Sample Template
+                      </span>
+</label>,
+                  ],
+                  "className": "project-dialog__state-value",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Add Code to Project",
+                    },
+                    "ref": null,
+                    "rendered": "Add Code to Project",
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          checked={true}
+                          className="state-value__input"
+                          name="codeGenerationOption"
+                          onChange={[Function]}
+                          type="radio"
+                          value="none"
+/>,
+                        <span>
+                          None (Just Create Project Folder)
+</span>,
+                      ],
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "checked": true,
+                          "className": "state-value__input",
+                          "name": "codeGenerationOption",
+                          "onChange": [Function],
+                          "type": "radio",
+                          "value": "none",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "None (Just Create Project Folder)",
+                        },
+                        "ref": null,
+                        "rendered": "None (Just Create Project Folder)",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          checked={false}
+                          className="state-value__input"
+                          name="codeGenerationOption"
+                          onChange={[Function]}
+                          type="radio"
+                          value="scaffolding"
+/>,
+                        <span>
+                          Generate Scaffolding
+</span>,
+                      ],
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "checked": false,
+                          "className": "state-value__input",
+                          "name": "codeGenerationOption",
+                          "onChange": [Function],
+                          "type": "radio",
+                          "value": "scaffolding",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Generate Scaffolding",
+                        },
+                        "ref": null,
+                        "rendered": "Generate Scaffolding",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <input
+                          checked={false}
+                          className="state-value__input"
+                          name="codeGenerationOption"
+                          onChange={[Function]}
+                          type="radio"
+                          value="template"
+/>,
+                        <span>
+                          Use Existing Sample Template
+</span>,
+                      ],
+                      "className": "state-value__label",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "checked": false,
+                          "className": "state-value__input",
+                          "name": "codeGenerationOption",
+                          "onChange": [Function],
+                          "type": "radio",
+                          "value": "template",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": "input",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "Use Existing Sample Template",
+                        },
+                        "ref": null,
+                        "rendered": "Use Existing Sample Template",
+                        "type": "span",
+                      },
+                    ],
+                    "type": "label",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "project-dialog__vertical-bar",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div>
+                You’re all set!  Good luck on your extension!
+</div>,
+              "className": "project-dialog__content right",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "You’re all set!  Good luck on your extension!",
+              },
+              "ref": null,
+              "rendered": "You’re all set!  Good luck on your extension!",
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "dialog__divider",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "hr",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="bottom-bar__save disabled"
+                  onClick={[Function]}
+>
+                  Save
+</div>,
+                <div
+                  className="bottom-bar__cancel"
+                  onClick={[Function]}
+>
+                  Cancel
+</div>,
+              ],
+              "className": "dialog_bottom-bar",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Save",
+                  "className": "bottom-bar__save disabled",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Save",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Cancel",
+                  "className": "bottom-bar__cancel",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Cancel",
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="project-dialog__background"
+/>,
+          <div
+            className="project-dialog__dialog"
+>
+            <div
+                        className="dialog__top-bar-container"
+            >
+                        <div
+                                    className="top-bar-container__title"
+                        >
+                                    Create New Extension Project
+                        </div>
+                        <div
+                                    className="top-bar-container__escape"
+                                    onClick={[Function]}
+                        >
+                                    <img
+                                                alt="Close"
+                                                src="close_icon.png"
+                                    />
+                        </div>
+            </div>
+            <hr
+                        className="dialog__divider"
+            />
+            <div
+                        className="project-dialog__content left"
+            >
+                        <label
+                                    className="state-value__label"
+                        >
+                                    <span>
+                                                Extension Project Name
+                                    </span>
+                                    <input
+                                                className="state-value__input"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </label>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <div>
+                                                Choose Extension
+                                    </div>
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                <input
+                                                            checked={true}
+                                                            className="state-value__input"
+                                                            name="isLocal"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value={1}
+                                                />
+                                                <span>
+                                                            Create Local Extension
+                                                </span>
+                                    </label>
+                                    <div>
+                                                <div>
+                                                            Extension Type
+                                                </div>
+                                                <label
+                                                            className="state-value__label"
+                                                >
+                                                            <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={4}
+                                                            />
+                                                            <span>
+                                                                        Video Overlay
+                                                            </span>
+                                                </label>
+                                                <label
+                                                            className="state-value__label"
+                                                >
+                                                            <input
+                                                                        checked={true}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={1}
+                                                            />
+                                                            <span>
+                                                                        Panel
+                                                            </span>
+                                                </label>
+                                                <label
+                                                            className="state-value__label"
+                                                >
+                                                            <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={2}
+                                                            />
+                                                            <span>
+                                                                        Component
+                                                            </span>
+                                                </label>
+                                                <label
+                                                            className="state-value__label"
+                                                >
+                                                            <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={8}
+                                                            />
+                                                            <span>
+                                                                        Mobile
+                                                            </span>
+                                                </label>
+                                    </div>
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="isLocal"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value={0}
+                                                />
+                                                <span>
+                                                            Use Already Created Online Extension
+                                                </span>
+                                    </label>
+                        </div>
+                        <label
+                                    className="state-value__label"
+                                    title="This is the folder we will create to contain your project. You must have already created its parent folder."
+                        >
+                                    <span>
+                                                Project Folder
+                                    </span>
+                                    <input
+                                                className="state-value__input"
+                                                name="projectFolderPath"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                    />
+                        </label>
+                        <div
+                                    className="project-dialog__state-value"
+                        >
+                                    <div>
+                                                Add Code to Project
+                                    </div>
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                <input
+                                                            checked={true}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="none"
+                                                />
+                                                <span>
+                                                            None (Just Create Project Folder)
+                                                </span>
+                                    </label>
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="scaffolding"
+                                                />
+                                                <span>
+                                                            Generate Scaffolding
+                                                </span>
+                                    </label>
+                                    <label
+                                                className="state-value__label"
+                                    >
+                                                <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="template"
+                                                />
+                                                <span>
+                                                            Use Existing Sample Template
+                                                </span>
+                                    </label>
+                        </div>
+            </div>
+            <div
+                        className="project-dialog__vertical-bar"
+            />
+            <div
+                        className="project-dialog__content right"
+            >
+                        <div>
+                                    You’re all set!  Good luck on your extension!
+                        </div>
+            </div>
+            <hr
+                        className="dialog__divider"
+            />
+            <div
+                        className="dialog_bottom-bar"
+            >
+                        <div
+                                    className="bottom-bar__save disabled"
+                                    onClick={[Function]}
+                        >
+                                    Save
+                        </div>
+                        <div
+                                    className="bottom-bar__cancel"
+                                    onClick={[Function]}
+                        >
+                                    Cancel
+                        </div>
+            </div>
+</div>,
+        ],
+        "className": "project-dialog",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "project-dialog__background",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="dialog__top-bar-container"
+>
+                <div
+                                className="top-bar-container__title"
+                >
+                                Create New Extension Project
+                </div>
+                <div
+                                className="top-bar-container__escape"
+                                onClick={[Function]}
+                >
+                                <img
+                                                alt="Close"
+                                                src="close_icon.png"
+                                />
+                </div>
+</div>,
+              undefined,
+              <hr
+                className="dialog__divider"
+/>,
+              <div
+                className="project-dialog__content left"
+>
+                <label
+                                className="state-value__label"
+                >
+                                <span>
+                                                Extension Project Name
+                                </span>
+                                <input
+                                                className="state-value__input"
+                                                name="name"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </label>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <div>
+                                                Choose Extension
+                                </div>
+                                <label
+                                                className="state-value__label"
+                                >
+                                                <input
+                                                                checked={true}
+                                                                className="state-value__input"
+                                                                name="isLocal"
+                                                                onChange={[Function]}
+                                                                type="radio"
+                                                                value={1}
+                                                />
+                                                <span>
+                                                                Create Local Extension
+                                                </span>
+                                </label>
+                                <div>
+                                                <div>
+                                                                Extension Type
+                                                </div>
+                                                <label
+                                                                className="state-value__label"
+                                                >
+                                                                <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={4}
+                                                                />
+                                                                <span>
+                                                                                Video Overlay
+                                                                </span>
+                                                </label>
+                                                <label
+                                                                className="state-value__label"
+                                                >
+                                                                <input
+                                                                                checked={true}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={1}
+                                                                />
+                                                                <span>
+                                                                                Panel
+                                                                </span>
+                                                </label>
+                                                <label
+                                                                className="state-value__label"
+                                                >
+                                                                <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={2}
+                                                                />
+                                                                <span>
+                                                                                Component
+                                                                </span>
+                                                </label>
+                                                <label
+                                                                className="state-value__label"
+                                                >
+                                                                <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={8}
+                                                                />
+                                                                <span>
+                                                                                Mobile
+                                                                </span>
+                                                </label>
+                                </div>
+                                <label
+                                                className="state-value__label"
+                                >
+                                                <input
+                                                                checked={false}
+                                                                className="state-value__input"
+                                                                name="isLocal"
+                                                                onChange={[Function]}
+                                                                type="radio"
+                                                                value={0}
+                                                />
+                                                <span>
+                                                                Use Already Created Online Extension
+                                                </span>
+                                </label>
+                </div>
+                <label
+                                className="state-value__label"
+                                title="This is the folder we will create to contain your project. You must have already created its parent folder."
+                >
+                                <span>
+                                                Project Folder
+                                </span>
+                                <input
+                                                className="state-value__input"
+                                                name="projectFolderPath"
+                                                onChange={[Function]}
+                                                type="text"
+                                                value=""
+                                />
+                </label>
+                <div
+                                className="project-dialog__state-value"
+                >
+                                <div>
+                                                Add Code to Project
+                                </div>
+                                <label
+                                                className="state-value__label"
+                                >
+                                                <input
+                                                                checked={true}
+                                                                className="state-value__input"
+                                                                name="codeGenerationOption"
+                                                                onChange={[Function]}
+                                                                type="radio"
+                                                                value="none"
+                                                />
+                                                <span>
+                                                                None (Just Create Project Folder)
+                                                </span>
+                                </label>
+                                <label
+                                                className="state-value__label"
+                                >
+                                                <input
+                                                                checked={false}
+                                                                className="state-value__input"
+                                                                name="codeGenerationOption"
+                                                                onChange={[Function]}
+                                                                type="radio"
+                                                                value="scaffolding"
+                                                />
+                                                <span>
+                                                                Generate Scaffolding
+                                                </span>
+                                </label>
+                                <label
+                                                className="state-value__label"
+                                >
+                                                <input
+                                                                checked={false}
+                                                                className="state-value__input"
+                                                                name="codeGenerationOption"
+                                                                onChange={[Function]}
+                                                                type="radio"
+                                                                value="template"
+                                                />
+                                                <span>
+                                                                Use Existing Sample Template
+                                                </span>
+                                </label>
+                </div>
+</div>,
+              <div
+                className="project-dialog__vertical-bar"
+/>,
+              <div
+                className="project-dialog__content right"
+>
+                <div>
+                                You’re all set!  Good luck on your extension!
+                </div>
+</div>,
+              <hr
+                className="dialog__divider"
+/>,
+              <div
+                className="dialog_bottom-bar"
+>
+                <div
+                                className="bottom-bar__save disabled"
+                                onClick={[Function]}
+                >
+                                Save
+                </div>
+                <div
+                                className="bottom-bar__cancel"
+                                onClick={[Function]}
+                >
+                                Cancel
+                </div>
+</div>,
+            ],
+            "className": "project-dialog__dialog",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="top-bar-container__title"
+>
+                    Create New Extension Project
+</div>,
+                  <div
+                    className="top-bar-container__escape"
+                    onClick={[Function]}
+>
+                    <img
+                                        alt="Close"
+                                        src="close_icon.png"
+                    />
+</div>,
+                ],
+                "className": "dialog__top-bar-container",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Create New Extension Project",
+                    "className": "top-bar-container__title",
+                  },
+                  "ref": null,
+                  "rendered": "Create New Extension Project",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <img
+                      alt="Close"
+                      src="close_icon.png"
+/>,
+                    "className": "top-bar-container__escape",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Close",
+                      "src": "close_icon.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "dialog__divider",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="state-value__label"
+>
+                    <span>
+                                        Extension Project Name
+                    </span>
+                    <input
+                                        className="state-value__input"
+                                        name="name"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                    />
+</label>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <div>
+                                        Choose Extension
+                    </div>
+                    <label
+                                        className="state-value__label"
+                    >
+                                        <input
+                                                            checked={true}
+                                                            className="state-value__input"
+                                                            name="isLocal"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value={1}
+                                        />
+                                        <span>
+                                                            Create Local Extension
+                                        </span>
+                    </label>
+                    <div>
+                                        <div>
+                                                            Extension Type
+                                        </div>
+                                        <label
+                                                            className="state-value__label"
+                                        >
+                                                            <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={4}
+                                                            />
+                                                            <span>
+                                                                                Video Overlay
+                                                            </span>
+                                        </label>
+                                        <label
+                                                            className="state-value__label"
+                                        >
+                                                            <input
+                                                                                checked={true}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={1}
+                                                            />
+                                                            <span>
+                                                                                Panel
+                                                            </span>
+                                        </label>
+                                        <label
+                                                            className="state-value__label"
+                                        >
+                                                            <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={2}
+                                                            />
+                                                            <span>
+                                                                                Component
+                                                            </span>
+                                        </label>
+                                        <label
+                                                            className="state-value__label"
+                                        >
+                                                            <input
+                                                                                checked={false}
+                                                                                className="state-value__input"
+                                                                                name="extensionTypes"
+                                                                                onChange={[Function]}
+                                                                                type="checkbox"
+                                                                                value={8}
+                                                            />
+                                                            <span>
+                                                                                Mobile
+                                                            </span>
+                                        </label>
+                    </div>
+                    <label
+                                        className="state-value__label"
+                    >
+                                        <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="isLocal"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value={0}
+                                        />
+                                        <span>
+                                                            Use Already Created Online Extension
+                                        </span>
+                    </label>
+</div>,
+                  <label
+                    className="state-value__label"
+                    title="This is the folder we will create to contain your project. You must have already created its parent folder."
+>
+                    <span>
+                                        Project Folder
+                    </span>
+                    <input
+                                        className="state-value__input"
+                                        name="projectFolderPath"
+                                        onChange={[Function]}
+                                        type="text"
+                                        value=""
+                    />
+</label>,
+                  <div
+                    className="project-dialog__state-value"
+>
+                    <div>
+                                        Add Code to Project
+                    </div>
+                    <label
+                                        className="state-value__label"
+                    >
+                                        <input
+                                                            checked={true}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="none"
+                                        />
+                                        <span>
+                                                            None (Just Create Project Folder)
+                                        </span>
+                    </label>
+                    <label
+                                        className="state-value__label"
+                    >
+                                        <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="scaffolding"
+                                        />
+                                        <span>
+                                                            Generate Scaffolding
+                                        </span>
+                    </label>
+                    <label
+                                        className="state-value__label"
+                    >
+                                        <input
+                                                            checked={false}
+                                                            className="state-value__input"
+                                                            name="codeGenerationOption"
+                                                            onChange={[Function]}
+                                                            type="radio"
+                                                            value="template"
+                                        />
+                                        <span>
+                                                            Use Existing Sample Template
+                                        </span>
+                    </label>
+</div>,
+                ],
+                "className": "project-dialog__content left",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Extension Project Name
+</span>,
+                      <input
+                        className="state-value__input"
+                        name="name"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "state-value__label",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Extension Project Name",
+                      },
+                      "ref": null,
+                      "rendered": "Extension Project Name",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "name",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        Choose Extension
+</div>,
+                      <label
+                        className="state-value__label"
+>
+                        <input
+                                                checked={true}
+                                                className="state-value__input"
+                                                name="isLocal"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value={1}
+                        />
+                        <span>
+                                                Create Local Extension
+                        </span>
+</label>,
+                      <div>
+                        <div>
+                                                Extension Type
+                        </div>
+                        <label
+                                                className="state-value__label"
+                        >
+                                                <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={4}
+                                                />
+                                                <span>
+                                                                        Video Overlay
+                                                </span>
+                        </label>
+                        <label
+                                                className="state-value__label"
+                        >
+                                                <input
+                                                                        checked={true}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={1}
+                                                />
+                                                <span>
+                                                                        Panel
+                                                </span>
+                        </label>
+                        <label
+                                                className="state-value__label"
+                        >
+                                                <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={2}
+                                                />
+                                                <span>
+                                                                        Component
+                                                </span>
+                        </label>
+                        <label
+                                                className="state-value__label"
+                        >
+                                                <input
+                                                                        checked={false}
+                                                                        className="state-value__input"
+                                                                        name="extensionTypes"
+                                                                        onChange={[Function]}
+                                                                        type="checkbox"
+                                                                        value={8}
+                                                />
+                                                <span>
+                                                                        Mobile
+                                                </span>
+                        </label>
+</div>,
+                      <label
+                        className="state-value__label"
+>
+                        <input
+                                                checked={false}
+                                                className="state-value__input"
+                                                name="isLocal"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value={0}
+                        />
+                        <span>
+                                                Use Already Created Online Extension
+                        </span>
+</label>,
+                      false,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Choose Extension",
+                      },
+                      "ref": null,
+                      "rendered": "Choose Extension",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            checked={true}
+                            className="state-value__input"
+                            name="isLocal"
+                            onChange={[Function]}
+                            type="radio"
+                            value={1}
+/>,
+                          <span>
+                            Create Local Extension
+</span>,
+                        ],
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "checked": true,
+                            "className": "state-value__input",
+                            "name": "isLocal",
+                            "onChange": [Function],
+                            "type": "radio",
+                            "value": 1,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Create Local Extension",
+                          },
+                          "ref": null,
+                          "rendered": "Create Local Extension",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <div>
+                            Extension Type
+</div>,
+                          <label
+                            className="state-value__label"
+>
+                            <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="extensionTypes"
+                                                        onChange={[Function]}
+                                                        type="checkbox"
+                                                        value={4}
+                            />
+                            <span>
+                                                        Video Overlay
+                            </span>
+</label>,
+                          <label
+                            className="state-value__label"
+>
+                            <input
+                                                        checked={true}
+                                                        className="state-value__input"
+                                                        name="extensionTypes"
+                                                        onChange={[Function]}
+                                                        type="checkbox"
+                                                        value={1}
+                            />
+                            <span>
+                                                        Panel
+                            </span>
+</label>,
+                          <label
+                            className="state-value__label"
+>
+                            <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="extensionTypes"
+                                                        onChange={[Function]}
+                                                        type="checkbox"
+                                                        value={2}
+                            />
+                            <span>
+                                                        Component
+                            </span>
+</label>,
+                          <label
+                            className="state-value__label"
+>
+                            <input
+                                                        checked={false}
+                                                        className="state-value__input"
+                                                        name="extensionTypes"
+                                                        onChange={[Function]}
+                                                        type="checkbox"
+                                                        value={8}
+                            />
+                            <span>
+                                                        Mobile
+                            </span>
+</label>,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Extension Type",
+                          },
+                          "ref": null,
+                          "rendered": "Extension Type",
+                          "type": "div",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <input
+                                checked={false}
+                                className="state-value__input"
+                                name="extensionTypes"
+                                onChange={[Function]}
+                                type="checkbox"
+                                value={4}
+/>,
+                              <span>
+                                Video Overlay
+</span>,
+                            ],
+                            "className": "state-value__label",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "checked": false,
+                                "className": "state-value__input",
+                                "name": "extensionTypes",
+                                "onChange": [Function],
+                                "type": "checkbox",
+                                "value": 4,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Video Overlay",
+                              },
+                              "ref": null,
+                              "rendered": "Video Overlay",
+                              "type": "span",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <input
+                                checked={true}
+                                className="state-value__input"
+                                name="extensionTypes"
+                                onChange={[Function]}
+                                type="checkbox"
+                                value={1}
+/>,
+                              <span>
+                                Panel
+</span>,
+                            ],
+                            "className": "state-value__label",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "checked": true,
+                                "className": "state-value__input",
+                                "name": "extensionTypes",
+                                "onChange": [Function],
+                                "type": "checkbox",
+                                "value": 1,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Panel",
+                              },
+                              "ref": null,
+                              "rendered": "Panel",
+                              "type": "span",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <input
+                                checked={false}
+                                className="state-value__input"
+                                name="extensionTypes"
+                                onChange={[Function]}
+                                type="checkbox"
+                                value={2}
+/>,
+                              <span>
+                                Component
+</span>,
+                            ],
+                            "className": "state-value__label",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "checked": false,
+                                "className": "state-value__input",
+                                "name": "extensionTypes",
+                                "onChange": [Function],
+                                "type": "checkbox",
+                                "value": 2,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Component",
+                              },
+                              "ref": null,
+                              "rendered": "Component",
+                              "type": "span",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <input
+                                checked={false}
+                                className="state-value__input"
+                                name="extensionTypes"
+                                onChange={[Function]}
+                                type="checkbox"
+                                value={8}
+/>,
+                              <span>
+                                Mobile
+</span>,
+                            ],
+                            "className": "state-value__label",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "checked": false,
+                                "className": "state-value__input",
+                                "name": "extensionTypes",
+                                "onChange": [Function],
+                                "type": "checkbox",
+                                "value": 8,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "children": "Mobile",
+                              },
+                              "ref": null,
+                              "rendered": "Mobile",
+                              "type": "span",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                      ],
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            checked={false}
+                            className="state-value__input"
+                            name="isLocal"
+                            onChange={[Function]}
+                            type="radio"
+                            value={0}
+/>,
+                          <span>
+                            Use Already Created Online Extension
+</span>,
+                        ],
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "checked": false,
+                            "className": "state-value__input",
+                            "name": "isLocal",
+                            "onChange": [Function],
+                            "type": "radio",
+                            "value": 0,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Use Already Created Online Extension",
+                          },
+                          "ref": null,
+                          "rendered": "Use Already Created Online Extension",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "label",
+                    },
+                    false,
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Project Folder
+</span>,
+                      <input
+                        className="state-value__input"
+                        name="projectFolderPath"
+                        onChange={[Function]}
+                        type="text"
+                        value=""
+/>,
+                    ],
+                    "className": "state-value__label",
+                    "title": "This is the folder we will create to contain your project. You must have already created its parent folder.",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Project Folder",
+                      },
+                      "ref": null,
+                      "rendered": "Project Folder",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "state-value__input",
+                        "name": "projectFolderPath",
+                        "onChange": [Function],
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                  ],
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        Add Code to Project
+</div>,
+                      <label
+                        className="state-value__label"
+>
+                        <input
+                                                checked={true}
+                                                className="state-value__input"
+                                                name="codeGenerationOption"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="none"
+                        />
+                        <span>
+                                                None (Just Create Project Folder)
+                        </span>
+</label>,
+                      <label
+                        className="state-value__label"
+>
+                        <input
+                                                checked={false}
+                                                className="state-value__input"
+                                                name="codeGenerationOption"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="scaffolding"
+                        />
+                        <span>
+                                                Generate Scaffolding
+                        </span>
+</label>,
+                      <label
+                        className="state-value__label"
+>
+                        <input
+                                                checked={false}
+                                                className="state-value__input"
+                                                name="codeGenerationOption"
+                                                onChange={[Function]}
+                                                type="radio"
+                                                value="template"
+                        />
+                        <span>
+                                                Use Existing Sample Template
+                        </span>
+</label>,
+                    ],
+                    "className": "project-dialog__state-value",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add Code to Project",
+                      },
+                      "ref": null,
+                      "rendered": "Add Code to Project",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            checked={true}
+                            className="state-value__input"
+                            name="codeGenerationOption"
+                            onChange={[Function]}
+                            type="radio"
+                            value="none"
+/>,
+                          <span>
+                            None (Just Create Project Folder)
+</span>,
+                        ],
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "checked": true,
+                            "className": "state-value__input",
+                            "name": "codeGenerationOption",
+                            "onChange": [Function],
+                            "type": "radio",
+                            "value": "none",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "None (Just Create Project Folder)",
+                          },
+                          "ref": null,
+                          "rendered": "None (Just Create Project Folder)",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            checked={false}
+                            className="state-value__input"
+                            name="codeGenerationOption"
+                            onChange={[Function]}
+                            type="radio"
+                            value="scaffolding"
+/>,
+                          <span>
+                            Generate Scaffolding
+</span>,
+                        ],
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "checked": false,
+                            "className": "state-value__input",
+                            "name": "codeGenerationOption",
+                            "onChange": [Function],
+                            "type": "radio",
+                            "value": "scaffolding",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Generate Scaffolding",
+                          },
+                          "ref": null,
+                          "rendered": "Generate Scaffolding",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "label",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <input
+                            checked={false}
+                            className="state-value__input"
+                            name="codeGenerationOption"
+                            onChange={[Function]}
+                            type="radio"
+                            value="template"
+/>,
+                          <span>
+                            Use Existing Sample Template
+</span>,
+                        ],
+                        "className": "state-value__label",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "checked": false,
+                            "className": "state-value__input",
+                            "name": "codeGenerationOption",
+                            "onChange": [Function],
+                            "type": "radio",
+                            "value": "template",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": "input",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Use Existing Sample Template",
+                          },
+                          "ref": null,
+                          "rendered": "Use Existing Sample Template",
+                          "type": "span",
+                        },
+                      ],
+                      "type": "label",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "project-dialog__vertical-bar",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div>
+                  You’re all set!  Good luck on your extension!
+</div>,
+                "className": "project-dialog__content right",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "You’re all set!  Good luck on your extension!",
+                },
+                "ref": null,
+                "rendered": "You’re all set!  Good luck on your extension!",
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "dialog__divider",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "hr",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="bottom-bar__save disabled"
+                    onClick={[Function]}
+>
+                    Save
+</div>,
+                  <div
+                    className="bottom-bar__cancel"
+                    onClick={[Function]}
+>
+                    Cancel
+</div>,
+                ],
+                "className": "dialog_bottom-bar",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Save",
+                    "className": "bottom-bar__save disabled",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Save",
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cancel",
+                    "className": "bottom-bar__cancel",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Cancel",
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

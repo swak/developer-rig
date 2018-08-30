@@ -120,6 +120,7 @@ if (process.env.HOST) {
 let socketServer, wss;
 function configureApp(app) {
   ({ socketServer, wss } = require('./local-mode')(app, extension) | {});
+  require('./project')(app);
 }
 
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';

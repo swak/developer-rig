@@ -1,0 +1,1656 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectView /> config mode views renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProjectView
+    onChange={[Function]}
+    rigProject={
+        Object {
+            "backendCommand": "test",
+            "frontendFolderName": "test",
+            "isLocal": true,
+            "manifest": Object {
+              "authorName": "test",
+              "bitsEnabled": true,
+              "description": "test",
+              "iconUrls": Object {
+                "100x100": "test",
+              },
+              "id": "test",
+              "name": "test",
+              "requestIdentityLink": false,
+              "sku": "test",
+              "state": "test",
+              "summary": "test",
+              "vendorCode": "test",
+              "version": "0.0.1",
+              "views": Object {
+                "component": Object {
+                  "aspectHeight": 3000,
+                  "aspectWidth": 2500,
+                  "canLinkExternalContent": false,
+                  "size": 1024,
+                  "viewerUrl": "test",
+                  "zoom": false,
+                  "zoomPixels": 24,
+                },
+                "config": Object {
+                  "canLinkExternalContent": false,
+                  "viewerUrl": "test",
+                },
+                "liveConfig": Object {
+                  "canLinkExternalContent": false,
+                  "viewerUrl": "test",
+                },
+                "panel": Object {
+                  "canLinkExternalContent": false,
+                  "height": 300,
+                  "viewerUrl": "test",
+                },
+              },
+              "whitelistedConfigUrls": Array [],
+              "whitelistedPanelUrls": Array [],
+            },
+            "projectFolderPath": "test",
+            "secret": "test",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div>
+          <div
+                    className="project-view__state-value"
+          >
+                    <label
+                              className="props-value__label"
+                    >
+                              Extension Name
+                    </label>
+                    <input
+                              className="props-value__input"
+                              name="name"
+                              onChange={[Function]}
+                              type="text"
+                              value="test"
+                    />
+          </div>
+          <div
+                    className="project-view__state-value"
+          >
+                    <label
+                              className="props-value__label"
+                              title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+                    >
+                              Front-end Files Location
+                    </label>
+                    <input
+                              className="props-value__input"
+                              name="frontendFolderName"
+                              onChange={[Function]}
+                              type="text"
+                              value="test"
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Host with Rig
+                    </button>
+                    <span />
+          </div>
+          <div
+                    className="project-view__state-value"
+          >
+                    <label
+                              className="props-value__label"
+                              title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+                    >
+                              Back-end Run Command
+                    </label>
+                    <input
+                              className="props-value__input"
+                              name="backendCommand"
+                              onChange={[Function]}
+                              type="text"
+                              value="test"
+                    />
+                    <button
+                              onClick={[Function]}
+                    >
+                              Activate
+                    </button>
+                    <span />
+          </div>
+          <div
+                    className="project-view__state-value"
+          >
+                    <label
+                              className="props-value__label"
+                    >
+                              Project Folder
+                    </label>
+                    <input
+                              className="props-value__input"
+                              name="projectFolderPath"
+                              onChange={[Function]}
+                              type="text"
+                              value="test"
+                    />
+          </div>
+          <div
+                    className="project-view__state-value"
+          >
+                    <label
+                              className="props-value__label"
+                    >
+                              Extension Views
+                    </label>
+                    <div>
+                              Panel, Component
+                    </div>
+          </div>
+</div>,
+        <div />,
+        <div>
+          <div>
+                    How to Run an Extension in the Rig
+          </div>
+          <ol>
+                    <li>
+                              <div>
+                                        Host your front-end files.
+                              </div>
+                              <div>
+                                        You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                              </div>
+                    </li>
+                    <li>
+                              <div>
+                                        If your extension has a back-end, run it locally.
+                              </div>
+                              <div>
+                                        You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                              </div>
+                    </li>
+                    <li>
+                              <div>
+                                        Go to Extension Views and add the View Type that matches your extension.
+                              </div>
+                    </li>
+          </ol>
+          <button>
+                    View Tutorial
+          </button>
+          <button>
+                    Go to Documentation
+          </button>
+</div>,
+      ],
+      "className": "project-view__content",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="project-view__state-value"
+>
+              <label
+                            className="props-value__label"
+              >
+                            Extension Name
+              </label>
+              <input
+                            className="props-value__input"
+                            name="name"
+                            onChange={[Function]}
+                            type="text"
+                            value="test"
+              />
+</div>,
+            <div
+              className="project-view__state-value"
+>
+              <label
+                            className="props-value__label"
+                            title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+              >
+                            Front-end Files Location
+              </label>
+              <input
+                            className="props-value__input"
+                            name="frontendFolderName"
+                            onChange={[Function]}
+                            type="text"
+                            value="test"
+              />
+              <button
+                            onClick={[Function]}
+              >
+                            Host with Rig
+              </button>
+              <span />
+</div>,
+            <div
+              className="project-view__state-value"
+>
+              <label
+                            className="props-value__label"
+                            title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+              >
+                            Back-end Run Command
+              </label>
+              <input
+                            className="props-value__input"
+                            name="backendCommand"
+                            onChange={[Function]}
+                            type="text"
+                            value="test"
+              />
+              <button
+                            onClick={[Function]}
+              >
+                            Activate
+              </button>
+              <span />
+</div>,
+            <div
+              className="project-view__state-value"
+>
+              <label
+                            className="props-value__label"
+              >
+                            Project Folder
+              </label>
+              <input
+                            className="props-value__input"
+                            name="projectFolderPath"
+                            onChange={[Function]}
+                            type="text"
+                            value="test"
+              />
+</div>,
+            <div
+              className="project-view__state-value"
+>
+              <label
+                            className="props-value__label"
+              >
+                            Extension Views
+              </label>
+              <div>
+                            Panel, Component
+              </div>
+</div>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="props-value__label"
+>
+                  Extension Name
+</label>,
+                <input
+                  className="props-value__input"
+                  name="name"
+                  onChange={[Function]}
+                  type="text"
+                  value="test"
+/>,
+              ],
+              "className": "project-view__state-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Extension Name",
+                  "className": "props-value__label",
+                },
+                "ref": null,
+                "rendered": "Extension Name",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "props-value__input",
+                  "name": "name",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="props-value__label"
+                  title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+>
+                  Front-end Files Location
+</label>,
+                <input
+                  className="props-value__input"
+                  name="frontendFolderName"
+                  onChange={[Function]}
+                  type="text"
+                  value="test"
+/>,
+                <button
+                  onClick={[Function]}
+>
+                  Host with Rig
+</button>,
+                <span />,
+              ],
+              "className": "project-view__state-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Front-end Files Location",
+                  "className": "props-value__label",
+                  "title": "This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.",
+                },
+                "ref": null,
+                "rendered": "Front-end Files Location",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "props-value__input",
+                  "name": "frontendFolderName",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Host with Rig",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Host with Rig",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="props-value__label"
+                  title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+>
+                  Back-end Run Command
+</label>,
+                <input
+                  className="props-value__input"
+                  name="backendCommand"
+                  onChange={[Function]}
+                  type="text"
+                  value="test"
+/>,
+                <button
+                  onClick={[Function]}
+>
+                  Activate
+</button>,
+                <span />,
+              ],
+              "className": "project-view__state-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Back-end Run Command",
+                  "className": "props-value__label",
+                  "title": "This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.",
+                },
+                "ref": null,
+                "rendered": "Back-end Run Command",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "props-value__input",
+                  "name": "backendCommand",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Activate",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Activate",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "span",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="props-value__label"
+>
+                  Project Folder
+</label>,
+                <input
+                  className="props-value__input"
+                  name="projectFolderPath"
+                  onChange={[Function]}
+                  type="text"
+                  value="test"
+/>,
+              ],
+              "className": "project-view__state-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Project Folder",
+                  "className": "props-value__label",
+                },
+                "ref": null,
+                "rendered": "Project Folder",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "props-value__input",
+                  "name": "projectFolderPath",
+                  "onChange": [Function],
+                  "type": "text",
+                  "value": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="props-value__label"
+>
+                  Extension Views
+</label>,
+                <div>
+                  Panel, Component
+</div>,
+              ],
+              "className": "project-view__state-value",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Extension Views",
+                  "className": "props-value__label",
+                },
+                "ref": null,
+                "rendered": "Extension Views",
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Panel, Component",
+                },
+                "ref": null,
+                "rendered": "Panel, Component",
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              How to Run an Extension in the Rig
+</div>,
+            <ol>
+              <li>
+                            <div>
+                                          Host your front-end files.
+                            </div>
+                            <div>
+                                          You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                            </div>
+              </li>
+              <li>
+                            <div>
+                                          If your extension has a back-end, run it locally.
+                            </div>
+                            <div>
+                                          You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                            </div>
+              </li>
+              <li>
+                            <div>
+                                          Go to Extension Views and add the View Type that matches your extension.
+                            </div>
+              </li>
+</ol>,
+            <button>
+              View Tutorial
+</button>,
+            <button>
+              Go to Documentation
+</button>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "How to Run an Extension in the Rig",
+            },
+            "ref": null,
+            "rendered": "How to Run an Extension in the Rig",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <div>
+                                    Host your front-end files.
+                  </div>
+                  <div>
+                                    You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                  </div>
+</li>,
+                <li>
+                  <div>
+                                    If your extension has a back-end, run it locally.
+                  </div>
+                  <div>
+                                    You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                  </div>
+</li>,
+                <li>
+                  <div>
+                                    Go to Extension Views and add the View Type that matches your extension.
+                  </div>
+</li>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      Host your front-end files.
+</div>,
+                    <div>
+                      You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+</div>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Host your front-end files.",
+                    },
+                    "ref": null,
+                    "rendered": "Host your front-end files.",
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "You can host with the Rig by pointing it at the location of your HTML files and clicking the \\"Host with Rig\\" button.",
+                    },
+                    "ref": null,
+                    "rendered": "You can host with the Rig by pointing it at the location of your HTML files and clicking the \\"Host with Rig\\" button.",
+                    "type": "div",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <div>
+                      If your extension has a back-end, run it locally.
+</div>,
+                    <div>
+                      You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+</div>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "If your extension has a back-end, run it locally.",
+                    },
+                    "ref": null,
+                    "rendered": "If your extension has a back-end, run it locally.",
+                    "type": "div",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "You can add the command to activate your back-end and trigger it from the Rig with the \\"Activate\\" button.",
+                    },
+                    "ref": null,
+                    "rendered": "You can add the command to activate your back-end and trigger it from the Rig with the \\"Activate\\" button.",
+                    "type": "div",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div>
+                    Go to Extension Views and add the View Type that matches your extension.
+</div>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Go to Extension Views and add the View Type that matches your extension.",
+                  },
+                  "ref": null,
+                  "rendered": "Go to Extension Views and add the View Type that matches your extension.",
+                  "type": "div",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ol",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "View Tutorial",
+            },
+            "ref": null,
+            "rendered": "View Tutorial",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Go to Documentation",
+            },
+            "ref": null,
+            "rendered": "Go to Documentation",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div>
+            <div
+                        className="project-view__state-value"
+            >
+                        <label
+                                    className="props-value__label"
+                        >
+                                    Extension Name
+                        </label>
+                        <input
+                                    className="props-value__input"
+                                    name="name"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                        />
+            </div>
+            <div
+                        className="project-view__state-value"
+            >
+                        <label
+                                    className="props-value__label"
+                                    title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+                        >
+                                    Front-end Files Location
+                        </label>
+                        <input
+                                    className="props-value__input"
+                                    name="frontendFolderName"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                        />
+                        <button
+                                    onClick={[Function]}
+                        >
+                                    Host with Rig
+                        </button>
+                        <span />
+            </div>
+            <div
+                        className="project-view__state-value"
+            >
+                        <label
+                                    className="props-value__label"
+                                    title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+                        >
+                                    Back-end Run Command
+                        </label>
+                        <input
+                                    className="props-value__input"
+                                    name="backendCommand"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                        />
+                        <button
+                                    onClick={[Function]}
+                        >
+                                    Activate
+                        </button>
+                        <span />
+            </div>
+            <div
+                        className="project-view__state-value"
+            >
+                        <label
+                                    className="props-value__label"
+                        >
+                                    Project Folder
+                        </label>
+                        <input
+                                    className="props-value__input"
+                                    name="projectFolderPath"
+                                    onChange={[Function]}
+                                    type="text"
+                                    value="test"
+                        />
+            </div>
+            <div
+                        className="project-view__state-value"
+            >
+                        <label
+                                    className="props-value__label"
+                        >
+                                    Extension Views
+                        </label>
+                        <div>
+                                    Panel, Component
+                        </div>
+            </div>
+</div>,
+          <div />,
+          <div>
+            <div>
+                        How to Run an Extension in the Rig
+            </div>
+            <ol>
+                        <li>
+                                    <div>
+                                                Host your front-end files.
+                                    </div>
+                                    <div>
+                                                You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                                    </div>
+                        </li>
+                        <li>
+                                    <div>
+                                                If your extension has a back-end, run it locally.
+                                    </div>
+                                    <div>
+                                                You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                                    </div>
+                        </li>
+                        <li>
+                                    <div>
+                                                Go to Extension Views and add the View Type that matches your extension.
+                                    </div>
+                        </li>
+            </ol>
+            <button>
+                        View Tutorial
+            </button>
+            <button>
+                        Go to Documentation
+            </button>
+</div>,
+        ],
+        "className": "project-view__content",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="project-view__state-value"
+>
+                <label
+                                className="props-value__label"
+                >
+                                Extension Name
+                </label>
+                <input
+                                className="props-value__input"
+                                name="name"
+                                onChange={[Function]}
+                                type="text"
+                                value="test"
+                />
+</div>,
+              <div
+                className="project-view__state-value"
+>
+                <label
+                                className="props-value__label"
+                                title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+                >
+                                Front-end Files Location
+                </label>
+                <input
+                                className="props-value__input"
+                                name="frontendFolderName"
+                                onChange={[Function]}
+                                type="text"
+                                value="test"
+                />
+                <button
+                                onClick={[Function]}
+                >
+                                Host with Rig
+                </button>
+                <span />
+</div>,
+              <div
+                className="project-view__state-value"
+>
+                <label
+                                className="props-value__label"
+                                title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+                >
+                                Back-end Run Command
+                </label>
+                <input
+                                className="props-value__input"
+                                name="backendCommand"
+                                onChange={[Function]}
+                                type="text"
+                                value="test"
+                />
+                <button
+                                onClick={[Function]}
+                >
+                                Activate
+                </button>
+                <span />
+</div>,
+              <div
+                className="project-view__state-value"
+>
+                <label
+                                className="props-value__label"
+                >
+                                Project Folder
+                </label>
+                <input
+                                className="props-value__input"
+                                name="projectFolderPath"
+                                onChange={[Function]}
+                                type="text"
+                                value="test"
+                />
+</div>,
+              <div
+                className="project-view__state-value"
+>
+                <label
+                                className="props-value__label"
+                >
+                                Extension Views
+                </label>
+                <div>
+                                Panel, Component
+                </div>
+</div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="props-value__label"
+>
+                    Extension Name
+</label>,
+                  <input
+                    className="props-value__input"
+                    name="name"
+                    onChange={[Function]}
+                    type="text"
+                    value="test"
+/>,
+                ],
+                "className": "project-view__state-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Extension Name",
+                    "className": "props-value__label",
+                  },
+                  "ref": null,
+                  "rendered": "Extension Name",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "props-value__input",
+                    "name": "name",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="props-value__label"
+                    title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
+>
+                    Front-end Files Location
+</label>,
+                  <input
+                    className="props-value__input"
+                    name="frontendFolderName"
+                    onChange={[Function]}
+                    type="text"
+                    value="test"
+/>,
+                  <button
+                    onClick={[Function]}
+>
+                    Host with Rig
+</button>,
+                  <span />,
+                ],
+                "className": "project-view__state-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Front-end Files Location",
+                    "className": "props-value__label",
+                    "title": "This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.",
+                  },
+                  "ref": null,
+                  "rendered": "Front-end Files Location",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "props-value__input",
+                    "name": "frontendFolderName",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Host with Rig",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Host with Rig",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="props-value__label"
+                    title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
+>
+                    Back-end Run Command
+</label>,
+                  <input
+                    className="props-value__input"
+                    name="backendCommand"
+                    onChange={[Function]}
+                    type="text"
+                    value="test"
+/>,
+                  <button
+                    onClick={[Function]}
+>
+                    Activate
+</button>,
+                  <span />,
+                ],
+                "className": "project-view__state-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Back-end Run Command",
+                    "className": "props-value__label",
+                    "title": "This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.",
+                  },
+                  "ref": null,
+                  "rendered": "Back-end Run Command",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "props-value__input",
+                    "name": "backendCommand",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Activate",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Activate",
+                  "type": "button",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "",
+                  },
+                  "ref": null,
+                  "rendered": "",
+                  "type": "span",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="props-value__label"
+>
+                    Project Folder
+</label>,
+                  <input
+                    className="props-value__input"
+                    name="projectFolderPath"
+                    onChange={[Function]}
+                    type="text"
+                    value="test"
+/>,
+                ],
+                "className": "project-view__state-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Project Folder",
+                    "className": "props-value__label",
+                  },
+                  "ref": null,
+                  "rendered": "Project Folder",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "props-value__input",
+                    "name": "projectFolderPath",
+                    "onChange": [Function],
+                    "type": "text",
+                    "value": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <label
+                    className="props-value__label"
+>
+                    Extension Views
+</label>,
+                  <div>
+                    Panel, Component
+</div>,
+                ],
+                "className": "project-view__state-value",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Extension Views",
+                    "className": "props-value__label",
+                  },
+                  "ref": null,
+                  "rendered": "Extension Views",
+                  "type": "label",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Panel, Component",
+                  },
+                  "ref": null,
+                  "rendered": "Panel, Component",
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                How to Run an Extension in the Rig
+</div>,
+              <ol>
+                <li>
+                                <div>
+                                                Host your front-end files.
+                                </div>
+                                <div>
+                                                You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                                </div>
+                </li>
+                <li>
+                                <div>
+                                                If your extension has a back-end, run it locally.
+                                </div>
+                                <div>
+                                                You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                                </div>
+                </li>
+                <li>
+                                <div>
+                                                Go to Extension Views and add the View Type that matches your extension.
+                                </div>
+                </li>
+</ol>,
+              <button>
+                View Tutorial
+</button>,
+              <button>
+                Go to Documentation
+</button>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "How to Run an Extension in the Rig",
+              },
+              "ref": null,
+              "rendered": "How to Run an Extension in the Rig",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <div>
+                                        Host your front-end files.
+                    </div>
+                    <div>
+                                        You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+                    </div>
+</li>,
+                  <li>
+                    <div>
+                                        If your extension has a back-end, run it locally.
+                    </div>
+                    <div>
+                                        You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+                    </div>
+</li>,
+                  <li>
+                    <div>
+                                        Go to Extension Views and add the View Type that matches your extension.
+                    </div>
+</li>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        Host your front-end files.
+</div>,
+                      <div>
+                        You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Host your front-end files.",
+                      },
+                      "ref": null,
+                      "rendered": "Host your front-end files.",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "You can host with the Rig by pointing it at the location of your HTML files and clicking the \\"Host with Rig\\" button.",
+                      },
+                      "ref": null,
+                      "rendered": "You can host with the Rig by pointing it at the location of your HTML files and clicking the \\"Host with Rig\\" button.",
+                      "type": "div",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <div>
+                        If your extension has a back-end, run it locally.
+</div>,
+                      <div>
+                        You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.
+</div>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "If your extension has a back-end, run it locally.",
+                      },
+                      "ref": null,
+                      "rendered": "If your extension has a back-end, run it locally.",
+                      "type": "div",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "You can add the command to activate your back-end and trigger it from the Rig with the \\"Activate\\" button.",
+                      },
+                      "ref": null,
+                      "rendered": "You can add the command to activate your back-end and trigger it from the Rig with the \\"Activate\\" button.",
+                      "type": "div",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <div>
+                      Go to Extension Views and add the View Type that matches your extension.
+</div>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Go to Extension Views and add the View Type that matches your extension.",
+                    },
+                    "ref": null,
+                    "rendered": "Go to Extension Views and add the View Type that matches your extension.",
+                    "type": "div",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ol",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Tutorial",
+              },
+              "ref": null,
+              "rendered": "View Tutorial",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Go to Documentation",
+              },
+              "ref": null,
+              "rendered": "Go to Documentation",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

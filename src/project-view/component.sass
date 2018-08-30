@@ -1,0 +1,86 @@
+.view
+  border: 1px solid #D3D0D6
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+.nono_zone:before
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  content: "";
+  opacity: 0.6;
+  background-color: #6441a4;
+  border: 2px solid #b19dd8;
+  box-sizing: border-box;
+
+.nono_zone:after
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 80px;
+  content: "";
+  opacity: 0.6;
+  background-color: #6441a4;
+  border: 2px solid #b19dd8;
+  box-sizing: border-box;
+
+.component-view
+  background-color: #322F37
+  overflow: hidden
+
+.view__wrapper
+  padding: 2em
+  padding-top: 0
+  border-left: 1px solid #DAD8DE
+  border-right: 1px solid #DAD8DE
+  border-bottom: 1px solid #DAD8DE
+  flex-grow: 1
+  flex-basis: auto
+  display: flex
+  flex-direction: column
+
+.view__header
+  padding-top: 1em
+  padding-bottom: 1em
+  height: 20px
+  display: flex
+
+.view__header-container
+  display: flex
+  flex: 1
+  flex-direction: row
+  justify-content: flex-end
+
+.view__close_button
+  color: #511798
+  cursor: pointer
+  visibility: hidden
+
+.visible
+  visibility: visible
+
+.view__descriptor
+  padding-right: 10px
+  font-size: .75em
+  color: #A4A4A4
+  margin-right: auto
+
+.view__edit_button
+  color: white
+  background-color: #7D55C7
+  border: 1px solid #7D55C7
+  text-align: center
+  width: 50px
+  height: 25px
+  vertical-align: middle
+  line-height: 25px
+  cursor: pointer
+  margin-right: .5em
+  align-self: flex-end
+  font-size: .75em

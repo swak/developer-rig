@@ -5,10 +5,10 @@ import { toCamelCase } from '../util/case';
 const API_HOST = process.env.API_HOST || 'api.twitch.tv';
 
 const API = {
-  async get<T>(path: string, message4xx: string, headers?: HeadersInit): Promise<T> {
+  async get<T>(path: string, message4xx?: string, headers?: HeadersInit): Promise<T> {
     return API.fetch<T>('GET', path, message4xx, headers);
   },
-  async post<T = void>(path: string, body: any, message4xx: string, headers?: HeadersInit): Promise<T> {
+  async post<T = void>(path: string, body: any, message4xx?: string, headers?: HeadersInit): Promise<T> {
     return API.fetch<T>('POST', path, message4xx, headers, body);
   },
   async fetch<T>(method: 'GET' | 'POST', path: string, message4xx: string, headers: HeadersInit, body?: any): Promise<T> {
@@ -28,18 +28,49 @@ const API = {
     }
     const url = new URL(path, `https://${API_HOST}`);
     const response = await fetch(url.toString(), request);
-    if (response.status >= 400 && response.status < 500) {
-      throw new Error(message4xx);
-    } else if (response.status >= 500) {
-      const message = 'Cannot access Twitch API.  Try again later.';
-      throw new Error(await response.json().then((json) => json.message || message).catch(() => message));
+    if (response.status >= 400) {
+      if (response.status < 500 && message4xx) {
+        throw new Error(message4xx);
+      } else {
+        const message = 'Cannot access Twitch API.  Try again later.';
+        throw new Error(await response.json().then((json) => json.message || message).catch(() => message));
+      }
     } else if (response.status !== 204) {
       return await response.json() as T;
     }
   }
 }
 
-export async function fetchExtensionManifest(id: string, version: string, jwt: string): Promise<ExtensionManifest> {
+export async function createProject(projectFolderPath: string, codeGenerationOption: string, exampleIndex: number) {
+  const url = 'https://localhost.rig.twitch.tv:3000/project';
+  return await API.post(url, { projectFolderPath, codeGenerationOption, exampleIndex });
+}
+
+export async function startFrontend(frontendFolderPath: string, port: number, projectFolderPath: string) {
+  const url = 'https://localhost.rig.twitch.tv:3000/frontend';
+  return await API.post(url, { frontendFolderPath, port, projectFolderPath });
+}
+
+export async function startBackend(backendCommand: string, projectFolderPath: string) {
+  const url = 'https://localhost.rig.twitch.tv:3000/backend';
+  return await API.post(url, { backendCommand, projectFolderPath });
+}
+
+export interface Example {
+  title: string;
+  description: string;
+  repository: string;
+  frontendFolderName: string;
+  backendCommand: string;
+  npm: string[];
+}
+
+export async function fetchExamples(): Promise<Example[]> {
+  const url = 'https://localhost.rig.twitch.tv:3000/examples';
+  return await API.get<Example[]>(url);
+}
+
+export async function fetchExtensionManifest(isLocal: boolean, id: string, version: string, jwt: string): Promise<ExtensionManifest> {
   const search = {
     limit: 1,
     searches: [
@@ -47,7 +78,8 @@ export async function fetchExtensionManifest(id: string, version: string, jwt: s
       { field: 'version', term: version },
     ],
   };
-  const response = await API.post<{ extensions: any[] }>('/extensions/search', search, `Unable to authorize for client id ${id}`, {
+  const apiDomain = isLocal ? 'localhost.rig.twitch.tv:3000' : 'api.twitch.tv';
+  const response = await API.post<{ extensions: any[] }>(`https://${apiDomain}/extensions/search`, search, `Unable to authorize for client id ${id}`, {
     Authorization: `Bearer ${jwt}`,
     'Client-ID': id,
   });
@@ -56,7 +88,7 @@ export async function fetchExtensionManifest(id: string, version: string, jwt: s
     const manifest = toCamelCase(extensions[0]) as ExtensionManifest;
     return manifest;
   }
-  throw new Error('Unable to retrieve extension manifest; please verify EXT_SECRET');
+  throw new Error('Unable to retrieve extension manifest; please verify your client ID, secret, and version');
 }
 
 interface UsersResponse {
@@ -138,10 +170,10 @@ export async function fetchNewRelease() {
   const tagName = response.tag_name;
   const zipUrl = response.assets[0].browser_download_url;
   if (tagName && zipUrl) {
-    return Promise.resolve({
+    return {
       tagName,
       zipUrl,
-    });
+    };
   }
   throw new Error('Cannot get GitHub developer rig latest release');
 }

@@ -1,8 +1,19 @@
-import { createSignedToken } from './token';
+import { createSignedToken, TokenSpec } from './token';
 import { ExtensionManifest } from '../core/models/manifest';
 import { generateId } from './generate-id';
 import { RigRole } from '../constants/rig';
 import { ViewerTypes } from '../constants/viewer-types';
+import { fetchExtensionManifest } from './api';
+
+export async function fetchUserExtensionManifest(isLocal: boolean, userId: string, secret: string, clientId: string, version: string): Promise<ExtensionManifest> {
+  const tokenSpec: TokenSpec = {
+    role: RigRole,
+    secret,
+    userId,
+  };
+  const token = createSignedToken(tokenSpec);
+  return await fetchExtensionManifest(isLocal, clientId, version, token);
+}
 
 export function createExtensionToken(newRole: string, linkedUserId: string, channelId: string, secret: string, opaqueId: string): string {
   const opaque = opaqueId ? opaqueId : generateId(15);

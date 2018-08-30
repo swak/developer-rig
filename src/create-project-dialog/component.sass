@@ -1,15 +1,15 @@
 @import "../dialog-component/component.sass"
-.rig-configurations-view
+.project-dialog
 
 
-.rig-configurations-view__background
+.project-dialog__background
   @extend .dialog__backdrop
 
-.rig-configurations-view__dialog
+.project-dialog__dialog
   @extend .dialog
-  height: 400px
+  height: 650px
 
-.rig-configurations-view__content
+.project-dialog__content
   @extend .container__left-block
   white-space: pre
   overflow-y: auto
@@ -36,7 +36,7 @@
 .dialog__bottom-bar
   @extend .container__left-block
 
-.bottom-bar__refresh
+.bottom-bar__save
   @include bottom-bar-box(white, #7D55C7)
 
 .bottom-bar__cancel
