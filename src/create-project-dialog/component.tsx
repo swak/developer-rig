@@ -141,10 +141,14 @@ export class CreateProjectDialog extends React.Component<Props, State>{
         this.setState({ errorMessage: 'Creating your project...' });
         await createProject(this.state.rigProject.projectFolderPath, this.state.codeGenerationOption, this.state.exampleIndex);
         const example = this.state.examples[this.state.exampleIndex];
+        const backendCommand = example.backendCommand
+          .replace('{clientId}', this.state.clientId)
+          .replace('{secret}', this.state.rigProject.secret)
+          .replace('{ownerId}', this.props.userId);
         const rigProject = {
           ...this.state.rigProject,
           frontendFolderName: example.frontendFolderName,
-          backendCommand: example.backendCommand,
+          backendCommand,
         };
         this.props.saveHandler(rigProject as RigProject);
       } catch (ex) {

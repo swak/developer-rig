@@ -11,8 +11,8 @@ module.exports = function(app) {
       description: 'Click a button to change the color on a circle.',
       repository: 'twitchdev/extensions-hello-world',
       frontendFolderName: join('extensions-hello-world', 'public'),
-      backendCommand: process.platform === 'win32' ? 'node extensions-hello-world\\services\\backend -c "%CLIENT_ID%" -s "%SECRET%" -o "%OWNER_ID%"' :
-        'node extensions-hello-world/services/backend -c "$CLIENT_ID" -s "$SECRET" -o "$OWNER_ID"',
+      backendCommand: process.platform === 'win32' ? 'node extensions-hello-world\\services\\backend -c "{clientId}" -s "{secret}" -o "{ownerId}"' :
+        'node extensions-hello-world/services/backend -c "{clientId}" -s "{secret}" -o "{ownerId}"',
       npm: ['i'],
       sslFolderName: 'conf',
     },
