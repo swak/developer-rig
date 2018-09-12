@@ -13,20 +13,20 @@ import * as runlist from '../../runlist/runlist.json';
 import { RunList } from '../core/models/run-list';
 import { ExtensionAnchor, ExtensionMode, ExtensionViewType, ExtensionPlatform } from '../constants/extension-coordinator';
 
-export const ConfigViewWrapperDimensions = Object.freeze({
-  overflow: "auto",
-  height: "70vh",
-});
+export const ConfigViewWrapperDimensions = {
+  overflow: 'auto',
+  height: '70vh',
+};
 
-export const ConfigViewDimensions = Object.freeze({
-  width: "100%",
-  height: "700px",
-});
+export const ConfigViewDimensions = {
+  width: '100%',
+  height: '700px',
+};
 
-export const PanelViewDimensions = Object.freeze({
-  width: "320",
-  height: "300",
-});
+export const PanelViewDimensions = {
+  width: '320',
+  height: '300',
+};
 
 interface ExtensionViewProps {
   id: string;
@@ -99,7 +99,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           <ExtensionComponentView
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
-            className="view"
+            className='view'
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`component-${this.props.id}`}
@@ -114,7 +114,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           <ExtensionMobileView
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
-            className="view"
+            className='view'
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`mobile-${this.props.id}`}
@@ -127,11 +127,11 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
         break;
       case ExtensionAnchor.Overlay:
         view = (
-          <div className="view nono_zone" style={extensionProps.viewStyles}>
+          <div className='view nono_zone' style={extensionProps.viewStyles}>
             <ExtensionFrame
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
-              className="view"
+              className='view'
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}
@@ -146,7 +146,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
           <ExtensionMobileView
             bindIframeToParent={this.bindIframeToParent}
             channelId={this.props.channelId}
-            className="view"
+            className='view'
             extension={this.props.extension}
             frameSize={this.props.frameSize}
             id={`mobile-${this.props.id}`}
@@ -159,11 +159,11 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
         break;
       case ExtensionAnchor.Overlay:
         view = (
-          <div className="view nono_zone" style={extensionProps.viewStyles}>
+          <div className='view nono_zone' style={extensionProps.viewStyles}>
             <ExtensionFrame
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
-              className="view"
+              className='view'
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}
@@ -176,11 +176,11 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
       default:
         // standard view for panels, live config, and broadcaster config
         view = (
-          <div className="view" style={extensionProps.viewStyles}>
+          <div className='view' style={extensionProps.viewStyles}>
             <ExtensionFrame
               bindIframeToParent={this.bindIframeToParent}
               channelId={this.props.channelId}
-              className="view"
+              className='view'
               extension={this.props.extension}
               frameId={`frameid-${this.props.id}`}
               installationAbilities={this.props.installationAbilities}
@@ -229,10 +229,11 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
         extensionProps.viewStyles = ConfigViewDimensions;
         extensionProps.viewWrapperStyles = ConfigViewWrapperDimensions;
         break;
-      case ExtensionViewType.LiveConfig:
+
+      case ExtensionMode.Dashboard:
         extensionProps.viewStyles = {
           height: panelHeight + 'px',
-          width: PanelViewDimensions.width + 'px',
+          width: '100%',
         }
         break;
       default:
