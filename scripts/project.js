@@ -14,6 +14,7 @@ module.exports = function(app) {
       backendCommand: process.platform === 'win32' ? 'node extensions-hello-world\\services\\backend -c "%CLIENT_ID%" -s "%SECRET%" -o "%OWNER_ID%"' :
         'node extensions-hello-world/services/backend -c "$CLIENT_ID" -s "$SECRET" -o "$OWNER_ID"',
       npm: ['i'],
+      sslFolderName: 'conf',
     },
     {
       title: 'Something Else',
@@ -140,7 +141,7 @@ module.exports = function(app) {
         throw new Error(`Invalid project folder "${projectFolderPath}"; it must be an absolute path`);
       }
       if (codeGenerationOption === 'template') {
-        const { repository, npm } = examples[exampleIndex];
+        const { repository, npm, sslFolderName } = examples[exampleIndex];
         if (repository) {
           const exampleFolderPath = await fetchExample(repository, projectFolderPath);
           // If necessary, run npm.
@@ -152,6 +153,15 @@ module.exports = function(app) {
             if (error || status) {
               throw new Error('npm failure');
             }
+          }
+
+          // If necessary, copy SSL certificates.
+          if (sslFolderName) {
+            const sslFolderPath = join(exampleFolderPath, sslFolderName);
+            if (!fs.existsSync(sslFolderPath)) {
+              fs.mkdirSync(sslFolderPath);
+            }
+            ['crt', 'key'].forEach((ext) => fs.copyFileSync(join('ssl', `server.${ext}`), join(sslFolderPath, `server.${ext}`)));
           }
         } else {
           console.warn('TODO:  handle non-GitHub examples.');
