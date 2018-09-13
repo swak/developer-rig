@@ -82,13 +82,13 @@ module.exports = function(app) {
   });
 
   app.post('/frontend', async (req, res) => {
-    const { frontendFolderPath, port, projectFolderPath, isLocal } = req.body;
+    const { frontendFolderPath, isLocal, port, projectFolderPath } = req.body;
     try {
       if (process.platform === 'win32') {
         const commandFilePath = join(process.env.TEMP, `rfe${Math.floor(99999 * Math.random())}.cmd`);
         const fout = fs.createWriteStream(commandFilePath);
         try {
-          fout.write(`yarn host -d "${join(projectFolderPath, frontendFolderPath)}" -p ${port}${isLocal ? '-l' : ''}`);
+          fout.write(`yarn host -d "${join(projectFolderPath, frontendFolderPath)}" -p ${port}${isLocal ? ' -l' : ''}`);
           fout.end();
           await new Promise((resolve, reject) => {
             fout.on('error', (ex) => reject(ex));

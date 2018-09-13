@@ -72,9 +72,11 @@ if (cmdOptions.local) {
 } else {
   process.env.API_HOST = "api.twitch.tv";
 }
-console.log('clientId:', process.env.EXT_CLIENT_ID);
-console.log('version:', process.env.EXT_VERSION);
-console.log('secret:', process.env.EXT_SECRET);
+if (process.argv.length > 2) {
+  console.log('clientId:', process.env.EXT_CLIENT_ID);
+  console.log('version:', process.env.EXT_VERSION);
+  console.log('secret:', process.env.EXT_SECRET);
+}
 
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will

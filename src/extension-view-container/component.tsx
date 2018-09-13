@@ -9,6 +9,7 @@ interface ExtensionViewContainerProps {
   extensionViews: RigExtensionView[];
   openEditViewHandler?: (id: string) => void;
   deleteExtensionViewHandler: (id: string) => void;
+  isLocal: boolean;
   openExtensionViewHandler: Function;
 }
 
@@ -38,6 +39,7 @@ export class ExtensionViewContainer extends React.Component<ExtensionViewContain
           frameSize={view.frameSize}
           position={{ x: view.x, y: view.y }}
           linked={view.linked}
+          isLocal={this.props.isLocal}
           isPopout={view.isPopout}
           orientation={view.orientation}
           openEditViewHandler={this.props.openEditViewHandler}

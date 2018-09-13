@@ -46,9 +46,9 @@ export async function createProject(projectFolderPath: string, codeGenerationOpt
   return await API.post(url, { projectFolderPath, codeGenerationOption, exampleIndex });
 }
 
-export async function startFrontend(frontendFolderPath: string, port: number, projectFolderPath: string) {
+export async function startFrontend(frontendFolderPath: string, isLocal: boolean, port: number, projectFolderPath: string) {
   const url = 'https://localhost.rig.twitch.tv:3000/frontend';
-  return await API.post(url, { frontendFolderPath, port, projectFolderPath });
+  return await API.post(url, { frontendFolderPath, isLocal, port, projectFolderPath });
 }
 
 export async function startBackend(backendCommand: string, projectFolderPath: string) {

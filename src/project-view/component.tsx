@@ -59,7 +59,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
         if (!frontendPort) {
           throw new Error('Cannot determine front-end port from extension');
         }
-        await startFrontend(rigProject.frontendFolderName, frontendPort, rigProject.projectFolderPath);
+        await startFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
         this.setState({ frontendResult: 'running' });
       } catch (ex) {
         this.setState({ frontendResult: ex.message });
@@ -68,10 +68,13 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
   }
 
   private getExtensionViews(rigProject: RigProject): string {
-    const extensionViewTypes = ['panel', 'component', 'videoOverlay', 'mobile'];
-    return ['Panel', 'Component', 'Video Overlay', 'Mobile'].filter((_, index) => {
-      return Object.getOwnPropertyDescriptor(rigProject.manifest.views, extensionViewTypes[index]);
-    }).join(', ');
+    if (rigProject.manifest.views) {
+      const extensionViewTypes = ['panel', 'component', 'videoOverlay', 'mobile'];
+      return ['Panel', 'Component', 'Video Overlay', 'Mobile'].filter((_, index) => {
+        return Object.getOwnPropertyDescriptor(rigProject.manifest.views, extensionViewTypes[index]);
+      }).join(', ');
+    }
+    return '';
   }
 
   public render() {

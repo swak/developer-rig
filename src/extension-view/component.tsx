@@ -37,6 +37,7 @@ interface ExtensionViewProps {
   mode: string;
   role?: string;
   linked?: boolean;
+  isLocal: boolean;
   isPopout: boolean;
   orientation?: string;
   deleteViewHandler?: (id: string) => void;
@@ -79,7 +80,7 @@ export class ExtensionViewComponent extends React.Component<Props, State> {
   private bindIframeToParent = (iframe: HTMLIFrameElement) => {
     if (iframe) {
       const coordinatorScriptElement = document.getElementById('coordinatorScriptElement') as HTMLScriptElement;
-      const coordinatorUrl = process.env.API_HOST === window.location.host ?
+      const coordinatorUrl = this.props.isLocal ?
         `https://${window.location.host}/coordinator.js` :
         coordinatorScriptElement.src;
       const attribute = iframe.contentDocument.createAttribute('coordinatorUrl');

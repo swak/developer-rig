@@ -61,6 +61,7 @@ ShallowWrapper {
           }
     }
     extensionViews={Array []}
+    isLocal={true}
     mode="viewer"
     openEditViewHandler={[Function]}
     openExtensionViewHandler={[Function]}

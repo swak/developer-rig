@@ -74,6 +74,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -843,6 +844,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -1712,6 +1714,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -2575,6 +2578,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -3349,6 +3353,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -4212,6 +4217,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={true}
     mockApiEnabled={false}
@@ -5081,6 +5087,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -5950,6 +5957,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -6813,6 +6821,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -7676,6 +7685,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={true}
     mockApiEnabled={false}
@@ -8545,6 +8555,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -9414,6 +9425,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}
@@ -10262,6 +10274,7 @@ ShallowWrapper {
             "isChatEnabled": true,
           }
     }
+    isLocal={true}
     isPopout={false}
     linked={false}
     mockApiEnabled={false}

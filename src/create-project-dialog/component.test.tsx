@@ -1,5 +1,10 @@
 import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { CreateProjectDialog } from './component';
+import { generateManifest } from '../util/generate-manifest';
+
+Math.random = () => .25;
+const login = 'test';
+localStorage.setItem('rigLogin', JSON.stringify({ login }));
 
 const mockExamples = [{
   title: 'title',
@@ -51,21 +56,21 @@ describe('<CreateProjectDialog />', () => {
   });
 
   it('fires saveHandler when save button is clicked', () => {
+    const value = 'value';
     const { wrapper } = setupShallowTest(CreateProjectDialog, () => ({
       userId: 'userId',
       closeHandler: jest.fn(),
       saveHandler: jest.fn().mockImplementation(() => {
         expect(wrapper.instance().props.saveHandler).toHaveBeenCalledWith({
+          backendCommand: '',
+          frontendFolderName: '',
           isLocal: true,
+          manifest: generateManifest('https://localhost.rig.twitch.tv:8080', login, value, ['panel']),
           projectFolderPath: value,
-          manifest: {},
           secret: 'test',
-          frontendFolderName: mockExamples[0].frontendFolderName,
-          backendCommand: mockExamples[0].backendCommand,
         });
       }),
     }))();
-    const value = 'value';
     ['name', 'projectFolderPath'].forEach((name: string) => {
       wrapper.find('input[name="' + name + '"]').simulate('change', { currentTarget: { name, value } });
     })

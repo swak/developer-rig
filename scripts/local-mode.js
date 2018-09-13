@@ -1,14 +1,8 @@
 module.exports = function(app, extension) {
-  if (!extension) {
-    // Do nothing if not in local mode.
-    return;
-  }
-
   const fs = require('fs');
   const jwt = require('jsonwebtoken');
   const parseUrl = require('url').parse;
   const dateFormat = require('dateformat');
-  const clientId = process.env.EXT_CLIENT_ID;
   let sequenceNumber = 0;
 
   app.use(require('body-parser').json());
@@ -41,12 +35,17 @@ module.exports = function(app, extension) {
     checkClientId(req.header('Client-ID'));
     checkToken(req.header('Authorization'));
     res.setHeader('Content-Type', 'application/json');
-    res.writeHead(200);
-    const data = {
-      _total: 1,
-      extensions: [extension]
-    };
-    res.end(JSON.stringify(data));
+    if (extension) {
+      res.writeHead(200);
+      const data = {
+        _total: 1,
+        extensions: [extension],
+      };
+      res.end(JSON.stringify(data));
+    } else {
+      res.writeHead(500);
+      res.end(JSON.stringify({ message: 'Extension not provided' }));
+    }
   });
 
   app.post('/extensions/message/:channelId', (req, res) => {
@@ -60,7 +59,7 @@ module.exports = function(app, extension) {
     message = {
       type: 'MESSAGE',
       data: {
-        topic: `channel-ext-v1.${req.params.channelId}-${clientId}-broadcast`,
+        topic: `channel-ext-v1.${req.params.channelId}-${req.header('Client-ID')}-broadcast`,
         message: JSON.stringify(message) + '\r\n',
       }
     };
@@ -96,18 +95,20 @@ module.exports = function(app, extension) {
   });
   socketServer.listen(3003);
 
-  function checkClientId(header) {
-    if (clientId !== header) {
-      console.warn('Unexpected Client ID:', header);
+  function checkClientId(clientIdHeaderValue) {
+    if (process.env.EXT_CLIENT_ID && process.env.EXT_CLIENT_ID !== clientIdHeaderValue) {
+      console.warn('Unexpected Client ID:', clientIdHeaderValue);
     }
   }
 
-  function checkToken(header) {
-    const token = (header || '').split(' ')[1] || '';
-    try {
-      jwt.verify(token, new Buffer(process.env.EXT_SECRET, 'base64'));
-    } catch (ex) {
-      console.warn('Invalid JWT:', token || '(none)');
+  function checkToken(authorizationHeaderValue) {
+    if (process.env.EXT_SECRET) {
+      const token = (authorizationHeaderValue || '').split(' ')[1] || '';
+      try {
+        jwt.verify(token, new Buffer(process.env.EXT_SECRET, 'base64'));
+      } catch (ex) {
+        console.warn('Invalid JWT:', token || '(none)');
+      }
     }
   }
 

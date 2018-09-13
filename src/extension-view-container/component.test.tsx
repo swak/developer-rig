@@ -12,6 +12,7 @@ const setupShallow = setupShallowTest(ExtensionViewContainer, () => ({
   openExtensionViewHandler: jest.fn(),
   openEditViewHandler: jest.fn(),
   extension: createExtensionForTest(),
+  isLocal: true,
 }));
 
 describe('<ExtensionViewContainer />', () => {

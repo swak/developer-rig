@@ -16,6 +16,7 @@ describe('<ExtensionViewComponent />', () => {
     role: ViewerTypes.Broadcaster,
     mode: 'viewer',
     linked: false,
+    isLocal: true,
     isPopout: false,
     position: { x: 0, y: 0 },
     frameSize: { width: 0, height: 0 },

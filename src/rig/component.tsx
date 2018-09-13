@@ -230,6 +230,7 @@ export class RigComponent extends React.Component<Props, State> {
             <ExtensionViewContainer
               deleteExtensionViewHandler={this.deleteExtensionView}
               extensionViews={this.state.extensionViews}
+              isLocal={this.state.currentProject.isLocal}
               openEditViewHandler={this.openEditViewHandler}
               openExtensionViewHandler={this.openExtensionViewHandler}
             />
@@ -284,12 +285,16 @@ export class RigComponent extends React.Component<Props, State> {
       localStorage.setItem('projects', JSON.stringify(projects));
       localStorage.setItem('currentProjectIndex', '0');
       const { isLocal, secret, manifest: { id: clientId, version } } = currentProject;
-      const manifest = await fetchUserExtensionManifest(isLocal, this.state.userId, secret, clientId, version);
-      this.setState((previousState) => {
-        Object.assign(previousState.currentProject, { manifest });
-        localStorage.setItem('projects', JSON.stringify([previousState.currentProject]));
-        return previousState;
-      });
+      try {
+        const manifest = await fetchUserExtensionManifest(isLocal, this.state.userId, secret, clientId, version);
+        this.setState((previousState) => {
+          Object.assign(previousState.currentProject, { manifest });
+          localStorage.setItem('projects', JSON.stringify([previousState.currentProject]));
+          return previousState;
+        });
+      } catch (ex) {
+        console.error(ex.message);
+      }
     }
   }
 

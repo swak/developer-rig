@@ -5,6 +5,8 @@ import { ExtensionManifest } from '../core/models/manifest';
 import { createProject, Example, fetchExamples } from '../util/api';
 import { RigProject } from '../core/models/rig';
 import { fetchUserExtensionManifest } from '../util/extension';
+import { generateManifest } from '../util/generate-manifest';
+import { ExtensionViewType } from '../constants/extension-coordinator';
 
 interface Props {
   userId: string;
@@ -135,20 +137,45 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     return true;
   }
 
+  private getTypes(): string[] {
+    const types: string[] = [];
+    this.state.extensionTypes & ExtensionTypes.Component && types.push(ExtensionViewType.Component);
+    this.state.extensionTypes & ExtensionTypes.Mobile && types.push(ExtensionViewType.Mobile);
+    this.state.extensionTypes & ExtensionTypes.Overlay && types.push(ExtensionViewType.Overlay);
+    this.state.extensionTypes & ExtensionTypes.Panel && types.push(ExtensionViewType.Panel);
+    return types;
+  }
+
+  private constructBackendCommand(example: Example) {
+    if (this.state.codeGenerationOption === CodeGenerationOption.Template) {
+      let backendCommand = example.backendCommand
+        .replace('{clientId}', this.state.rigProject.manifest.id)
+        .replace('{secret}', this.state.rigProject.secret)
+        .replace('{ownerId}', this.props.userId);
+      if (this.state.rigProject.isLocal) {
+        backendCommand += ' -l';
+      }
+      return backendCommand;
+    }
+    return '';
+  }
+
   private saveHandler = async () => {
     if (this.canSave()) {
       try {
         this.setState({ errorMessage: 'Creating your project...' });
-        await createProject(this.state.rigProject.projectFolderPath, this.state.codeGenerationOption, this.state.exampleIndex);
-        const example = this.state.examples[this.state.exampleIndex];
-        const backendCommand = example.backendCommand
-          .replace('{clientId}', this.state.clientId)
-          .replace('{secret}', this.state.rigProject.secret)
-          .replace('{ownerId}', this.props.userId);
+        if (this.state.rigProject.isLocal) {
+          this.state.rigProject.secret = this.state.rigProject.secret || 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk';
+          const ownerName: string = JSON.parse(localStorage.getItem('rigLogin')).login;
+          this.state.rigProject.manifest = generateManifest('https://localhost.rig.twitch.tv:8080', ownerName, this.state.name, this.getTypes());
+        }
+        const { codeGenerationOption, exampleIndex, examples } = this.state;
+        await createProject(this.state.rigProject.projectFolderPath, codeGenerationOption, exampleIndex);
+        const example = examples[exampleIndex];
         const rigProject = {
           ...this.state.rigProject,
-          frontendFolderName: example.frontendFolderName,
-          backendCommand,
+          frontendFolderName: codeGenerationOption === CodeGenerationOption.Template ? example.frontendFolderName : '',
+          backendCommand: this.constructBackendCommand(example),
         };
         this.props.saveHandler(rigProject as RigProject);
       } catch (ex) {
@@ -274,7 +301,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
             <div className="project-dialog__content right">
               <div>Start from an existing extension sample from Twitch or the Developer Community</div>
               <div>Twitch Provided Samples</div>
-              <select name='exampleIndex' value={this.state.exampleIndex} onChange={this.onChange}>
+              <select name="exampleIndex" value={this.state.exampleIndex} onChange={this.onChange}>
                 {this.state.examples.map((example, index) => (
                   <option key={index} value={index}>{example.title}</option>
                 ))}
