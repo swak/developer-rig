@@ -135,7 +135,11 @@ module.exports = function(app) {
     let deleteOnError = false;
     try {
       if (isAbsolute(projectFolderPath)) {
-        fs.mkdirSync(projectFolderPath);
+        if (!fs.existsSync(projectFolderPath)) {
+          fs.mkdirSync(projectFolderPath);
+        } else if (codeGenerationOption !== 'none' && fs.readdirSync(projectFolderPath).length) {
+          throw new Error(`Invalid project folder "${projectFolderPath}"; it must be empty`);
+        }
         deleteOnError = true;
       } else {
         throw new Error(`Invalid project folder "${projectFolderPath}"; it must be an absolute path`);

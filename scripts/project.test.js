@@ -56,6 +56,12 @@ async function runTests() {
   rmrf(projectFolderPath);
   await postRoutes['/project'](req, res);
   rmrf(projectFolderPath);
+  req.body.codeGenerationOption = 'none';
+  await postRoutes['/project'](req, res);
+  await postRoutes['/project'](req, res);
+  req.body.codeGenerationOption = 'scaffolding';
+  await postRoutes['/project'](req, res);
+  rmrf(projectFolderPath);
   req.body.codeGenerationOption = 'template';
   await postRoutes['/project'](req, res);
 }
