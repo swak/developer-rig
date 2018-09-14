@@ -113,24 +113,31 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     const target = input.currentTarget;
     const value = Boolean(Number(target.value));
     this.setState((previousState) => {
-      const rigProject = Object.assign({}, this.state.rigProject, { isLocal: value });
+      const rigProject = Object.assign({}, previousState.rigProject, { isLocal: value });
       return { rigProject };
     });
   }
 
   private canSave = () => {
-    // The extension must be named and must have a project folder root.
-    if (!this.state.name.trim() || !this.state.rigProject.projectFolderPath.trim()) {
+    const { name, codeGenerationOption, rigProject, extensionTypes } = this.state;
+
+    // The project must be named.
+    if (!name.trim()) {
       return false;
     }
-    if (this.state.rigProject.isLocal) {
+    // The project must have a project folder root if the code generation
+    // option is not None.
+    if (codeGenerationOption !== CodeGenerationOption.None && !rigProject.projectFolderPath.trim()) {
+      return false;
+    }
+    if (rigProject.isLocal) {
       // At least one extension type must be selected.
-      if (!this.state.extensionTypes) {
+      if (!extensionTypes) {
         return false;
       }
     } else {
       // An online extension must be selected.
-      if (!this.state.rigProject.manifest.id) {
+      if (!rigProject.manifest.id) {
         return false;
       }
     }
@@ -167,10 +174,13 @@ export class CreateProjectDialog extends React.Component<Props, State>{
         if (this.state.rigProject.isLocal) {
           this.state.rigProject.secret = this.state.rigProject.secret || 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk';
           const ownerName: string = JSON.parse(localStorage.getItem('rigLogin')).login;
-          this.state.rigProject.manifest = generateManifest('https://localhost.rig.twitch.tv:8080', ownerName, this.state.name, this.getTypes());
+          this.state.rigProject.manifest = generateManifest('https://localhost.rig.twitch.tv:8080',
+            ownerName, this.state.name.trim(), this.getTypes());
         }
         const { codeGenerationOption, exampleIndex, examples } = this.state;
-        await createProject(this.state.rigProject.projectFolderPath, codeGenerationOption, exampleIndex);
+        if (codeGenerationOption !== CodeGenerationOption.None) {
+          await createProject(this.state.rigProject.projectFolderPath.trim(), codeGenerationOption, exampleIndex);
+        }
         const example = examples[exampleIndex];
         const rigProject = {
           ...this.state.rigProject,
