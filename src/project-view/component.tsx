@@ -35,7 +35,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     if (this.props.rigProject.backendCommand) {
       try {
         await startBackend(this.props.rigProject.backendCommand, this.props.rigProject.projectFolderPath);
-        this.setState({ backendResult: 'running' });
+        this.setState({ backendResult: 'started' });
       } catch (ex) {
         this.setState({ backendResult: ex.message });
       }
@@ -60,7 +60,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
           throw new Error('Cannot determine front-end port from extension');
         }
         await startFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
-        this.setState({ frontendResult: 'running' });
+        this.setState({ frontendResult: 'started' });
       } catch (ex) {
         this.setState({ frontendResult: ex.message });
       }
@@ -81,47 +81,47 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     const rigProject = this.props.rigProject;
     const manifest = rigProject.manifest;
     return (
-      <div className="project-view__content">
+      <div className="project-view">
         <div>
-          <div className="project-view__state-value">
-            <label className="props-value__label">Extension Name</label>
-            <input className="props-value__input" type="text" name="name" value={manifest.name} onChange={this.onChange} />
-          </div>
-          <div className="project-view__state-value">
-            <label className="props-value__label" title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.">Front-end Files Location</label>
-            <input className="props-value__input" type="text" name="frontendFolderName" value={rigProject.frontendFolderName} onChange={this.onChange} />
-            <button onClick={this.startFrontend}>Host with Rig</button>
+          <label>
+            <div>Project Name</div>
+            <input className="half" type="text" name="name" value={manifest.name} onChange={this.onChange} />
+          </label>
+          <label title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.">
+            <div>Front-end Files Location</div>
+            <input type="text" name="frontendFolderName" value={rigProject.frontendFolderName} onChange={this.onChange} />
+            <button title="" onClick={this.startFrontend}>Host with Rig</button>
             <span>{this.state.frontendResult}</span>
-          </div>
-          <div className="project-view__state-value">
-            <label className="props-value__label" title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.">Back-end Run Command</label>
-            <input className="props-value__input" type="text" name="backendCommand" value={rigProject.backendCommand} onChange={this.onChange} />
-            <button onClick={this.startBackend}>Activate</button>
+          </label>
+          <label title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.">
+            <div>Back-end Run Command</div>
+            <input type="text" name="backendCommand" value={rigProject.backendCommand} onChange={this.onChange} />
+            <button title="" onClick={this.startBackend}>Activate</button>
             <span>{this.state.backendResult}</span>
-          </div>
-          <div className="project-view__state-value">
-            <label className="props-value__label">Project Folder</label>
-            <input className="props-value__input" type="text" name="projectFolderPath" value={rigProject.projectFolderPath} onChange={this.onChange} />
-          </div>
-          <div className="project-view__state-value">
-            <label className="props-value__label">Extension Views</label>
+          </label>
+          <label>
+            <div>Project Folder</div>
+            <input type="text" name="projectFolderPath" value={rigProject.projectFolderPath} onChange={this.onChange} />
+          </label>
+          <label>
+            <div>Extension Types</div>
             <div>{this.getExtensionViews(rigProject)}</div>
-          </div>
+          </label>
         </div>
-        <div />
+        <div className="vertical-bar" />
         <div>
           <div>How to Run an Extension in the Rig</div>
           <ol>
             <li>
               <div>Host your front-end files.</div>
-              <div>You can host with the Rig by pointing it at the location of your HTML files and clicking the "Host with Rig" button.</div>
+              <div>You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.</div>
             </li>
             <li>
               <div>If your extension has a back-end, run it locally.</div>
-              <div>You can add the command to activate your back-end and trigger it from the Rig with the "Activate" button.</div>
+              <div>You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.</div>
             </li>
             <li>
-              <div>Go to Extension Views and add the View Type that matches your extension.</div>
+              <div>Go to Extension Views and add the Extension Types that match your extension.</div>
             </li>
           </ol>
           <button>View Tutorial</button>
