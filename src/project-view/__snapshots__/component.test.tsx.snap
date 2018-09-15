@@ -71,13 +71,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <div>
-          <label>
-                    <div>
+        <div
+          className="project-view__section project-view__section--left"
+>
+          <label
+                    className="project-view-property"
+          >
+                    <div
+                              className="project-view-property__name"
+                    >
                               Project Name
                     </div>
                     <input
-                              className="half"
+                              className="project-view-property__input project-view-property__input--half"
                               name="name"
                               onChange={[Function]}
                               type="text"
@@ -85,99 +91,148 @@ ShallowWrapper {
                     />
           </label>
           <label
+                    className="project-view-property"
                     title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
           >
-                    <div>
+                    <div
+                              className="project-view-property__name"
+                    >
                               Front-end Files Location
                     </div>
                     <input
+                              className="project-view-property__input"
                               name="frontendFolderName"
                               onChange={[Function]}
                               type="text"
                               value="test"
                     />
                     <button
+                              className="project-view__button"
                               onClick={[Function]}
                               title=""
                     >
                               Host with Rig
                     </button>
-                    <span />
+                    <span
+                              className="project-view-property__result"
+                    />
           </label>
           <label
+                    className="project-view-property"
                     title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
           >
-                    <div>
+                    <div
+                              className="project-view-property__name"
+                    >
                               Back-end Run Command
                     </div>
                     <input
+                              className="project-view-property__input"
                               name="backendCommand"
                               onChange={[Function]}
                               type="text"
                               value="test"
                     />
                     <button
+                              className="project-view__button"
                               onClick={[Function]}
                               title=""
                     >
                               Activate
                     </button>
-                    <span />
+                    <span
+                              className="project-view-property__result"
+                    />
           </label>
-          <label>
-                    <div>
+          <label
+                    className="project-view-property"
+          >
+                    <div
+                              className="project-view-property__name"
+                    >
                               Project Folder
                     </div>
                     <input
+                              className="project-view-property__input"
                               name="projectFolderPath"
                               onChange={[Function]}
                               type="text"
                               value="test"
                     />
           </label>
-          <label>
-                    <div>
+          <label
+                    className="project-view-property"
+          >
+                    <div
+                              className="project-view-property__name"
+                    >
                               Extension Types
                     </div>
-                    <div>
+                    <div
+                              className="project-view-property__value"
+                    >
                               Panel, Component
                     </div>
           </label>
 </div>,
         <div
-          className="vertical-bar"
+          className="project-view__vertical-bar"
 />,
-        <div>
-          <div>
+        <div
+          className="project-view__section project-view__section--right"
+>
+          <div
+                    className="project-view__title"
+          >
                     How to Run an Extension in the Rig
           </div>
           <ol>
-                    <li>
-                              <div>
+                    <li
+                              className="project-view__item"
+                    >
+                              <div
+                                        className="project-view__item-text project-view__item-text--title"
+                              >
                                         Host your front-end files.
                               </div>
-                              <div>
+                              <div
+                                        className="project-view__item-text"
+                              >
                                         You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                               </div>
                     </li>
-                    <li>
-                              <div>
+                    <li
+                              className="project-view__item"
+                    >
+                              <div
+                                        className="project-view__item-text project-view__item-text--title"
+                              >
                                         If your extension has a back-end, run it locally.
                               </div>
-                              <div>
+                              <div
+                                        className="project-view__item-text"
+                              >
                                         You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                               </div>
                     </li>
-                    <li>
-                              <div>
+                    <li
+                              className="project-view__item"
+                    >
+                              <div
+                                        className="project-view__item-text project-view__item-text--title"
+                              >
                                         Go to Extension Views and add the Extension Types that match your extension.
                               </div>
                     </li>
           </ol>
-          <button>
+          <button
+                    className="project-view__button project-view__button--first"
+          >
                     View Tutorial
           </button>
-          <button>
+          <button
+                    className="project-view__button"
+          >
                     Go to Documentation
           </button>
 </div>,
@@ -192,12 +247,16 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <label>
-              <div>
+            <label
+              className="project-view-property"
+>
+              <div
+                            className="project-view-property__name"
+              >
                             Project Name
               </div>
               <input
-                            className="half"
+                            className="project-view-property__input project-view-property__input--half"
                             name="name"
                             onChange={[Function]}
                             type="text"
@@ -205,65 +264,91 @@ ShallowWrapper {
               />
 </label>,
             <label
+              className="project-view-property"
               title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
 >
-              <div>
+              <div
+                            className="project-view-property__name"
+              >
                             Front-end Files Location
               </div>
               <input
+                            className="project-view-property__input"
                             name="frontendFolderName"
                             onChange={[Function]}
                             type="text"
                             value="test"
               />
               <button
+                            className="project-view__button"
                             onClick={[Function]}
                             title=""
               >
                             Host with Rig
               </button>
-              <span />
+              <span
+                            className="project-view-property__result"
+              />
 </label>,
             <label
+              className="project-view-property"
               title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
 >
-              <div>
+              <div
+                            className="project-view-property__name"
+              >
                             Back-end Run Command
               </div>
               <input
+                            className="project-view-property__input"
                             name="backendCommand"
                             onChange={[Function]}
                             type="text"
                             value="test"
               />
               <button
+                            className="project-view__button"
                             onClick={[Function]}
                             title=""
               >
                             Activate
               </button>
-              <span />
+              <span
+                            className="project-view-property__result"
+              />
 </label>,
-            <label>
-              <div>
+            <label
+              className="project-view-property"
+>
+              <div
+                            className="project-view-property__name"
+              >
                             Project Folder
               </div>
               <input
+                            className="project-view-property__input"
                             name="projectFolderPath"
                             onChange={[Function]}
                             type="text"
                             value="test"
               />
 </label>,
-            <label>
-              <div>
+            <label
+              className="project-view-property"
+>
+              <div
+                            className="project-view-property__name"
+              >
                             Extension Types
               </div>
-              <div>
+              <div
+                            className="project-view-property__value"
+              >
                             Panel, Component
               </div>
 </label>,
           ],
+          "className": "project-view__section project-view__section--left",
         },
         "ref": null,
         "rendered": Array [
@@ -273,17 +358,20 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <div
+                  className="project-view-property__name"
+>
                   Project Name
 </div>,
                 <input
-                  className="half"
+                  className="project-view-property__input project-view-property__input--half"
                   name="name"
                   onChange={[Function]}
                   type="text"
                   value="test"
 />,
               ],
+              "className": "project-view-property",
             },
             "ref": null,
             "rendered": Array [
@@ -293,6 +381,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Project Name",
+                  "className": "project-view-property__name",
                 },
                 "ref": null,
                 "rendered": "Project Name",
@@ -303,7 +392,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "className": "half",
+                  "className": "project-view-property__input project-view-property__input--half",
                   "name": "name",
                   "onChange": [Function],
                   "type": "text",
@@ -322,23 +411,30 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <div
+                  className="project-view-property__name"
+>
                   Front-end Files Location
 </div>,
                 <input
+                  className="project-view-property__input"
                   name="frontendFolderName"
                   onChange={[Function]}
                   type="text"
                   value="test"
 />,
                 <button
+                  className="project-view__button"
                   onClick={[Function]}
                   title=""
 >
                   Host with Rig
 </button>,
-                <span />,
+                <span
+                  className="project-view-property__result"
+/>,
               ],
+              "className": "project-view-property",
               "title": "This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.",
             },
             "ref": null,
@@ -349,6 +445,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Front-end Files Location",
+                  "className": "project-view-property__name",
                 },
                 "ref": null,
                 "rendered": "Front-end Files Location",
@@ -359,6 +456,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "project-view-property__input",
                   "name": "frontendFolderName",
                   "onChange": [Function],
                   "type": "text",
@@ -374,6 +472,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Host with Rig",
+                  "className": "project-view__button",
                   "onClick": [Function],
                   "title": "",
                 },
@@ -387,6 +486,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
+                  "className": "project-view-property__result",
                 },
                 "ref": null,
                 "rendered": "",
@@ -401,23 +501,30 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <div
+                  className="project-view-property__name"
+>
                   Back-end Run Command
 </div>,
                 <input
+                  className="project-view-property__input"
                   name="backendCommand"
                   onChange={[Function]}
                   type="text"
                   value="test"
 />,
                 <button
+                  className="project-view__button"
                   onClick={[Function]}
                   title=""
 >
                   Activate
 </button>,
-                <span />,
+                <span
+                  className="project-view-property__result"
+/>,
               ],
+              "className": "project-view-property",
               "title": "This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.",
             },
             "ref": null,
@@ -428,6 +535,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Back-end Run Command",
+                  "className": "project-view-property__name",
                 },
                 "ref": null,
                 "rendered": "Back-end Run Command",
@@ -438,6 +546,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "project-view-property__input",
                   "name": "backendCommand",
                   "onChange": [Function],
                   "type": "text",
@@ -453,6 +562,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Activate",
+                  "className": "project-view__button",
                   "onClick": [Function],
                   "title": "",
                 },
@@ -466,6 +576,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "",
+                  "className": "project-view-property__result",
                 },
                 "ref": null,
                 "rendered": "",
@@ -480,16 +591,20 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <div
+                  className="project-view-property__name"
+>
                   Project Folder
 </div>,
                 <input
+                  className="project-view-property__input"
                   name="projectFolderPath"
                   onChange={[Function]}
                   type="text"
                   value="test"
 />,
               ],
+              "className": "project-view-property",
             },
             "ref": null,
             "rendered": Array [
@@ -499,6 +614,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Project Folder",
+                  "className": "project-view-property__name",
                 },
                 "ref": null,
                 "rendered": "Project Folder",
@@ -509,6 +625,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
+                  "className": "project-view-property__input",
                   "name": "projectFolderPath",
                   "onChange": [Function],
                   "type": "text",
@@ -527,13 +644,18 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <div>
+                <div
+                  className="project-view-property__name"
+>
                   Extension Types
 </div>,
-                <div>
+                <div
+                  className="project-view-property__value"
+>
                   Panel, Component
 </div>,
               ],
+              "className": "project-view-property",
             },
             "ref": null,
             "rendered": Array [
@@ -543,6 +665,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Extension Types",
+                  "className": "project-view-property__name",
                 },
                 "ref": null,
                 "rendered": "Extension Types",
@@ -554,6 +677,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Panel, Component",
+                  "className": "project-view-property__value",
                 },
                 "ref": null,
                 "rendered": "Panel, Component",
@@ -570,7 +694,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "className": "vertical-bar",
+          "className": "project-view__vertical-bar",
         },
         "ref": null,
         "rendered": null,
@@ -582,39 +706,62 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <div>
+            <div
+              className="project-view__title"
+>
               How to Run an Extension in the Rig
 </div>,
             <ol>
-              <li>
-                            <div>
+              <li
+                            className="project-view__item"
+              >
+                            <div
+                                          className="project-view__item-text project-view__item-text--title"
+                            >
                                           Host your front-end files.
                             </div>
-                            <div>
+                            <div
+                                          className="project-view__item-text"
+                            >
                                           You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                             </div>
               </li>
-              <li>
-                            <div>
+              <li
+                            className="project-view__item"
+              >
+                            <div
+                                          className="project-view__item-text project-view__item-text--title"
+                            >
                                           If your extension has a back-end, run it locally.
                             </div>
-                            <div>
+                            <div
+                                          className="project-view__item-text"
+                            >
                                           You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                             </div>
               </li>
-              <li>
-                            <div>
+              <li
+                            className="project-view__item"
+              >
+                            <div
+                                          className="project-view__item-text project-view__item-text--title"
+                            >
                                           Go to Extension Views and add the Extension Types that match your extension.
                             </div>
               </li>
 </ol>,
-            <button>
+            <button
+              className="project-view__button project-view__button--first"
+>
               View Tutorial
 </button>,
-            <button>
+            <button
+              className="project-view__button"
+>
               Go to Documentation
 </button>,
           ],
+          "className": "project-view__section project-view__section--right",
         },
         "ref": null,
         "rendered": Array [
@@ -624,6 +771,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "How to Run an Extension in the Rig",
+              "className": "project-view__title",
             },
             "ref": null,
             "rendered": "How to Run an Extension in the Rig",
@@ -635,24 +783,40 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <li>
-                  <div>
+                <li
+                  className="project-view__item"
+>
+                  <div
+                                    className="project-view__item-text project-view__item-text--title"
+                  >
                                     Host your front-end files.
                   </div>
-                  <div>
+                  <div
+                                    className="project-view__item-text"
+                  >
                                     You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                   </div>
 </li>,
-                <li>
-                  <div>
+                <li
+                  className="project-view__item"
+>
+                  <div
+                                    className="project-view__item-text project-view__item-text--title"
+                  >
                                     If your extension has a back-end, run it locally.
                   </div>
-                  <div>
+                  <div
+                                    className="project-view__item-text"
+                  >
                                     You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                   </div>
 </li>,
-                <li>
-                  <div>
+                <li
+                  className="project-view__item"
+>
+                  <div
+                                    className="project-view__item-text project-view__item-text--title"
+                  >
                                     Go to Extension Views and add the Extension Types that match your extension.
                   </div>
 </li>,
@@ -666,13 +830,18 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <div>
+                    <div
+                      className="project-view__item-text project-view__item-text--title"
+>
                       Host your front-end files.
 </div>,
-                    <div>
+                    <div
+                      className="project-view__item-text"
+>
                       You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
 </div>,
                   ],
+                  "className": "project-view__item",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -682,6 +851,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Host your front-end files.",
+                      "className": "project-view__item-text project-view__item-text--title",
                     },
                     "ref": null,
                     "rendered": "Host your front-end files.",
@@ -693,6 +863,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "You can host your front-end files with the Rig by entering the path to your HTML files in the \\"Front-end Files Location\\" text box and clicking the \\"Host with Rig\\" button.",
+                      "className": "project-view__item-text",
                     },
                     "ref": null,
                     "rendered": "You can host your front-end files with the Rig by entering the path to your HTML files in the \\"Front-end Files Location\\" text box and clicking the \\"Host with Rig\\" button.",
@@ -707,13 +878,18 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    <div>
+                    <div
+                      className="project-view__item-text project-view__item-text--title"
+>
                       If your extension has a back-end, run it locally.
 </div>,
-                    <div>
+                    <div
+                      className="project-view__item-text"
+>
                       You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
 </div>,
                   ],
+                  "className": "project-view__item",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -723,6 +899,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "If your extension has a back-end, run it locally.",
+                      "className": "project-view__item-text project-view__item-text--title",
                     },
                     "ref": null,
                     "rendered": "If your extension has a back-end, run it locally.",
@@ -734,6 +911,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "You can run your back-end service from the Rig by entering the command to activate it in the \\"Back-end Run Command\\" text box and clicking the \\"Activate\\" button.",
+                      "className": "project-view__item-text",
                     },
                     "ref": null,
                     "rendered": "You can run your back-end service from the Rig by entering the command to activate it in the \\"Back-end Run Command\\" text box and clicking the \\"Activate\\" button.",
@@ -747,9 +925,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": <div>
+                  "children": <div
+                    className="project-view__item-text project-view__item-text--title"
+>
                     Go to Extension Views and add the Extension Types that match your extension.
 </div>,
+                  "className": "project-view__item",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -758,6 +939,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Go to Extension Views and add the Extension Types that match your extension.",
+                    "className": "project-view__item-text project-view__item-text--title",
                   },
                   "ref": null,
                   "rendered": "Go to Extension Views and add the Extension Types that match your extension.",
@@ -774,6 +956,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "View Tutorial",
+              "className": "project-view__button project-view__button--first",
             },
             "ref": null,
             "rendered": "View Tutorial",
@@ -785,6 +968,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": "Go to Documentation",
+              "className": "project-view__button",
             },
             "ref": null,
             "rendered": "Go to Documentation",
@@ -803,13 +987,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <div>
-            <label>
-                        <div>
+          <div
+            className="project-view__section project-view__section--left"
+>
+            <label
+                        className="project-view-property"
+            >
+                        <div
+                                    className="project-view-property__name"
+                        >
                                     Project Name
                         </div>
                         <input
-                                    className="half"
+                                    className="project-view-property__input project-view-property__input--half"
                                     name="name"
                                     onChange={[Function]}
                                     type="text"
@@ -817,99 +1007,148 @@ ShallowWrapper {
                         />
             </label>
             <label
+                        className="project-view-property"
                         title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
             >
-                        <div>
+                        <div
+                                    className="project-view-property__name"
+                        >
                                     Front-end Files Location
                         </div>
                         <input
+                                    className="project-view-property__input"
                                     name="frontendFolderName"
                                     onChange={[Function]}
                                     type="text"
                                     value="test"
                         />
                         <button
+                                    className="project-view__button"
                                     onClick={[Function]}
                                     title=""
                         >
                                     Host with Rig
                         </button>
-                        <span />
+                        <span
+                                    className="project-view-property__result"
+                        />
             </label>
             <label
+                        className="project-view-property"
                         title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
             >
-                        <div>
+                        <div
+                                    className="project-view-property__name"
+                        >
                                     Back-end Run Command
                         </div>
                         <input
+                                    className="project-view-property__input"
                                     name="backendCommand"
                                     onChange={[Function]}
                                     type="text"
                                     value="test"
                         />
                         <button
+                                    className="project-view__button"
                                     onClick={[Function]}
                                     title=""
                         >
                                     Activate
                         </button>
-                        <span />
+                        <span
+                                    className="project-view-property__result"
+                        />
             </label>
-            <label>
-                        <div>
+            <label
+                        className="project-view-property"
+            >
+                        <div
+                                    className="project-view-property__name"
+                        >
                                     Project Folder
                         </div>
                         <input
+                                    className="project-view-property__input"
                                     name="projectFolderPath"
                                     onChange={[Function]}
                                     type="text"
                                     value="test"
                         />
             </label>
-            <label>
-                        <div>
+            <label
+                        className="project-view-property"
+            >
+                        <div
+                                    className="project-view-property__name"
+                        >
                                     Extension Types
                         </div>
-                        <div>
+                        <div
+                                    className="project-view-property__value"
+                        >
                                     Panel, Component
                         </div>
             </label>
 </div>,
           <div
-            className="vertical-bar"
+            className="project-view__vertical-bar"
 />,
-          <div>
-            <div>
+          <div
+            className="project-view__section project-view__section--right"
+>
+            <div
+                        className="project-view__title"
+            >
                         How to Run an Extension in the Rig
             </div>
             <ol>
-                        <li>
-                                    <div>
+                        <li
+                                    className="project-view__item"
+                        >
+                                    <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                    >
                                                 Host your front-end files.
                                     </div>
-                                    <div>
+                                    <div
+                                                className="project-view__item-text"
+                                    >
                                                 You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                                     </div>
                         </li>
-                        <li>
-                                    <div>
+                        <li
+                                    className="project-view__item"
+                        >
+                                    <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                    >
                                                 If your extension has a back-end, run it locally.
                                     </div>
-                                    <div>
+                                    <div
+                                                className="project-view__item-text"
+                                    >
                                                 You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                                     </div>
                         </li>
-                        <li>
-                                    <div>
+                        <li
+                                    className="project-view__item"
+                        >
+                                    <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                    >
                                                 Go to Extension Views and add the Extension Types that match your extension.
                                     </div>
                         </li>
             </ol>
-            <button>
+            <button
+                        className="project-view__button project-view__button--first"
+            >
                         View Tutorial
             </button>
-            <button>
+            <button
+                        className="project-view__button"
+            >
                         Go to Documentation
             </button>
 </div>,
@@ -924,12 +1163,16 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <label>
-                <div>
+              <label
+                className="project-view-property"
+>
+                <div
+                                className="project-view-property__name"
+                >
                                 Project Name
                 </div>
                 <input
-                                className="half"
+                                className="project-view-property__input project-view-property__input--half"
                                 name="name"
                                 onChange={[Function]}
                                 type="text"
@@ -937,65 +1180,91 @@ ShallowWrapper {
                 />
 </label>,
               <label
+                className="project-view-property"
                 title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute."
 >
-                <div>
+                <div
+                                className="project-view-property__name"
+                >
                                 Front-end Files Location
                 </div>
                 <input
+                                className="project-view-property__input"
                                 name="frontendFolderName"
                                 onChange={[Function]}
                                 type="text"
                                 value="test"
                 />
                 <button
+                                className="project-view__button"
                                 onClick={[Function]}
                                 title=""
                 >
                                 Host with Rig
                 </button>
-                <span />
+                <span
+                                className="project-view-property__result"
+                />
 </label>,
               <label
+                className="project-view-property"
                 title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory."
 >
-                <div>
+                <div
+                                className="project-view-property__name"
+                >
                                 Back-end Run Command
                 </div>
                 <input
+                                className="project-view-property__input"
                                 name="backendCommand"
                                 onChange={[Function]}
                                 type="text"
                                 value="test"
                 />
                 <button
+                                className="project-view__button"
                                 onClick={[Function]}
                                 title=""
                 >
                                 Activate
                 </button>
-                <span />
+                <span
+                                className="project-view-property__result"
+                />
 </label>,
-              <label>
-                <div>
+              <label
+                className="project-view-property"
+>
+                <div
+                                className="project-view-property__name"
+                >
                                 Project Folder
                 </div>
                 <input
+                                className="project-view-property__input"
                                 name="projectFolderPath"
                                 onChange={[Function]}
                                 type="text"
                                 value="test"
                 />
 </label>,
-              <label>
-                <div>
+              <label
+                className="project-view-property"
+>
+                <div
+                                className="project-view-property__name"
+                >
                                 Extension Types
                 </div>
-                <div>
+                <div
+                                className="project-view-property__value"
+                >
                                 Panel, Component
                 </div>
 </label>,
             ],
+            "className": "project-view__section project-view__section--left",
           },
           "ref": null,
           "rendered": Array [
@@ -1005,17 +1274,20 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
+                  <div
+                    className="project-view-property__name"
+>
                     Project Name
 </div>,
                   <input
-                    className="half"
+                    className="project-view-property__input project-view-property__input--half"
                     name="name"
                     onChange={[Function]}
                     type="text"
                     value="test"
 />,
                 ],
+                "className": "project-view-property",
               },
               "ref": null,
               "rendered": Array [
@@ -1025,6 +1297,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Project Name",
+                    "className": "project-view-property__name",
                   },
                   "ref": null,
                   "rendered": "Project Name",
@@ -1035,7 +1308,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "className": "half",
+                    "className": "project-view-property__input project-view-property__input--half",
                     "name": "name",
                     "onChange": [Function],
                     "type": "text",
@@ -1054,23 +1327,30 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
+                  <div
+                    className="project-view-property__name"
+>
                     Front-end Files Location
 </div>,
                   <input
+                    className="project-view-property__input"
                     name="frontendFolderName"
                     onChange={[Function]}
                     type="text"
                     value="test"
 />,
                   <button
+                    className="project-view__button"
                     onClick={[Function]}
                     title=""
 >
                     Host with Rig
 </button>,
-                  <span />,
+                  <span
+                    className="project-view-property__result"
+/>,
                 ],
+                "className": "project-view-property",
                 "title": "This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.",
               },
               "ref": null,
@@ -1081,6 +1361,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Front-end Files Location",
+                    "className": "project-view-property__name",
                   },
                   "ref": null,
                   "rendered": "Front-end Files Location",
@@ -1091,6 +1372,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "project-view-property__input",
                     "name": "frontendFolderName",
                     "onChange": [Function],
                     "type": "text",
@@ -1106,6 +1388,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Host with Rig",
+                    "className": "project-view__button",
                     "onClick": [Function],
                     "title": "",
                   },
@@ -1119,6 +1402,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
+                    "className": "project-view-property__result",
                   },
                   "ref": null,
                   "rendered": "",
@@ -1133,23 +1417,30 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
+                  <div
+                    className="project-view-property__name"
+>
                     Back-end Run Command
 </div>,
                   <input
+                    className="project-view-property__input"
                     name="backendCommand"
                     onChange={[Function]}
                     type="text"
                     value="test"
 />,
                   <button
+                    className="project-view__button"
                     onClick={[Function]}
                     title=""
 >
                     Activate
 </button>,
-                  <span />,
+                  <span
+                    className="project-view-property__result"
+/>,
                 ],
+                "className": "project-view-property",
                 "title": "This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.",
               },
               "ref": null,
@@ -1160,6 +1451,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Back-end Run Command",
+                    "className": "project-view-property__name",
                   },
                   "ref": null,
                   "rendered": "Back-end Run Command",
@@ -1170,6 +1462,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "project-view-property__input",
                     "name": "backendCommand",
                     "onChange": [Function],
                     "type": "text",
@@ -1185,6 +1478,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Activate",
+                    "className": "project-view__button",
                     "onClick": [Function],
                     "title": "",
                   },
@@ -1198,6 +1492,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "",
+                    "className": "project-view-property__result",
                   },
                   "ref": null,
                   "rendered": "",
@@ -1212,16 +1507,20 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
+                  <div
+                    className="project-view-property__name"
+>
                     Project Folder
 </div>,
                   <input
+                    className="project-view-property__input"
                     name="projectFolderPath"
                     onChange={[Function]}
                     type="text"
                     value="test"
 />,
                 ],
+                "className": "project-view-property",
               },
               "ref": null,
               "rendered": Array [
@@ -1231,6 +1530,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Project Folder",
+                    "className": "project-view-property__name",
                   },
                   "ref": null,
                   "rendered": "Project Folder",
@@ -1241,6 +1541,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
+                    "className": "project-view-property__input",
                     "name": "projectFolderPath",
                     "onChange": [Function],
                     "type": "text",
@@ -1259,13 +1560,18 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <div>
+                  <div
+                    className="project-view-property__name"
+>
                     Extension Types
 </div>,
-                  <div>
+                  <div
+                    className="project-view-property__value"
+>
                     Panel, Component
 </div>,
                 ],
+                "className": "project-view-property",
               },
               "ref": null,
               "rendered": Array [
@@ -1275,6 +1581,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Extension Types",
+                    "className": "project-view-property__name",
                   },
                   "ref": null,
                   "rendered": "Extension Types",
@@ -1286,6 +1593,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Panel, Component",
+                    "className": "project-view-property__value",
                   },
                   "ref": null,
                   "rendered": "Panel, Component",
@@ -1302,7 +1610,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "vertical-bar",
+            "className": "project-view__vertical-bar",
           },
           "ref": null,
           "rendered": null,
@@ -1314,39 +1622,62 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <div>
+              <div
+                className="project-view__title"
+>
                 How to Run an Extension in the Rig
 </div>,
               <ol>
-                <li>
-                                <div>
+                <li
+                                className="project-view__item"
+                >
+                                <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                >
                                                 Host your front-end files.
                                 </div>
-                                <div>
+                                <div
+                                                className="project-view__item-text"
+                                >
                                                 You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                                 </div>
                 </li>
-                <li>
-                                <div>
+                <li
+                                className="project-view__item"
+                >
+                                <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                >
                                                 If your extension has a back-end, run it locally.
                                 </div>
-                                <div>
+                                <div
+                                                className="project-view__item-text"
+                                >
                                                 You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                                 </div>
                 </li>
-                <li>
-                                <div>
+                <li
+                                className="project-view__item"
+                >
+                                <div
+                                                className="project-view__item-text project-view__item-text--title"
+                                >
                                                 Go to Extension Views and add the Extension Types that match your extension.
                                 </div>
                 </li>
 </ol>,
-              <button>
+              <button
+                className="project-view__button project-view__button--first"
+>
                 View Tutorial
 </button>,
-              <button>
+              <button
+                className="project-view__button"
+>
                 Go to Documentation
 </button>,
             ],
+            "className": "project-view__section project-view__section--right",
           },
           "ref": null,
           "rendered": Array [
@@ -1356,6 +1687,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "How to Run an Extension in the Rig",
+                "className": "project-view__title",
               },
               "ref": null,
               "rendered": "How to Run an Extension in the Rig",
@@ -1367,24 +1699,40 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <li>
-                    <div>
+                  <li
+                    className="project-view__item"
+>
+                    <div
+                                        className="project-view__item-text project-view__item-text--title"
+                    >
                                         Host your front-end files.
                     </div>
-                    <div>
+                    <div
+                                        className="project-view__item-text"
+                    >
                                         You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
                     </div>
 </li>,
-                  <li>
-                    <div>
+                  <li
+                    className="project-view__item"
+>
+                    <div
+                                        className="project-view__item-text project-view__item-text--title"
+                    >
                                         If your extension has a back-end, run it locally.
                     </div>
-                    <div>
+                    <div
+                                        className="project-view__item-text"
+                    >
                                         You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
                     </div>
 </li>,
-                  <li>
-                    <div>
+                  <li
+                    className="project-view__item"
+>
+                    <div
+                                        className="project-view__item-text project-view__item-text--title"
+                    >
                                         Go to Extension Views and add the Extension Types that match your extension.
                     </div>
 </li>,
@@ -1398,13 +1746,18 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <div>
+                      <div
+                        className="project-view__item-text project-view__item-text--title"
+>
                         Host your front-end files.
 </div>,
-                      <div>
+                      <div
+                        className="project-view__item-text"
+>
                         You can host your front-end files with the Rig by entering the path to your HTML files in the "Front-end Files Location" text box and clicking the "Host with Rig" button.
 </div>,
                     ],
+                    "className": "project-view__item",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1414,6 +1767,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "Host your front-end files.",
+                        "className": "project-view__item-text project-view__item-text--title",
                       },
                       "ref": null,
                       "rendered": "Host your front-end files.",
@@ -1425,6 +1779,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "You can host your front-end files with the Rig by entering the path to your HTML files in the \\"Front-end Files Location\\" text box and clicking the \\"Host with Rig\\" button.",
+                        "className": "project-view__item-text",
                       },
                       "ref": null,
                       "rendered": "You can host your front-end files with the Rig by entering the path to your HTML files in the \\"Front-end Files Location\\" text box and clicking the \\"Host with Rig\\" button.",
@@ -1439,13 +1794,18 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
-                      <div>
+                      <div
+                        className="project-view__item-text project-view__item-text--title"
+>
                         If your extension has a back-end, run it locally.
 </div>,
-                      <div>
+                      <div
+                        className="project-view__item-text"
+>
                         You can run your back-end service from the Rig by entering the command to activate it in the "Back-end Run Command" text box and clicking the "Activate" button.
 </div>,
                     ],
+                    "className": "project-view__item",
                   },
                   "ref": null,
                   "rendered": Array [
@@ -1455,6 +1815,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "If your extension has a back-end, run it locally.",
+                        "className": "project-view__item-text project-view__item-text--title",
                       },
                       "ref": null,
                       "rendered": "If your extension has a back-end, run it locally.",
@@ -1466,6 +1827,7 @@ ShallowWrapper {
                       "nodeType": "host",
                       "props": Object {
                         "children": "You can run your back-end service from the Rig by entering the command to activate it in the \\"Back-end Run Command\\" text box and clicking the \\"Activate\\" button.",
+                        "className": "project-view__item-text",
                       },
                       "ref": null,
                       "rendered": "You can run your back-end service from the Rig by entering the command to activate it in the \\"Back-end Run Command\\" text box and clicking the \\"Activate\\" button.",
@@ -1479,9 +1841,12 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": <div>
+                    "children": <div
+                      className="project-view__item-text project-view__item-text--title"
+>
                       Go to Extension Views and add the Extension Types that match your extension.
 </div>,
+                    "className": "project-view__item",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1490,6 +1855,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "children": "Go to Extension Views and add the Extension Types that match your extension.",
+                      "className": "project-view__item-text project-view__item-text--title",
                     },
                     "ref": null,
                     "rendered": "Go to Extension Views and add the Extension Types that match your extension.",
@@ -1506,6 +1872,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "View Tutorial",
+                "className": "project-view__button project-view__button--first",
               },
               "ref": null,
               "rendered": "View Tutorial",
@@ -1517,6 +1884,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Go to Documentation",
+                "className": "project-view__button",
               },
               "ref": null,
               "rendered": "Go to Documentation",

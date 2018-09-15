@@ -2,51 +2,50 @@
   display: grid
   grid-template-columns: 1fr 8pt 1fr
   grid-gap: 8pt
-  grid-auto-rows: minmax(100px, auto)
   margin-top: 8pt
 
-  button
+  &__button
     background-color: #6441A4
     border: 0
     color: white
-    height: 16pt
+    height: 15pt
+    margin-left: 8pt
+    min-width: 8em
 
-  div
-    button
-      margin-right: 1em
+    &--first
+      margin-left: 0
 
-  > div
-    > div
-      font-weight: bold
+  &__title
+    font-size: larger
+    font-weight: bold
 
-  label
+  &-property
     display: block
     margin: 1em
 
-    button
-      margin-left: 8pt
-      width: 8em
-
-    input
+    &__input
       width: 70%
 
-    .half
-      width: 40%
+      &--half
+        width: 40%
 
-    div
+    &__name
       margin-bottom: 4pt
 
-  .vertical-bar
+    &__value
+      color: grey
+
+  &__vertical-bar
     background-color: #DAD8DE
     width: 1pt;
     height: 100%
 
-  li
+  &__item
     margin-bottom: 8pt
     margin-left: -17pt
 
-    div
-      margin: 3pt
+  &__item-text
+    margin: 3pt
 
-      &:first-child
-        font-weight: bold
+    &--title
+      font-weight: bold
