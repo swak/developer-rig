@@ -1,43 +1,146 @@
 @import "../dialog-component/component.sass"
 .project-dialog
+  display: block
 
+  &__background
+    @extend .dialog__backdrop
 
-.project-dialog__background
-  @extend .dialog__backdrop
+  &__body
+    display: grid
+    grid-template-columns: 1fr 1px 1fr
+    grid-gap: 1em
+    grid-auto-rows: min-content
 
-.project-dialog__dialog
-  @extend .dialog
-  height: 650px
+  &__dialog
+    @extend .dialog
+    height: 650px
 
-.project-dialog__content
-  @extend .container__left-block
-  white-space: pre
-  overflow-y: auto
-  height: 250px
-  width: 95%
+  &__divider
+    @extend .dialog__divider-width
+    background-color: #DAD8DE
+    border: 0
+    height: 1px
+    margin-top: 0
 
-.dialog__top-bar-container
-  @extend .top-bar
+  &__header
+    display: grid
+    grid-template-columns: 1fr
+    font-size: larger
+    padding: .5em 1em
 
-.top-bar-container__title
-  @extend .top-bar-element-left
-  margin-top: 5px
+  &__section
+    display: block
+    &--left
+      grid-column: 1
 
-.top-bar-container__escape
-  @extend .top-bar-element-right
-  width: $top-bar-dimension
-  cursor: pointer
-  width: 4em
-  margin-top: 5px
+    &--right
+      grid-column: 3
+      margin-right: 1em
 
-.dialog__divider
-  @extend .dialog__divider-width
+  &__title
+    grid-column: 1
 
-.dialog__bottom-bar
-  @extend .container__left-block
+  &-property
+    display: block
+    margin: .5em
+
+    &__box
+      border: 1px solid black
+      display: block
+      max-height: 11em
+      overflow-y: scroll
+
+    &__input
+      display: inline
+      width: 90%
+
+      &--half
+        width: 50%
+
+    &__left-text
+      text-align: right
+
+      &--grid
+        grid-column: 2
+
+    &__left-input
+      display: inline
+
+    &__name
+      display: block
+
+    &__option
+      padding: .2em
+
+      &:hover
+        background-color: #ededed
+
+      &--selected
+        background-color: #dedede
+
+      &-description
+        font-size: smaller
+
+      &-title
+        display: block
+        font-style: italic
+        font-weight: bold
+
+    &__right-text
+      display: inline
+
+    &__right-input
+      display: inline
+
+      &--grid
+        grid-column: 3
+
+    &__textarea
+      display: block
+      width: 90%
+
+    &__value
+      display: block
+
+      &--grid
+        display: grid
+        grid-gap: 3px
+        grid-template-columns: 7px 5em 1fr 5em
+
+  &__project-name-input
+    width: 15em
+
+  &__vertical-bar
+    background-color: #DAD8DE
+    grid-column: 2
+    height: 100%
+    width: 1px;
+    span
+      grid-column: 2
+      margin-right: 3px
+      text-align: right
+    input
+      grid-column: 3
+
+.bottom-bar__cancel
+  @include bottom-bar-box(#7D55C7, white)
 
 .bottom-bar__save
   @include bottom-bar-box(white, #7D55C7)
 
-.bottom-bar__cancel
-  @include bottom-bar-box(#7D55C7, white)
+.dialog__bottom-bar
+  @extend .container__left-block
+
+.dialog__top-bar-container
+  @extend .top-bar
+  grid-column: 1 / 4
+  grid-row: 1
+
+.top-bar-container__title
+  @extend .top-bar-element-left
+  margin-top: 5px
+  width: 100%
+
+.project-dialog__escape
+  cursor: pointer
+  grid-column: 2

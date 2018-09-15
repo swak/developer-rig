@@ -81,8 +81,8 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     this.initial.isMounted = false;
   }
 
-  public onChange = (input: React.FormEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, checked, type, value } = input.currentTarget as HTMLInputElement;
+  public onChange = (input: React.FormEvent<HTMLInputElement>) => {
+    const { name, checked, type, value } = input.currentTarget;
     if (type === 'checkbox') {
       if (typeof this.state[name] === 'boolean') {
         const rigProject = Object.assign(this.state.rigProject, { [name]: checked }) as RigProject;
@@ -107,6 +107,10 @@ export class CreateProjectDialog extends React.Component<Props, State>{
         this.setState({ [name]: convert(value), errorMessage: null });
       }
     }
+  }
+
+  public onChangeExample = (exampleIndex: number) => {
+    this.setState({ exampleIndex });
   }
 
   public onChangeIsLocal = (input: React.FormEvent<HTMLInputElement>) => {
@@ -216,116 +220,129 @@ export class CreateProjectDialog extends React.Component<Props, State>{
       <div className="project-dialog">
         <div className="project-dialog__background" />
         <div className="project-dialog__dialog">
-          <div className="dialog__top-bar-container">
-            <div className="top-bar-container__title">Create New Extension Project</div>
-            {!this.props.mustSave && <div className="top-bar-container__escape" onClick={this.props.closeHandler}><img alt="Close" src={closeButton} /></div>}
+          <div className="project-dialog__header">
+            <div className="project-dialog__title">Create New Extension Project</div>
+            {!this.props.mustSave && <div className="project-dialog__escape" onClick={this.props.closeHandler}><img alt="Close" src={closeButton} /></div>}
           </div>
           {this.state.errorMessage && <div>{this.state.errorMessage}</div>}
-          <hr className="dialog__divider" />
-          <div className="project-dialog__content left">
-            <label className="state-value__label">
-              <span>Extension Project Name</span>
-              <input className="state-value__input" type="text" name="name" value={this.state.name} onChange={this.onChange} />
-            </label>
-            <div className="project-dialog__state-value">
-              <div>Choose Extension</div>
-              <label className="state-value__label">
-                <input className="state-value__input" type="radio" name="isLocal" value={1} checked={this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
-                <span>Create Local Extension</span>
+          <hr className="project-dialog__divider" />
+          <div className="project-dialog__body">
+            <div className="project-dialog__section project-dialog__section--left">
+              <label className="project-dialog-property">
+                <div className="project-dialog-property__name">Extension Project Name</div>
+                <input className="project-dialog-property__input project-dialog-property__input--half" type="text" name="name" value={this.state.name} onChange={this.onChange} />
               </label>
-              {this.state.rigProject.isLocal && <div>
-                <div>Extension Type</div>
-                <label className="state-value__label">
-                  <input className="state-value__input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Overlay} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Overlay)} onChange={this.onChange} />
-                  <span>Video Overlay</span>
+              <div className="project-dialog-property">
+                <div className="project-dialog-property__name">Choose Extension</div>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={1} checked={this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
+                  <span className="project-dialog-property__right-text">Create Local Extension</span>
                 </label>
-                <label className="state-value__label">
-                  <input className="state-value__input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Panel} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Panel)} onChange={this.onChange} />
-                  <span>Panel</span>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={0} checked={!this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
+                  <span className="project-dialog-property__right-text">Use Already Created Online Extension</span>
                 </label>
-                <label className="state-value__label">
-                  <input className="state-value__input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Component} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Component)} onChange={this.onChange} />
-                  <span>Component</span>
+              </div>
+              {this.state.rigProject.isLocal && <div className="project-dialog-property">
+                <div className="project-dialog-property__name">Extension Types</div>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Overlay} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Overlay)} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Video Overlay</span>
                 </label>
-                <label className="state-value__label">
-                  <input className="state-value__input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Mobile} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Mobile)} onChange={this.onChange} />
-                  <span>Mobile</span>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Panel} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Panel)} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Panel</span>
+                </label>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Component} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Component)} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Component</span>
+                </label>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Mobile} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Mobile)} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Mobile</span>
                 </label>
               </div>}
-              <label className="state-value__label">
-                <input className="state-value__input" type="radio" name="isLocal" value={0} checked={!this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
-                <span>Use Already Created Online Extension</span>
-              </label>
-              {!this.state.rigProject.isLocal && <div>
-                <label>
-                  <span>Client ID</span>
-                  <input type="text" name="clientId" value={this.state.clientId} onChange={this.onChange} />
+              {!this.state.rigProject.isLocal && <div className="project-dialog-property">
+                <label className="project-dialog-property__value project-dialog-property__value--grid">
+                  <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Client ID</span>
+                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="clientId" value={this.state.clientId} onChange={this.onChange} />
                 </label>
-                <label>
-                  <span>Secret</span>
-                  <input type="text" name="secret" value={this.state.rigProject.secret} onChange={this.onChange} />
+                <label className="project-dialog-property__value project-dialog-property__value--grid">
+                  <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Secret</span>
+                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="secret" value={this.state.rigProject.secret} onChange={this.onChange} />
                 </label>
-                <label>
-                  <span>Version</span>
-                  <input type="text" name="version" value={this.state.version} onChange={this.onChange} />
+                <label className="project-dialog-property__value project-dialog-property__value--grid">
+                  <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Version</span>
+                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="version" value={this.state.version} onChange={this.onChange} />
                 </label>
-                <button onClick={this.fetchExtensionManifest}>Fetch</button>
-                <textarea value={JSON.stringify(this.state.rigProject.manifest)} disabled={true} />
+                <button className="project-dialog-property__button" onClick={this.fetchExtensionManifest}>Fetch</button>
+                <textarea className="project-dialog-property__textarea" value={JSON.stringify(this.state.rigProject.manifest)} disabled={true} />
               </div>}
+              <label className="project-dialog-property" title="This is the folder we will create to contain your project. You must have already created its parent folder.">
+                <div className="project-dialog-property__name">Project Folder</div>
+                <input className="project-dialog-property__input" type="text" name="projectFolderPath" value={this.state.rigProject.projectFolderPath} onChange={this.onChange} />
+              </label>
+              <div className="project-dialog-property">
+                <div className="project-dialog-property__name">Add Code to Project</div>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.None} checked={this.state.codeGenerationOption === CodeGenerationOption.None} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">None (Just Create Project Folder)</span>
+                </label>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Scaffolding} checked={this.state.codeGenerationOption === CodeGenerationOption.Scaffolding} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Generate Scaffolding</span>
+                </label>
+                <label className="project-dialog-property__value">
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Template} checked={this.state.codeGenerationOption === CodeGenerationOption.Template} onChange={this.onChange} />
+                  <span className="project-dialog-property__right-text">Use Existing Sample Template</span>
+                </label>
+              </div>
             </div>
-            <label className="state-value__label" title="This is the folder we will create to contain your project. You must have already created its parent folder.">
-              <span>Project Folder</span>
-              <input className="state-value__input" type="text" name="projectFolderPath" value={this.state.rigProject.projectFolderPath} onChange={this.onChange} />
-            </label>
-            <div className="project-dialog__state-value">
-              <div>Add Code to Project</div>
-              <label className="state-value__label">
-                <input className="state-value__input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.None} checked={this.state.codeGenerationOption === CodeGenerationOption.None} onChange={this.onChange} />
-                <span>None (Just Create Project Folder)</span>
-              </label>
-              <label className="state-value__label">
-                <input className="state-value__input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Scaffolding} checked={this.state.codeGenerationOption === CodeGenerationOption.Scaffolding} onChange={this.onChange} />
-                <span>Generate Scaffolding</span>
-              </label>
-              <label className="state-value__label">
-                <input className="state-value__input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Template} checked={this.state.codeGenerationOption === CodeGenerationOption.Template} onChange={this.onChange} />
-                <span>Use Existing Sample Template</span>
-              </label>
+            <div className="project-dialog__vertical-bar" />
+            <div className="project-dialog__section project-dialog__section--right">
+              {this.state.codeGenerationOption === CodeGenerationOption.Scaffolding ? (
+                <>
+                  <div className="project-dialog__section-header">Tell us more about what your extension will do</div>
+                  <div className="project-dialog__section-text">(We’ll automatically provide basic React-based scaffolding, but we want to provide extras where useful!)</div>
+                  <label className="project-dialog-property">
+                    <input className="project-dialog-property__left-input" type="checkbox" name="scaffoldingOptions" value={ScaffoldingOptions.StoreConfiguration} checked={Boolean(this.state.scaffoldingOptions)} onChange={this.onChange} />
+                    <span className="project-dialog-property__right-text">Store Broadcaster Configuration</span>
+                  </label>
+                  <label className="project-dialog-property">
+                    <input className="project-dialog-property__left-input" type="checkbox" name="scaffoldingOptions" value={ScaffoldingOptions.RetrieveConfiguration} checked={Boolean(this.state.scaffoldingOptions & ScaffoldingOptions.RetrieveConfiguration)} onChange={this.onChange} />
+                    <span className="project-dialog-property__right-text">Retrieve Configuration on Load</span>
+                  </label>
+                </>
+              ) : this.state.codeGenerationOption === CodeGenerationOption.Template ? (
+                <>
+                  <div className="project-dialog__section-header">Start from an existing extension sample from Twitch or the Developer Community</div>
+                  <label className="project-dialog-property">
+                    <div className="project-dialog-property__name">Twitch Provided Samples</div>
+                    <div className="project-dialog-property__box">
+                      {this.state.examples.map((example, index) => {
+                        const className = 'project-dialog-property__option' +
+                          (this.state.exampleIndex === index ? ' project-dialog-property__option--selected' : '');
+                        return (
+                          <div key={index} className={className} onClick={() => this.onChangeExample(index)}>
+                            <div className="project-dialog-property__option-title">{example.title}</div>
+                            <div className="project-dialog-property__option-description">{example.description}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </label>
+                  <label className="project-dialog-property">
+                    <div className="project-dialog-property__name">Community Samples</div>
+                    <div className="project-dialog-property__right-text">Coming soon!  Reach out to developer@twitch.tv if you’d like to contribute.</div>
+                  </label>
+                </>
+              ) : (
+                    <div className="project-dialog__section-header">You’re all set!  Good luck on your extension!</div>
+                  )}
             </div>
           </div>
-          <div className="project-dialog__vertical-bar" />
-          {this.state.codeGenerationOption === CodeGenerationOption.Scaffolding ? (
-            <div className="project-dialog__content right">
-              <div>Tell us more about what your extension will do</div>
-              <div>(We’ll automatically provide basic React-based scaffolding, but we want to provide extras where useful!)</div>
-              <label className="state-value__label">
-                <input className="state-value__input" type="checkbox" name="scaffoldingOptions" value={ScaffoldingOptions.StoreConfiguration} checked={Boolean(this.state.scaffoldingOptions)} onChange={this.onChange} />
-                <span>Store Broadcaster Configuration</span>
-              </label>
-              <label className="state-value__label">
-                <input className="state-value__input" type="checkbox" name="scaffoldingOptions" value={ScaffoldingOptions.RetrieveConfiguration} checked={Boolean(this.state.scaffoldingOptions & ScaffoldingOptions.RetrieveConfiguration)} onChange={this.onChange} />
-                <span>Retrieve Configuration on Load</span>
-              </label>
-            </div>
-          ) : this.state.codeGenerationOption === CodeGenerationOption.Template ? (
-            <div className="project-dialog__content right">
-              <div>Start from an existing extension sample from Twitch or the Developer Community</div>
-              <div>Twitch Provided Samples</div>
-              <select name="exampleIndex" value={this.state.exampleIndex} onChange={this.onChange}>
-                {this.state.examples.map((example, index) => (
-                  <option key={index} value={index}>{example.title}</option>
-                ))}
-              </select>
-              <div>Community Samples</div>
-              <div>Coming soon!  Reach out to developer@twitch.tv if you’d like to contribute.</div>
-            </div>
-          ) : (
-                <div className="project-dialog__content right">
-                  <div>You’re all set!  Good luck on your extension!</div>
-                </div>
-              )}
-          <hr className="dialog__divider" />
-          <div className="dialog_bottom-bar">
+          <hr className="project-dialog__divider" />
+          <div className="project-dialog__footer">
             <div className={saveClassName} onClick={this.saveHandler}>Save</div>
             {!this.props.mustSave && (
               <div className="bottom-bar__cancel" onClick={this.props.closeHandler}>Cancel</div>

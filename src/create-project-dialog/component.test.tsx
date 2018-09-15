@@ -40,12 +40,12 @@ describe('<CreateProjectDialog />', () => {
 
   it('expects label-only content', () => {
     const { wrapper } = setupShallow();
-    expect(wrapper.find('.project-dialog__content').first().text().trim()).toBe('Extension Project NameChoose ExtensionCreate Local ExtensionExtension TypeVideo OverlayPanelComponentMobileUse Already Created Online ExtensionProject FolderAdd Code to ProjectNone (Just Create Project Folder)Generate ScaffoldingUse Existing Sample Template');
+    expect(wrapper.find('.project-dialog__dialog').first().text().trim()).toBe('Create New Extension ProjectExtension Project NameChoose ExtensionCreate Local ExtensionUse Already Created Online ExtensionExtension TypesVideo OverlayPanelComponentMobileProject FolderAdd Code to ProjectNone (Just Create Project Folder)Generate ScaffoldingUse Existing Sample TemplateYou’re all set!  Good luck on your extension!SaveCancel');
   });
 
   it('fires closeHandler when top exit button is clicked', () => {
     const { wrapper } = setupShallow();
-    wrapper.find('.top-bar-container__escape').simulate('click');
+    wrapper.find('.project-dialog__escape').simulate('click');
     expect(wrapper.instance().props.closeHandler).toHaveBeenCalled();
   });
 
