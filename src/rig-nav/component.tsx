@@ -6,7 +6,7 @@ import { UserDropdown } from '../user-dropdown';
 import { LoginButton } from '../login-button';
 import { UserSession } from '../core/models/user-session';
 import { ExtensionManifest } from '../core/models/manifest';
-import { MockApiDropdown } from './mock-api-dropdown';
+import { ProjectDropdown, Props as ProjectDropdownProps } from './project-dropdown';
 
 export interface PublicProps {
   manifest: ExtensionManifest,
@@ -20,7 +20,7 @@ export interface ReduxStateProps {
   mockApiEnabled?: boolean,
 }
 
-type Props = PublicProps & ReduxStateProps;
+type Props = PublicProps & ProjectDropdownProps & ReduxStateProps;
 
 export class RigNavComponent extends React.Component<Props> {
   private openProductManagementHandler = (): void => {
@@ -58,7 +58,12 @@ export class RigNavComponent extends React.Component<Props> {
       return (
         <div className='top-nav'>
           <div className='personal-bar'>
-            <MockApiDropdown />
+            <ProjectDropdown
+              currentProjectIndex={this.props.currentProjectIndex}
+              projects={this.props.projects}
+              createNewProject={this.props.createNewProject}
+              selectProject={this.props.selectProject}
+            />
             {manifest && <div className='personal-bar__ext-name'>
               <span>{manifest.name}</span>
             </div>}

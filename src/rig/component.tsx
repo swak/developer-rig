@@ -17,7 +17,7 @@ import { ExtensionManifest } from '../core/models/manifest';
 import { UserSession } from '../core/models/user-session';
 import { SignInDialog } from '../sign-in-dialog';
 import { ExtensionMode, ExtensionViewType } from '../constants/extension-coordinator';
-import { ProjectView } from '../project-view/component';
+import { ProjectView } from '../project-view';
 import { CreateProjectDialog } from '../create-project-dialog';
 
 enum LocalStorageKeys {
@@ -187,6 +187,17 @@ export class RigComponent extends React.Component<Props, State> {
     });
   }
 
+  public createNewProject = () => {
+    this.setState({ showingCreateProjectDialog: true });
+  }
+
+  public selectProject = (projectIndex: number) => {
+    const selectedProject = this.state.projects[projectIndex];
+    if (selectedProject !== this.state.currentProject) {
+      // TODO:  shut down any hosting.
+    }
+  }
+
   public closeProjectDialog = () => {
     this.setState({ showingCreateProjectDialog: false });
   }
@@ -196,6 +207,10 @@ export class RigComponent extends React.Component<Props, State> {
     return (
       <div className="rig-container">
         <RigNav
+          currentProjectIndex={this.state.projects.indexOf(this.state.currentProject)}
+          projects={this.state.projects}
+          createNewProject={this.createNewProject}
+          selectProject={this.selectProject}
           manifest={currentProject ? currentProject.manifest : null}
           selectedView={this.state.selectedView}
           viewerHandler={this.viewerHandler}
@@ -204,11 +219,11 @@ export class RigComponent extends React.Component<Props, State> {
           <label>Something went wrong: {this.state.error}</label>
         ) : !this.props.session ? (
           <SignInDialog />
-        ) : !currentProject ? (
+        ) : !currentProject || this.state.showingCreateProjectDialog ? (
           <CreateProjectDialog
             userId={this.state.userId}
             mustSave={!this.state.currentProject}
-            closeHandler={() => { }}
+            closeHandler={this.closeProjectDialog}
             saveHandler={this.updateProject}
           />
         ) : this.state.selectedView === NavItem.ProductManagement ? (
@@ -220,12 +235,6 @@ export class RigComponent extends React.Component<Props, State> {
               rigProject={currentProject}
               onChange={this.updateProject}
             />
-            {this.state.showingCreateProjectDialog && <CreateProjectDialog
-              userId={this.state.userId}
-              mustSave={false}
-              closeHandler={this.closeProjectDialog}
-              saveHandler={this.updateProject}
-            />}
           </div>
         ) : (
           <div>

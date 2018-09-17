@@ -31,8 +31,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(RigNavComponent)
+          createNewProject={[Function]}
+          currentProjectIndex={0}
           error={undefined}
           manifest={undefined}
+          projects={
+                    Array [
+                              Object {},
+                            ]
+          }
+          selectProject={[Function]}
           selectedView="Extension Views"
           viewerHandler={[Function]}
 />,
@@ -56,8 +64,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "createNewProject": [Function],
+          "currentProjectIndex": 0,
           "error": undefined,
           "manifest": undefined,
+          "projects": Array [
+            Object {},
+          ],
+          "selectProject": [Function],
           "selectedView": "Extension Views",
           "viewerHandler": [Function],
         },
@@ -125,8 +139,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(RigNavComponent)
+            createNewProject={[Function]}
+            currentProjectIndex={0}
             error={undefined}
             manifest={undefined}
+            projects={
+                        Array [
+                                    Object {},
+                                  ]
+            }
+            selectProject={[Function]}
             selectedView="Extension Views"
             viewerHandler={[Function]}
 />,
@@ -150,8 +172,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "createNewProject": [Function],
+            "currentProjectIndex": 0,
             "error": undefined,
             "manifest": undefined,
+            "projects": Array [
+              Object {},
+            ],
+            "selectProject": [Function],
             "selectedView": "Extension Views",
             "viewerHandler": [Function],
           },
@@ -253,8 +281,16 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(RigNavComponent)
+          createNewProject={[Function]}
+          currentProjectIndex={0}
           error={undefined}
           manifest={undefined}
+          projects={
+                    Array [
+                              Object {},
+                            ]
+          }
+          selectProject={[Function]}
           selectedView="Extension Views"
           viewerHandler={[Function]}
 />,
@@ -348,8 +384,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "createNewProject": [Function],
+          "currentProjectIndex": 0,
           "error": undefined,
           "manifest": undefined,
+          "projects": Array [
+            Object {},
+          ],
+          "selectProject": [Function],
           "selectedView": "Extension Views",
           "viewerHandler": [Function],
         },
@@ -555,8 +597,16 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(RigNavComponent)
+            createNewProject={[Function]}
+            currentProjectIndex={0}
             error={undefined}
             manifest={undefined}
+            projects={
+                        Array [
+                                    Object {},
+                                  ]
+            }
+            selectProject={[Function]}
             selectedView="Extension Views"
             viewerHandler={[Function]}
 />,
@@ -650,8 +700,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "createNewProject": [Function],
+            "currentProjectIndex": 0,
             "error": undefined,
             "manifest": undefined,
+            "projects": Array [
+              Object {},
+            ],
+            "selectProject": [Function],
             "selectedView": "Extension Views",
             "viewerHandler": [Function],
           },

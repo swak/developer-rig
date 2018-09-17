@@ -2,6 +2,7 @@ import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { RigNavComponent } from '.';
 import { NavItem } from '../constants/nav-items';
 import { LoginButton } from '../login-button';
+import { RigProject } from '../core/models/rig';
 import { UserDropdown } from '../user-dropdown';
 import { createExtensionManifestForTest } from '../tests/constants/extension';
 
@@ -16,7 +17,12 @@ const defaultGenerator = () => ({
   manifest: createExtensionManifestForTest(),
   session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
   mockApiEnabled: false,
+  currentProjectIndex: 0,
+  projects: [] as RigProject[],
+  createNewProject: () => {},
+  selectProject: (projectIndex: number) => {},
 });
+
 
 const setupShallow = setupShallowTest(RigNavComponent, defaultGenerator);
 
