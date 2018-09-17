@@ -167,23 +167,26 @@ export class RigComponent extends React.Component<Props, State> {
     this.closeEditViewHandler();
   }
 
-  public updateProject = (project: RigProject) => {
+  public createProject = (project: RigProject) => {
     this.setState((previousState) => {
-      if (previousState.currentProject) {
-        const currentProject = Object.assign(previousState.currentProject, project);
-        const projects = previousState.projects;
-        localStorage.setItem('projects', JSON.stringify(projects));
-        return { currentProject, projects };
-      } else {
-        const projects = [project];
-        localStorage.setItem('projects', JSON.stringify(projects));
-        localStorage.setItem('currentProjectIndex', '0');
-        return { currentProject: project, projects };
-      }
+      const previousProjects = previousState.currentProject ? previousState.projects : [];
+      localStorage.setItem('currentProjectIndex', previousProjects.length.toString());
+      const projects = [...previousProjects, project];
+      localStorage.setItem('projects', JSON.stringify(projects));
+      return { currentProject: project, projects };
     });
   }
 
-  public createNewProject = () => {
+  public updateProject = (project: RigProject) => {
+    this.setState((previousState) => {
+      const currentProject = Object.assign(previousState.currentProject, project);
+      const projects = previousState.projects;
+      localStorage.setItem('projects', JSON.stringify(projects));
+      return { currentProject, projects };
+    });
+  }
+
+  public showCreateProjectDialog = () => {
     this.setState({ showingCreateProjectDialog: true });
   }
 
@@ -205,7 +208,7 @@ export class RigComponent extends React.Component<Props, State> {
         <RigNav
           currentProjectIndex={this.state.projects.indexOf(this.state.currentProject)}
           projects={this.state.projects}
-          createNewProject={this.createNewProject}
+          createNewProject={this.showCreateProjectDialog}
           selectProject={this.selectProject}
           manifest={currentProject ? currentProject.manifest : null}
           selectedView={this.state.selectedView}
@@ -220,7 +223,7 @@ export class RigComponent extends React.Component<Props, State> {
             userId={this.state.userId}
             mustSave={!this.state.currentProject}
             closeHandler={this.closeProjectDialog}
-            saveHandler={this.updateProject}
+            saveHandler={this.createProject}
           />
         ) : this.state.selectedView === NavItem.ProductManagement ? (
           <ProductManagementViewContainer clientId={currentProject.manifest.id} />
