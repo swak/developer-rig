@@ -1,6 +1,7 @@
 import { ExtensionManifest } from './manifest';
 
 export interface RigProject {
+  extensionViews: RigExtensionView[],
   isLocal: boolean;
   projectFolderPath: string;
   manifest: ExtensionManifest;

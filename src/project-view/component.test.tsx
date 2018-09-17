@@ -5,6 +5,7 @@ import { createExtensionManifestForTest } from '../tests/constants/extension';
 describe('<ProjectView />', () => {
   const setupShallow = setupShallowTest(ProjectView, () => ({
     rigProject: {
+      extensionViews: [],
       isLocal: true,
       projectFolderPath: 'test',
       manifest: createExtensionManifestForTest(),

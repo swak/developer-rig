@@ -9,6 +9,7 @@ ShallowWrapper {
     rigProject={
         Object {
             "backendCommand": "test",
+            "extensionViews": Array [],
             "frontendFolderName": "test",
             "isLocal": true,
             "manifest": Object {

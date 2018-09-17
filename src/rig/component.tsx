@@ -21,7 +21,6 @@ import { ProjectView } from '../project-view';
 import { CreateProjectDialog } from '../create-project-dialog';
 
 enum LocalStorageKeys {
-  RigExtensionViews = 'extensionViews',
   RigLogin = 'rigLogin',
 }
 
@@ -37,7 +36,6 @@ export interface ReduxDispatchProps {
 interface State {
   projects: RigProject[],
   currentProject?: RigProject,
-  extensionViews: RigExtensionView[],
   manifest: ExtensionManifest;
   showingExtensionsView: boolean;
   showingEditView: boolean;
@@ -53,7 +51,6 @@ type Props = ReduxDispatchProps & ReduxStateProps;
 export class RigComponent extends React.Component<Props, State> {
   public state: State = {
     projects: [],
-    extensionViews: [],
     manifest: {} as ExtensionManifest,
     showingExtensionsView: false,
     showingEditView: false,
@@ -66,7 +63,6 @@ export class RigComponent extends React.Component<Props, State> {
     super(props);
     this.setLogin();
     this.loadProjects();
-    this.loadExtensionViews();
   }
 
   public openEditViewHandler = (id: string) => {
@@ -116,7 +112,7 @@ export class RigComponent extends React.Component<Props, State> {
   }
 
   public createExtensionView = (extensionViewDialogState: ExtensionViewDialogState) => {
-    const extensionViews = this.getStoredRigExtensionViews();
+    const extensionViews = this.state.currentProject.extensionViews || [];
     const mode = extensionViewDialogState.extensionViewType === ExtensionMode.Config ? ExtensionMode.Config :
       extensionViewDialogState.extensionViewType === ExtensionMode.Dashboard ? ExtensionMode.Dashboard : ExtensionMode.Viewer;
     const linked = extensionViewDialogState.identityOption === IdentityOptions.Linked ||
@@ -150,16 +146,16 @@ export class RigComponent extends React.Component<Props, State> {
       orientation: extensionViewDialogState.orientation,
       frameSize: this.getFrameSizeFromDialog(extensionViewDialogState),
     });
-    this.pushExtensionViews(extensionViews);
+    this.updateExtensionViews(extensionViews);
     this.closeExtensionViewDialog();
   }
 
   public deleteExtensionView = (id: string) => {
-    this.pushExtensionViews(this.state.extensionViews.filter(element => element.id !== id));
+    this.updateExtensionViews(this.state.currentProject.extensionViews.filter(element => element.id !== id));
   }
 
   public editViewHandler = (newViewState: EditViewProps) => {
-    const views = this.getStoredRigExtensionViews();
+    const views = this.state.currentProject.extensionViews;
     views.forEach((element: RigExtensionView) => {
       if (element.id === this.state.idToEdit) {
         element.x = newViewState.x;
@@ -167,7 +163,7 @@ export class RigComponent extends React.Component<Props, State> {
         element.orientation = newViewState.orientation;
       }
     });
-    this.pushExtensionViews(views);
+    this.updateExtensionViews(views);
     this.closeEditViewHandler();
   }
 
@@ -240,7 +236,7 @@ export class RigComponent extends React.Component<Props, State> {
           <div>
             <ExtensionViewContainer
               deleteExtensionViewHandler={this.deleteExtensionView}
-              extensionViews={this.state.extensionViews}
+              extensionViews={this.state.currentProject.extensionViews}
               isLocal={this.state.currentProject.isLocal}
               openEditViewHandler={this.openEditViewHandler}
               openExtensionViewHandler={this.openExtensionViewHandler}
@@ -256,7 +252,7 @@ export class RigComponent extends React.Component<Props, State> {
             {this.state.showingEditView && (
               <EditViewDialog
                 idToEdit={this.state.idToEdit}
-                views={this.getStoredRigExtensionViews()}
+                views={this.state.currentProject.extensionViews}
                 closeHandler={this.closeEditViewHandler}
                 saveViewHandler={this.editViewHandler}
               />
@@ -268,11 +264,8 @@ export class RigComponent extends React.Component<Props, State> {
     );
   }
 
-  public pushExtensionViews(newViews: RigExtensionView[]) {
-    this.storeExtensionViews(newViews);
-    this.setState({
-      extensionViews: newViews,
-    });
+  public updateExtensionViews(extensionViews: RigExtensionView[]) {
+    this.updateProject({ extensionViews } as RigProject);
   }
 
   private async loadProjects() {
@@ -282,7 +275,9 @@ export class RigComponent extends React.Component<Props, State> {
       const currentProject = projects[Number(localStorage.getItem('currentProjectIndex') || 0)];
       Object.assign(this.state, { currentProject, projects, selectedView: NavItem.ExtensionViews });
     } else if (process.env.EXT_CLIENT_ID && process.env.EXT_SECRET && process.env.EXT_VERSION) {
+      const serializedExtensionViews = localStorage.getItem('extensionViews');
       const currentProject: RigProject = {
+        extensionViews: serializedExtensionViews ? JSON.parse(serializedExtensionViews) : [],
         isLocal: process.env.EXT_SECRET.startsWith('kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk'),
         projectFolderPath: '',
         manifest: { id: process.env.EXT_CLIENT_ID, version: process.env.EXT_VERSION } as ExtensionManifest,
@@ -305,18 +300,6 @@ export class RigComponent extends React.Component<Props, State> {
       } catch (ex) {
         console.error(ex.message);
       }
-    }
-  }
-
-  private loadExtensionViews() {
-    const extensionViews = this.getStoredRigExtensionViews();
-    if (extensionViews.length) {
-      this.state.extensionViews = extensionViews.map((view, index) => ({
-        ...view,
-        id: (index + 1).toString(),
-      }));
-    } else {
-      this.storeExtensionViews([]);
     }
   }
 
@@ -360,14 +343,5 @@ export class RigComponent extends React.Component<Props, State> {
         }
       }
     }
-  }
-
-  private getStoredRigExtensionViews(): RigExtensionView[] {
-    const stored = localStorage.getItem(LocalStorageKeys.RigExtensionViews);
-    return stored ? JSON.parse(stored) as RigExtensionView[] : [];
-  }
-
-  private storeExtensionViews(rigExtensionViews: RigExtensionView[]) {
-    localStorage.setItem(LocalStorageKeys.RigExtensionViews, JSON.stringify(rigExtensionViews));
   }
 }
