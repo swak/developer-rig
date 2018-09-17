@@ -202,6 +202,8 @@ export class RigComponent extends React.Component<Props, State> {
           error={this.state.error} />
         {this.state.error ? (
           <label>Something went wrong: {this.state.error}</label>
+        ) : !this.props.session ? (
+          <SignInDialog />
         ) : !currentProject ? (
           <CreateProjectDialog
             userId={this.state.userId}
@@ -250,7 +252,6 @@ export class RigComponent extends React.Component<Props, State> {
                 saveViewHandler={this.editViewHandler}
               />
             )}
-            {!this.props.session && <SignInDialog />}
             <Console />
           </div>
         )}

@@ -80,7 +80,6 @@ ShallowWrapper {
 />,
             false,
             false,
-            false,
             <Console />,
           ],
         },
@@ -101,7 +100,6 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
-          false,
           false,
           false,
           Object {
@@ -176,7 +174,6 @@ ShallowWrapper {
 />,
               false,
               false,
-              false,
               <Console />,
             ],
           },
@@ -197,7 +194,6 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            false,
             false,
             false,
             Object {
@@ -446,7 +442,6 @@ ShallowWrapper {
 />,
             false,
             false,
-            false,
             <Console />,
           ],
         },
@@ -535,7 +530,6 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
-          false,
           false,
           false,
           Object {
@@ -750,7 +744,6 @@ ShallowWrapper {
 />,
               false,
               false,
-              false,
               <Console />,
             ],
           },
@@ -839,7 +832,6 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
-            false,
             false,
             false,
             Object {
