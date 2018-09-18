@@ -1,6 +1,7 @@
 module.exports = function(app) {
   const childProcess = require('child_process');
   const fs = require('fs');
+  const parseCommandString = require('minimist-string');
   const { isAbsolute, join } = require('path');
   const children = {
     backend: null,
@@ -36,47 +37,42 @@ module.exports = function(app) {
   app.post('/backend', async (req, res) => {
     const { backendCommand, projectFolderPath } = req.body;
     try {
-      if (process.platform === 'win32') {
-        const commandFilePath = join(process.env.TEMP, `rbe${Math.floor(99999 * Math.random())}.cmd`);
-        const fout = fs.createWriteStream(commandFilePath);
-        try {
-          fout.write(backendCommand);
-          fout.end();
-          await new Promise((resolve, reject) => {
-            fout.on('error', (ex) => reject(ex));
-            fout.on('close', () => resolve());
-          });
-          const options = {};
-          if (projectFolderPath) {
-            options.cwd = projectFolderPath;
+      const parsedArgs = parseCommandString(backendCommand);
+      const args = [];
+      Object.keys(parsedArgs).forEach((key) => {
+        if (key === '_') {
+          args.push(...parsedArgs._.filter((_, index) => index));
+        } else {
+          const hyphen = key.length === 1 ? '-' : '--';
+          args.push(hyphen + key);
+          if (parsedArgs[key] !== true) {
+            args.push(parsedArgs[key]);
           }
-          const child = childProcess.spawn('cmd.exe', ['/c', commandFilePath], options);
-          await new Promise((resolve, reject) => {
-            let hasResolved = false;
-            child.stderr.on('data', (data) => process.stderr.write(data.toString()));
-            child.stdout.on('data', (data) => process.stdout.write(data.toString()));
-            child.on('error', (ex) => reject(ex));
-            child.on('exit', (code) => {
-              hasResolved = hasResolved || (clearTimeout(timerId), resolve(), code, true);
-            });
-            const timerId = setTimeout(() => {
-              hasResolved = hasResolved || (resolve(), true);
-            }, 999);
-          });
-          if (child.error || child.status) {
-            throw child.error || new Error(child.stderr.toString());
-          } else if (child.exitCode) {
-            throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
-          }
-          children.backend = child;
-          fs.unlinkSync(commandFilePath);
-        } catch (ex) {
-          fs.unlinkSync(commandFilePath);
-          throw ex;
         }
-      } else {
-        // TODO:  handle Mac.
+      });
+      const options = {};
+      if (projectFolderPath) {
+        options.cwd = projectFolderPath;
       }
+      const child = childProcess.spawn(parsedArgs._[0], args, options);
+      await new Promise((resolve, reject) => {
+        let hasResolved = false;
+        child.stderr.on('data', (data) => process.stderr.write(data.toString()));
+        child.stdout.on('data', (data) => process.stdout.write(data.toString()));
+        child.on('error', (ex) => reject(ex));
+        child.on('exit', (code) => {
+          hasResolved = hasResolved || (clearTimeout(timerId), resolve(), code, true);
+        });
+        const timerId = setTimeout(() => {
+          hasResolved = hasResolved || (resolve(), true);
+        }, 999);
+      });
+      if (child.error || child.status) {
+        throw child.error || new Error(child.stderr.toString());
+      } else if (child.exitCode) {
+        throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
+      }
+      children.backend = child;
       res.writeHead(204);
       res.end();
     } catch (ex) {

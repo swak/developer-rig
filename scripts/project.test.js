@@ -27,26 +27,6 @@ const res = {
 runTests();
 
 async function runTests() {
-  // Test the back-end.
-  await postRoutes['/backend']({
-    body: {
-      backendCommand: 'dir\r\nexit /b 3',
-      projectFolderPath: 'C:\\Users\\cidzerda\\Documents\\GitHub\\developer-rig',
-    },
-  }, res);
-
-  // Test the front-end.
-  await postRoutes['/frontend']({
-    body: {
-      frontendFolderPath: '..\\my-extension\\public',
-      port: 8080,
-      projectFolderPath: 'C:\\Users\\cidzerda\\Documents\\GitHub\\developer-rig',
-    },
-  }, res);
-
-  // Test shut down.
-  await postRoutes['/stop']({}, res);
-
   // Test project creation.
   const projectFolderPath = normalize(join(__dirname, '..', 'build', 'asdf'));
   const req = {
@@ -67,4 +47,24 @@ async function runTests() {
   rmrf(projectFolderPath);
   req.body.codeGenerationOption = 'template';
   await postRoutes['/project'](req, res);
+
+  // Test the back-end.
+  await postRoutes['/backend']({
+    body: {
+      backendCommand: 'node extensions-hello-world\\services\\backend -c "{clientId}" -s "{secret}" -o "{ownerId}"',
+      projectFolderPath,
+    },
+  }, res);
+
+  // Test the front-end.
+  await postRoutes['/frontend']({
+    body: {
+      frontendFolderPath: '..\\my-extension\\public',
+      port: 8080,
+      projectFolderPath,
+    },
+  }, res);
+
+  // Test shut down.
+  await postRoutes['/stop']({}, res);
 }

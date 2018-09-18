@@ -42,6 +42,7 @@
     "http-server": "^0.11.1",
     "jest": "20.0.4",
     "jsonwebtoken": "^8.2.0",
+    "minimist-string": "^1.0.2",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",
