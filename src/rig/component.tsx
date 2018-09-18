@@ -59,6 +59,8 @@ export class RigComponent extends React.Component<Props, State> {
     selectedView: NavItem.ProjectOverview,
   }
 
+  get currentProjectIndex() { return this.state.projects.indexOf(this.state.currentProject); }
+
   constructor(props: Props) {
     super(props);
     this.setLogin();
@@ -206,7 +208,7 @@ export class RigComponent extends React.Component<Props, State> {
     return (
       <div className="rig-container">
         <RigNav
-          currentProjectIndex={this.state.projects.indexOf(this.state.currentProject)}
+          currentProjectIndex={this.currentProjectIndex}
           projects={this.state.projects}
           createNewProject={this.showCreateProjectDialog}
           selectProject={this.selectProject}
@@ -230,7 +232,7 @@ export class RigComponent extends React.Component<Props, State> {
         ) : this.state.selectedView === NavItem.ProjectOverview ? (
           <div>
             <ProjectView
-              key={currentProject.manifest.name}
+              key={this.currentProjectIndex}
               rigProject={currentProject}
               onChange={this.updateProject}
             />
