@@ -1,17 +1,20 @@
 import * as React from 'react';
+import './component.sass';
+import { ExtensionMode } from '../constants/extension-coordinator';
 import { ExtensionView } from '../extension-view';
 import { ExtensionViewButton } from '../extension-view-button';
-import { ExtensionMode } from '../constants/extension-coordinator';
-import './component.sass';
 import { RigExtensionView } from '../core/models/rig';
 
-interface ExtensionViewContainerProps {
+interface Props {
   extensionViews: RigExtensionView[];
   openEditViewHandler?: (id: string) => void;
   deleteExtensionViewHandler: (id: string) => void;
   isLocal: boolean;
   openExtensionViewHandler: Function;
-  mockApiEnabled: boolean;
+}
+
+interface State {
+  mockTriggersEnabled: boolean;
 }
 
 const ConfigNames: { [key: string]: string; } = {
@@ -19,9 +22,17 @@ const ConfigNames: { [key: string]: string; } = {
   [ExtensionMode.Dashboard]: 'Broadcaster Live Dashboard',
 };
 
-export class ExtensionViewContainer extends React.Component<ExtensionViewContainerProps> {
+export class ExtensionViewContainer extends React.Component<Props, State> {
+  public state: State = {
+    mockTriggersEnabled: false,
+  };
+
   private openExtensionViewDialog = () => {
     this.props.openExtensionViewHandler();
+  }
+
+  private toggleMockTriggers = () => {
+    this.setState((previousState) => ({ mockTriggersEnabled: !previousState.mockTriggersEnabled }));
   }
 
   public render() {
@@ -45,13 +56,21 @@ export class ExtensionViewContainer extends React.Component<ExtensionViewContain
           orientation={view.orientation}
           openEditViewHandler={this.props.openEditViewHandler}
           deleteViewHandler={this.props.deleteExtensionViewHandler}
-          mockApiEnabled={this.props.mockApiEnabled}
+          mockApiEnabled={this.state.mockTriggersEnabled}
         />
       )));
     }
-
+    const triggerHandleClassName = "trigger-bar__switch-handle" +
+      (this.state.mockTriggersEnabled ? ' trigger-bar__switch-handle--on' : '');
     return (
       <div className='view-container-wrapper'>
+        <div className="trigger-bar">
+          <div className="trigger-bar__switch" onClick={this.toggleMockTriggers}>
+            <div className={triggerHandleClassName}>{this.state.mockTriggersEnabled ? 'on' : 'off'}</div>
+          </div>
+          <div className="trigger-bar__text">Use Mock Triggers</div>
+          <button className="trigger-bar__button">Edit Responses</button>
+        </div>
         <div className="view-container">
           {extensionViews}
         </div>

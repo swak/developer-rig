@@ -138,8 +138,13 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                                    class="runlist-trigger__container"
+                                    class="runlist-trigger"
                   >
+                                    <div
+                                                      class="runlist-trigger__text"
+                                    >
+                                                      [Response Recieved]
+                                    </div>
                                     <select
                                                       class="runlist-trigger__select"
                                     >
@@ -285,8 +290,13 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                                class="runlist-trigger__container"
+                                class="runlist-trigger"
                 >
+                                <div
+                                                class="runlist-trigger__text"
+                                >
+                                                [Response Recieved]
+                                </div>
                                 <select
                                                 class="runlist-trigger__select"
                                 >
@@ -432,77 +442,7 @@ ReactWrapper {
             "actualDuration": 0,
             "actualStartTime": 0,
             "alternate": null,
-            "child": FiberNode {
-              "_debugID": 9,
-              "_debugIsCurrentlyTiming": false,
-              "_debugOwner": [Circular],
-              "_debugSource": null,
-              "actualDuration": 0,
-              "actualStartTime": 0,
-              "alternate": null,
-              "child": null,
-              "effectTag": 0,
-              "expirationTime": 0,
-              "firstEffect": null,
-              "index": 0,
-              "key": "testContext",
-              "lastEffect": null,
-              "memoizedProps": Object {
-                "children": "testContext",
-              },
-              "memoizedState": null,
-              "mode": 0,
-              "nextEffect": null,
-              "pendingProps": Object {
-                "children": "testContext",
-              },
-              "ref": null,
-              "return": [Circular],
-              "selfBaseTime": 0,
-              "sibling": FiberNode {
-                "_debugID": 10,
-                "_debugIsCurrentlyTiming": false,
-                "_debugOwner": [Circular],
-                "_debugSource": null,
-                "actualDuration": 0,
-                "actualStartTime": 0,
-                "alternate": null,
-                "child": null,
-                "effectTag": 0,
-                "expirationTime": 0,
-                "firstEffect": null,
-                "index": 1,
-                "key": "testAuth",
-                "lastEffect": null,
-                "memoizedProps": Object {
-                  "children": "testAuth",
-                },
-                "memoizedState": null,
-                "mode": 0,
-                "nextEffect": null,
-                "pendingProps": Object {
-                  "children": "testAuth",
-                },
-                "ref": null,
-                "return": [Circular],
-                "selfBaseTime": 0,
-                "sibling": null,
-                "stateNode": <option>
-                  testAuth
-</option>,
-                "tag": 5,
-                "treeBaseTime": 0,
-                "type": "option",
-                "updateQueue": null,
-              },
-              "stateNode": <option>
-                testContext
-</option>,
-              "tag": 5,
-              "treeBaseTime": 0,
-              "type": "option",
-              "updateQueue": null,
-            },
+            "child": null,
             "effectTag": 0,
             "expirationTime": 0,
             "firstEffect": null,
@@ -510,31 +450,15 @@ ReactWrapper {
             "key": null,
             "lastEffect": null,
             "memoizedProps": Object {
-              "children": Array [
-                <option>
-                  testContext
-</option>,
-                <option>
-                  testAuth
-</option>,
-              ],
-              "className": "runlist-trigger__select",
-              "onChange": [Function],
+              "children": "[Response Recieved]",
+              "className": "runlist-trigger__text",
             },
             "memoizedState": null,
             "mode": 0,
             "nextEffect": null,
             "pendingProps": Object {
-              "children": Array [
-                <option>
-                  testContext
-</option>,
-                <option>
-                  testAuth
-</option>,
-              ],
-              "className": "runlist-trigger__select",
-              "onChange": [Function],
+              "children": "[Response Recieved]",
+              "className": "runlist-trigger__text",
             },
             "ref": null,
             "return": [Circular],
@@ -547,7 +471,77 @@ ReactWrapper {
               "actualDuration": 0,
               "actualStartTime": 0,
               "alternate": null,
-              "child": null,
+              "child": FiberNode {
+                "_debugID": 10,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 0,
+                "key": "testContext",
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "testContext",
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "testContext",
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": FiberNode {
+                  "_debugID": 11,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 1,
+                  "key": "testAuth",
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "testAuth",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "testAuth",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <option>
+                    testAuth
+</option>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "option",
+                  "updateQueue": null,
+                },
+                "stateNode": <option>
+                  testContext
+</option>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "option",
+                "updateQueue": null,
+              },
               "effectTag": 0,
               "expirationTime": 0,
               "firstEffect": null,
@@ -555,45 +549,100 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": "Trigger",
-                "className": "runlist-trigger__button",
-                "onClick": [Function],
+                "children": Array [
+                  <option>
+                    testContext
+</option>,
+                  <option>
+                    testAuth
+</option>,
+                ],
+                "className": "runlist-trigger__select",
+                "onChange": [Function],
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": "Trigger",
-                "className": "runlist-trigger__button",
-                "onClick": [Function],
+                "children": Array [
+                  <option>
+                    testContext
+</option>,
+                  <option>
+                    testAuth
+</option>,
+                ],
+                "className": "runlist-trigger__select",
+                "onChange": [Function],
               },
               "ref": null,
               "return": [Circular],
               "selfBaseTime": 0,
-              "sibling": null,
-              "stateNode": <button
-                class="runlist-trigger__button"
+              "sibling": FiberNode {
+                "_debugID": 9,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": [Circular],
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": null,
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 0,
+                "firstEffect": null,
+                "index": 2,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": Object {
+                  "children": "Trigger",
+                  "className": "runlist-trigger__button",
+                  "onClick": [Function],
+                },
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": Object {
+                  "children": "Trigger",
+                  "className": "runlist-trigger__button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "return": [Circular],
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": <button
+                  class="runlist-trigger__button"
 >
-                Trigger
+                  Trigger
 </button>,
+                "tag": 5,
+                "treeBaseTime": 0,
+                "type": "button",
+                "updateQueue": null,
+              },
+              "stateNode": <select
+                class="runlist-trigger__select"
+>
+                <option>
+                                testContext
+                </option>
+                <option>
+                                testAuth
+                </option>
+</select>,
               "tag": 5,
               "treeBaseTime": 0,
-              "type": "button",
+              "type": "select",
               "updateQueue": null,
             },
-            "stateNode": <select
-              class="runlist-trigger__select"
+            "stateNode": <div
+              class="runlist-trigger__text"
 >
-              <option>
-                            testContext
-              </option>
-              <option>
-                            testAuth
-              </option>
-</select>,
+              [Response Recieved]
+</div>,
             "tag": 5,
             "treeBaseTime": 0,
-            "type": "select",
+            "type": "div",
             "updateQueue": null,
           },
           "effectTag": 0,
@@ -604,6 +653,11 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "children": Array [
+              <div
+                className="runlist-trigger__text"
+>
+                [Response Recieved]
+</div>,
               <select
                 className="runlist-trigger__select"
                 onChange={[Function]}
@@ -622,13 +676,18 @@ ReactWrapper {
                 Trigger
 </button>,
             ],
-            "className": "runlist-trigger__container",
+            "className": "runlist-trigger",
           },
           "memoizedState": null,
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
             "children": Array [
+              <div
+                className="runlist-trigger__text"
+>
+                [Response Recieved]
+</div>,
               <select
                 className="runlist-trigger__select"
                 onChange={[Function]}
@@ -647,15 +706,20 @@ ReactWrapper {
                 Trigger
 </button>,
             ],
-            "className": "runlist-trigger__container",
+            "className": "runlist-trigger",
           },
           "ref": null,
           "return": [Circular],
           "selfBaseTime": 0,
           "sibling": null,
           "stateNode": <div
-            class="runlist-trigger__container"
+            class="runlist-trigger"
 >
+            <div
+                        class="runlist-trigger__text"
+            >
+                        [Response Recieved]
+            </div>
             <select
                         class="runlist-trigger__select"
             >
@@ -698,6 +762,7 @@ ReactWrapper {
           },
         },
         "memoizedState": Object {
+          "hasTriggered": false,
           "runListTriggerMap": Object {
             "testAuth": Object {
               "name": "testAuth",
@@ -835,8 +900,13 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                                    class="runlist-trigger__container"
+                                    class="runlist-trigger"
                   >
+                                    <div
+                                                      class="runlist-trigger__text"
+                                    >
+                                                      [Response Recieved]
+                                    </div>
                                     <select
                                                       class="runlist-trigger__select"
                                     >
@@ -982,8 +1052,13 @@ ReactWrapper {
             "stateNode": Object {
               "containerInfo": <div>
                 <div
-                                class="runlist-trigger__container"
+                                class="runlist-trigger"
                 >
+                                <div
+                                                class="runlist-trigger__text"
+                                >
+                                                [Response Recieved]
+                                </div>
                                 <select
                                                 class="runlist-trigger__select"
                                 >
@@ -1135,6 +1210,7 @@ ReactWrapper {
       },
       "refs": Object {},
       "state": Object {
+        "hasTriggered": false,
         "runListTriggerMap": Object {
           "testAuth": Object {
             "name": "testAuth",
@@ -1175,8 +1251,13 @@ ReactWrapper {
     "ref": null,
     "rendered": Object {
       "instance": <div
-        class="runlist-trigger__container"
+        class="runlist-trigger"
 >
+        <div
+                class="runlist-trigger__text"
+        >
+                [Response Recieved]
+        </div>
         <select
                 class="runlist-trigger__select"
         >
@@ -1197,6 +1278,11 @@ ReactWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="runlist-trigger__text"
+>
+            [Response Recieved]
+</div>,
           <select
             className="runlist-trigger__select"
             onChange={[Function]}
@@ -1215,10 +1301,28 @@ ReactWrapper {
             Trigger
 </button>,
         ],
-        "className": "runlist-trigger__container",
+        "className": "runlist-trigger",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": <div
+            class="runlist-trigger__text"
+>
+            [Response Recieved]
+</div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "[Response Recieved]",
+            "className": "runlist-trigger__text",
+          },
+          "ref": null,
+          "rendered": Array [
+            "[Response Recieved]",
+          ],
+          "type": "div",
+        },
         Object {
           "instance": <select
             class="runlist-trigger__select"
@@ -1415,8 +1519,13 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                                        class="runlist-trigger__container"
+                                        class="runlist-trigger"
                     >
+                                        <div
+                                                            class="runlist-trigger__text"
+                                        >
+                                                            [Response Recieved]
+                                        </div>
                                         <select
                                                             class="runlist-trigger__select"
                                         >
@@ -1562,8 +1671,13 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                                    class="runlist-trigger__container"
+                                    class="runlist-trigger"
                   >
+                                    <div
+                                                      class="runlist-trigger__text"
+                                    >
+                                                      [Response Recieved]
+                                    </div>
                                     <select
                                                       class="runlist-trigger__select"
                                     >
@@ -1709,77 +1823,7 @@ ReactWrapper {
               "actualDuration": 0,
               "actualStartTime": 0,
               "alternate": null,
-              "child": FiberNode {
-                "_debugID": 9,
-                "_debugIsCurrentlyTiming": false,
-                "_debugOwner": [Circular],
-                "_debugSource": null,
-                "actualDuration": 0,
-                "actualStartTime": 0,
-                "alternate": null,
-                "child": null,
-                "effectTag": 0,
-                "expirationTime": 0,
-                "firstEffect": null,
-                "index": 0,
-                "key": "testContext",
-                "lastEffect": null,
-                "memoizedProps": Object {
-                  "children": "testContext",
-                },
-                "memoizedState": null,
-                "mode": 0,
-                "nextEffect": null,
-                "pendingProps": Object {
-                  "children": "testContext",
-                },
-                "ref": null,
-                "return": [Circular],
-                "selfBaseTime": 0,
-                "sibling": FiberNode {
-                  "_debugID": 10,
-                  "_debugIsCurrentlyTiming": false,
-                  "_debugOwner": [Circular],
-                  "_debugSource": null,
-                  "actualDuration": 0,
-                  "actualStartTime": 0,
-                  "alternate": null,
-                  "child": null,
-                  "effectTag": 0,
-                  "expirationTime": 0,
-                  "firstEffect": null,
-                  "index": 1,
-                  "key": "testAuth",
-                  "lastEffect": null,
-                  "memoizedProps": Object {
-                    "children": "testAuth",
-                  },
-                  "memoizedState": null,
-                  "mode": 0,
-                  "nextEffect": null,
-                  "pendingProps": Object {
-                    "children": "testAuth",
-                  },
-                  "ref": null,
-                  "return": [Circular],
-                  "selfBaseTime": 0,
-                  "sibling": null,
-                  "stateNode": <option>
-                    testAuth
-</option>,
-                  "tag": 5,
-                  "treeBaseTime": 0,
-                  "type": "option",
-                  "updateQueue": null,
-                },
-                "stateNode": <option>
-                  testContext
-</option>,
-                "tag": 5,
-                "treeBaseTime": 0,
-                "type": "option",
-                "updateQueue": null,
-              },
+              "child": null,
               "effectTag": 0,
               "expirationTime": 0,
               "firstEffect": null,
@@ -1787,31 +1831,15 @@ ReactWrapper {
               "key": null,
               "lastEffect": null,
               "memoizedProps": Object {
-                "children": Array [
-                  <option>
-                    testContext
-</option>,
-                  <option>
-                    testAuth
-</option>,
-                ],
-                "className": "runlist-trigger__select",
-                "onChange": [Function],
+                "children": "[Response Recieved]",
+                "className": "runlist-trigger__text",
               },
               "memoizedState": null,
               "mode": 0,
               "nextEffect": null,
               "pendingProps": Object {
-                "children": Array [
-                  <option>
-                    testContext
-</option>,
-                  <option>
-                    testAuth
-</option>,
-                ],
-                "className": "runlist-trigger__select",
-                "onChange": [Function],
+                "children": "[Response Recieved]",
+                "className": "runlist-trigger__text",
               },
               "ref": null,
               "return": [Circular],
@@ -1824,7 +1852,77 @@ ReactWrapper {
                 "actualDuration": 0,
                 "actualStartTime": 0,
                 "alternate": null,
-                "child": null,
+                "child": FiberNode {
+                  "_debugID": 10,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 0,
+                  "key": "testContext",
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "testContext",
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "testContext",
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": FiberNode {
+                    "_debugID": 11,
+                    "_debugIsCurrentlyTiming": false,
+                    "_debugOwner": [Circular],
+                    "_debugSource": null,
+                    "actualDuration": 0,
+                    "actualStartTime": 0,
+                    "alternate": null,
+                    "child": null,
+                    "effectTag": 0,
+                    "expirationTime": 0,
+                    "firstEffect": null,
+                    "index": 1,
+                    "key": "testAuth",
+                    "lastEffect": null,
+                    "memoizedProps": Object {
+                      "children": "testAuth",
+                    },
+                    "memoizedState": null,
+                    "mode": 0,
+                    "nextEffect": null,
+                    "pendingProps": Object {
+                      "children": "testAuth",
+                    },
+                    "ref": null,
+                    "return": [Circular],
+                    "selfBaseTime": 0,
+                    "sibling": null,
+                    "stateNode": <option>
+                      testAuth
+</option>,
+                    "tag": 5,
+                    "treeBaseTime": 0,
+                    "type": "option",
+                    "updateQueue": null,
+                  },
+                  "stateNode": <option>
+                    testContext
+</option>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "option",
+                  "updateQueue": null,
+                },
                 "effectTag": 0,
                 "expirationTime": 0,
                 "firstEffect": null,
@@ -1832,45 +1930,100 @@ ReactWrapper {
                 "key": null,
                 "lastEffect": null,
                 "memoizedProps": Object {
-                  "children": "Trigger",
-                  "className": "runlist-trigger__button",
-                  "onClick": [Function],
+                  "children": Array [
+                    <option>
+                      testContext
+</option>,
+                    <option>
+                      testAuth
+</option>,
+                  ],
+                  "className": "runlist-trigger__select",
+                  "onChange": [Function],
                 },
                 "memoizedState": null,
                 "mode": 0,
                 "nextEffect": null,
                 "pendingProps": Object {
-                  "children": "Trigger",
-                  "className": "runlist-trigger__button",
-                  "onClick": [Function],
+                  "children": Array [
+                    <option>
+                      testContext
+</option>,
+                    <option>
+                      testAuth
+</option>,
+                  ],
+                  "className": "runlist-trigger__select",
+                  "onChange": [Function],
                 },
                 "ref": null,
                 "return": [Circular],
                 "selfBaseTime": 0,
-                "sibling": null,
-                "stateNode": <button
-                  class="runlist-trigger__button"
+                "sibling": FiberNode {
+                  "_debugID": 9,
+                  "_debugIsCurrentlyTiming": false,
+                  "_debugOwner": [Circular],
+                  "_debugSource": null,
+                  "actualDuration": 0,
+                  "actualStartTime": 0,
+                  "alternate": null,
+                  "child": null,
+                  "effectTag": 0,
+                  "expirationTime": 0,
+                  "firstEffect": null,
+                  "index": 2,
+                  "key": null,
+                  "lastEffect": null,
+                  "memoizedProps": Object {
+                    "children": "Trigger",
+                    "className": "runlist-trigger__button",
+                    "onClick": [Function],
+                  },
+                  "memoizedState": null,
+                  "mode": 0,
+                  "nextEffect": null,
+                  "pendingProps": Object {
+                    "children": "Trigger",
+                    "className": "runlist-trigger__button",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "return": [Circular],
+                  "selfBaseTime": 0,
+                  "sibling": null,
+                  "stateNode": <button
+                    class="runlist-trigger__button"
 >
-                  Trigger
+                    Trigger
 </button>,
+                  "tag": 5,
+                  "treeBaseTime": 0,
+                  "type": "button",
+                  "updateQueue": null,
+                },
+                "stateNode": <select
+                  class="runlist-trigger__select"
+>
+                  <option>
+                                    testContext
+                  </option>
+                  <option>
+                                    testAuth
+                  </option>
+</select>,
                 "tag": 5,
                 "treeBaseTime": 0,
-                "type": "button",
+                "type": "select",
                 "updateQueue": null,
               },
-              "stateNode": <select
-                class="runlist-trigger__select"
+              "stateNode": <div
+                class="runlist-trigger__text"
 >
-                <option>
-                                testContext
-                </option>
-                <option>
-                                testAuth
-                </option>
-</select>,
+                [Response Recieved]
+</div>,
               "tag": 5,
               "treeBaseTime": 0,
-              "type": "select",
+              "type": "div",
               "updateQueue": null,
             },
             "effectTag": 0,
@@ -1881,6 +2034,11 @@ ReactWrapper {
             "lastEffect": null,
             "memoizedProps": Object {
               "children": Array [
+                <div
+                  className="runlist-trigger__text"
+>
+                  [Response Recieved]
+</div>,
                 <select
                   className="runlist-trigger__select"
                   onChange={[Function]}
@@ -1899,13 +2057,18 @@ ReactWrapper {
                   Trigger
 </button>,
               ],
-              "className": "runlist-trigger__container",
+              "className": "runlist-trigger",
             },
             "memoizedState": null,
             "mode": 0,
             "nextEffect": null,
             "pendingProps": Object {
               "children": Array [
+                <div
+                  className="runlist-trigger__text"
+>
+                  [Response Recieved]
+</div>,
                 <select
                   className="runlist-trigger__select"
                   onChange={[Function]}
@@ -1924,15 +2087,20 @@ ReactWrapper {
                   Trigger
 </button>,
               ],
-              "className": "runlist-trigger__container",
+              "className": "runlist-trigger",
             },
             "ref": null,
             "return": [Circular],
             "selfBaseTime": 0,
             "sibling": null,
             "stateNode": <div
-              class="runlist-trigger__container"
+              class="runlist-trigger"
 >
+              <div
+                            class="runlist-trigger__text"
+              >
+                            [Response Recieved]
+              </div>
               <select
                             class="runlist-trigger__select"
               >
@@ -1975,6 +2143,7 @@ ReactWrapper {
             },
           },
           "memoizedState": Object {
+            "hasTriggered": false,
             "runListTriggerMap": Object {
               "testAuth": Object {
                 "name": "testAuth",
@@ -2112,8 +2281,13 @@ ReactWrapper {
                 "stateNode": Object {
                   "containerInfo": <div>
                     <div
-                                        class="runlist-trigger__container"
+                                        class="runlist-trigger"
                     >
+                                        <div
+                                                            class="runlist-trigger__text"
+                                        >
+                                                            [Response Recieved]
+                                        </div>
                                         <select
                                                             class="runlist-trigger__select"
                                         >
@@ -2259,8 +2433,13 @@ ReactWrapper {
               "stateNode": Object {
                 "containerInfo": <div>
                   <div
-                                    class="runlist-trigger__container"
+                                    class="runlist-trigger"
                   >
+                                    <div
+                                                      class="runlist-trigger__text"
+                                    >
+                                                      [Response Recieved]
+                                    </div>
                                     <select
                                                       class="runlist-trigger__select"
                                     >
@@ -2412,6 +2591,7 @@ ReactWrapper {
         },
         "refs": Object {},
         "state": Object {
+          "hasTriggered": false,
           "runListTriggerMap": Object {
             "testAuth": Object {
               "name": "testAuth",
@@ -2452,8 +2632,13 @@ ReactWrapper {
       "ref": null,
       "rendered": Object {
         "instance": <div
-          class="runlist-trigger__container"
+          class="runlist-trigger"
 >
+          <div
+                    class="runlist-trigger__text"
+          >
+                    [Response Recieved]
+          </div>
           <select
                     class="runlist-trigger__select"
           >
@@ -2474,6 +2659,11 @@ ReactWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
+            <div
+              className="runlist-trigger__text"
+>
+              [Response Recieved]
+</div>,
             <select
               className="runlist-trigger__select"
               onChange={[Function]}
@@ -2492,10 +2682,28 @@ ReactWrapper {
               Trigger
 </button>,
           ],
-          "className": "runlist-trigger__container",
+          "className": "runlist-trigger",
         },
         "ref": null,
         "rendered": Array [
+          Object {
+            "instance": <div
+              class="runlist-trigger__text"
+>
+              [Response Recieved]
+</div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "[Response Recieved]",
+              "className": "runlist-trigger__text",
+            },
+            "ref": null,
+            "rendered": Array [
+              "[Response Recieved]",
+            ],
+            "type": "div",
+          },
           Object {
             "instance": <select
               class="runlist-trigger__select"

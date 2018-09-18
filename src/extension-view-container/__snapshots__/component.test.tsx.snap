@@ -81,6 +81,30 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
+          className="trigger-bar"
+>
+          <div
+                    className="trigger-bar__switch"
+                    onClick={[Function]}
+          >
+                    <div
+                              className="trigger-bar__switch-handle"
+                    >
+                              off
+                    </div>
+          </div>
+          <div
+                    className="trigger-bar__text"
+          >
+                    Use Mock Triggers
+          </div>
+          <button
+                    className="trigger-bar__button"
+          >
+                    Edit Responses
+          </button>
+</div>,
+        <div
           className="view-container"
 >
           
@@ -95,6 +119,92 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="trigger-bar__switch"
+              onClick={[Function]}
+>
+              <div
+                            className="trigger-bar__switch-handle"
+              >
+                            off
+              </div>
+</div>,
+            <div
+              className="trigger-bar__text"
+>
+              Use Mock Triggers
+</div>,
+            <button
+              className="trigger-bar__button"
+>
+              Edit Responses
+</button>,
+          ],
+          "className": "trigger-bar",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div
+                className="trigger-bar__switch-handle"
+>
+                off
+</div>,
+              "className": "trigger-bar__switch",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "off",
+                "className": "trigger-bar__switch-handle",
+              },
+              "ref": null,
+              "rendered": "off",
+              "type": "div",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Use Mock Triggers",
+              "className": "trigger-bar__text",
+            },
+            "ref": null,
+            "rendered": "Use Mock Triggers",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Edit Responses",
+              "className": "trigger-bar__button",
+            },
+            "ref": null,
+            "rendered": "Edit Responses",
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -141,6 +251,30 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <div
+            className="trigger-bar"
+>
+            <div
+                        className="trigger-bar__switch"
+                        onClick={[Function]}
+            >
+                        <div
+                                    className="trigger-bar__switch-handle"
+                        >
+                                    off
+                        </div>
+            </div>
+            <div
+                        className="trigger-bar__text"
+            >
+                        Use Mock Triggers
+            </div>
+            <button
+                        className="trigger-bar__button"
+            >
+                        Edit Responses
+            </button>
+</div>,
+          <div
             className="view-container"
 >
             
@@ -155,6 +289,92 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="trigger-bar__switch"
+                onClick={[Function]}
+>
+                <div
+                                className="trigger-bar__switch-handle"
+                >
+                                off
+                </div>
+</div>,
+              <div
+                className="trigger-bar__text"
+>
+                Use Mock Triggers
+</div>,
+              <button
+                className="trigger-bar__button"
+>
+                Edit Responses
+</button>,
+            ],
+            "className": "trigger-bar",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="trigger-bar__switch-handle"
+>
+                  off
+</div>,
+                "className": "trigger-bar__switch",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "off",
+                  "className": "trigger-bar__switch-handle",
+                },
+                "ref": null,
+                "rendered": "off",
+                "type": "div",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Use Mock Triggers",
+                "className": "trigger-bar__text",
+              },
+              "ref": null,
+              "rendered": "Use Mock Triggers",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Edit Responses",
+                "className": "trigger-bar__button",
+              },
+              "ref": null,
+              "rendered": "Edit Responses",
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
