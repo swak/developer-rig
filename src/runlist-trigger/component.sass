@@ -1,24 +1,33 @@
-.runlist-trigger__container
+.runlist-trigger
   align-self: flex-end
   padding-right: 0.8em
 
-.runlist-trigger__select
-  color: #7D55C7
-  background: transparent
-  border: none
-  font-size: 14px
-  height: 29px
-  padding: 5px
-  margin-right: 1rem
-  text-align-last: right
+  &__button
+    color: white
+    background-color: #7D55C7
+    border: 1px solid #7D55C7
+    text-align: center
+    width: 4rem
+    height: 2rem
+    vertical-align: middle
+    cursor: pointer
+    font-size: .75em
 
-.runlist-trigger__button
-  color: white
-  background-color: #7D55C7
-  border: 1px solid #7D55C7
-  text-align: center
-  width: 4rem
-  height: 2rem
-  vertical-align: middle
-  cursor: pointer
-  font-size: .75em
+  &__text
+    display: inline
+    color: #7D55C7
+    font-size: smaller
+    visibility: hidden
+
+    &--on
+      visibility: visible
+
+  &__select
+    color: #7D55C7
+    background: transparent
+    border: none
+    font-size: 14px
+    height: 29px
+    padding: 5px
+    margin-right: 1rem
+    text-align-last: right

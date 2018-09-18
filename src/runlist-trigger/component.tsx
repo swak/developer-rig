@@ -11,6 +11,7 @@ export interface PublicProps {
 }
 
 interface State {
+  hasTriggered: boolean;
   selectedTrigger: string;
   runListTriggerMap: {
     [key: string]: GenericResponse;
@@ -34,12 +35,13 @@ export class RunListTrigger extends React.Component<Props, State>{
   public onChange(event: React.FormEvent<HTMLSelectElement>) {
     this.setState({
       selectedTrigger: event.currentTarget.value,
-    })
+      hasTriggered: false,
+    });
   }
 
   private stateFromRunList(runList: RunList): State {
     let firstTrigger;
-    let runlistMap: { [key: string]: GenericResponse} = {}
+    let runlistMap: { [key: string]: GenericResponse } = {}
     let triggerMap: { [key: string]: string } = {}
     for (let callback in runList) {
       for (let resp of runList[callback]) {
@@ -52,6 +54,7 @@ export class RunListTrigger extends React.Component<Props, State>{
     }
 
     return {
+      hasTriggered: false,
       selectedTrigger: firstTrigger,
       runListTriggerMap: runlistMap,
       triggerTypeMap: triggerMap,
@@ -81,10 +84,11 @@ export class RunListTrigger extends React.Component<Props, State>{
     return data;
   }
 
-  private triggerRunlistResponse(iframe?: HTMLIFrameElement): void{
+  private triggerRunlistResponse(iframe?: HTMLIFrameElement) {
     const data = this.dataFromTrigger(this.state.selectedTrigger);
     if (data && iframe && iframe.contentWindow) {
       iframe.contentWindow.postMessage(data, '*');
+      this.setState({ hasTriggered: true });
     }
   }
 
@@ -103,8 +107,11 @@ export class RunListTrigger extends React.Component<Props, State>{
   }
 
   public render() {
+    const textClassName = 'runlist-trigger__text' +
+      (this.state.hasTriggered ? ' runlist-trigger__text--on' : '');
     return (
-      <div className='runlist-trigger__container'>
+      <div className='runlist-trigger'>
+        <div className={textClassName}>[Response Recieved]</div>
         <select className='runlist-trigger__select' onChange={(e) => this.onChange(e)}>
           {this.renderRunListOptions(this.props.runList)}
         </select>
