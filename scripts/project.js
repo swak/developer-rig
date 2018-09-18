@@ -89,44 +89,36 @@ module.exports = function(app) {
   app.post('/frontend', async (req, res) => {
     const { frontendFolderPath, isLocal, port, projectFolderPath } = req.body;
     try {
-      if (process.platform === 'win32') {
-        const commandFilePath = join(process.env.TEMP, `rfe${Math.floor(99999 * Math.random())}.cmd`);
-        const fout = fs.createWriteStream(commandFilePath);
-        try {
-          fout.write(`yarn host -d "${join(projectFolderPath, frontendFolderPath)}" -p ${port}${isLocal ? ' -l' : ''}`);
-          fout.end();
-          await new Promise((resolve, reject) => {
-            fout.on('error', (ex) => reject(ex));
-            fout.on('close', () => resolve());
-          });
-          const options = {};
-          const child = childProcess.spawn('cmd.exe', ['/c', commandFilePath], options);
-          await new Promise((resolve, reject) => {
-            let hasResolved = false;
-            child.stderr.on('data', (data) => process.stderr.write(data.toString()));
-            child.stdout.on('data', (data) => process.stdout.write(data.toString()));
-            child.on('error', (ex) => reject(ex));
-            child.on('exit', (code) => {
-              hasResolved = hasResolved || (clearTimeout(timerId), resolve(), code, true);
-            });
-            const timerId = setTimeout(() => {
-              hasResolved = hasResolved || (resolve(), true);
-            }, 999);
-          });
-          if (child.error || child.status) {
-            throw child.error || new Error(child.stderr.toString());
-          } else if (child.exitCode) {
-            throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
-          }
-          children.frontend = child;
-          fs.unlinkSync(commandFilePath);
-        } catch (ex) {
-          fs.unlinkSync(commandFilePath);
-          throw ex;
-        }
-      } else {
-        // TODO:  handle Mac.
+      const options = {};
+      const args = [
+        join('scripts', 'host.js'),
+        '-d',
+        isAbsolute(frontendFolderPath) ? frontendFolderPath : join(projectFolderPath, frontendFolderPath),
+        '-p',
+        port,
+      ];
+      if (isLocal) {
+        args.push('-l');
       }
+      const child = childProcess.spawn('node', args, options);
+      await new Promise((resolve, reject) => {
+        let hasResolved = false;
+        child.stderr.on('data', (data) => process.stderr.write(data.toString()));
+        child.stdout.on('data', (data) => process.stdout.write(data.toString()));
+        child.on('error', (ex) => reject(ex));
+        child.on('exit', (code) => {
+          hasResolved = hasResolved || (clearTimeout(timerId), resolve(), code, true);
+        });
+        const timerId = setTimeout(() => {
+          hasResolved = hasResolved || (resolve(), true);
+        }, 999);
+      });
+      if (child.error || child.status) {
+        throw child.error || new Error(child.stderr.toString());
+      } else if (child.exitCode) {
+        throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
+      }
+      children.frontend = child;
       res.writeHead(204);
       res.end();
     } catch (ex) {
