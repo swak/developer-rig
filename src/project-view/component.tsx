@@ -44,6 +44,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
   private startBackend = async () => {
     if (this.props.rigProject.backendCommand) {
       try {
+        this.setState({ backendResult: '' });
         await startBackend(this.props.rigProject.backendCommand, this.props.rigProject.projectFolderPath);
         this.setState({ backendResult: 'started' });
       } catch (ex) {
@@ -69,6 +70,7 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
         if (!frontendPort) {
           throw new Error('Cannot determine front-end port from extension');
         }
+        this.setState({ frontendResult: '' });
         await startFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
         this.setState({ frontendResult: 'started' });
       } catch (ex) {
