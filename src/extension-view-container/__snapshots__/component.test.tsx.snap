@@ -62,6 +62,7 @@ ShallowWrapper {
     }
     extensionViews={Array []}
     isLocal={true}
+    mockApiEnabled={false}
     mode="viewer"
     openEditViewHandler={[Function]}
     openExtensionViewHandler={[Function]}

@@ -37,6 +37,7 @@ interface State {
   projects: RigProject[],
   currentProject?: RigProject,
   manifest: ExtensionManifest;
+  enablingMockTriggers: boolean;
   showingExtensionsView: boolean;
   showingEditView: boolean;
   showingCreateProjectDialog: boolean;
@@ -50,6 +51,7 @@ type Props = ReduxDispatchProps & ReduxStateProps;
 
 export class RigComponent extends React.Component<Props, State> {
   public state: State = {
+    enablingMockTriggers: false,
     projects: [],
     manifest: {} as ExtensionManifest,
     showingExtensionsView: false,
@@ -216,6 +218,8 @@ export class RigComponent extends React.Component<Props, State> {
 
   public render() {
     const currentProject = this.state.currentProject;
+    const triggerHandleClassName = "trigger-bar__switch-handle" +
+      (this.state.enablingMockTriggers ? ' trigger-bar__switch-handle--on' : '');
     return (
       <div className="rig-container">
         <RigNav
@@ -227,6 +231,13 @@ export class RigComponent extends React.Component<Props, State> {
           selectedView={this.state.selectedView}
           viewerHandler={this.viewerHandler}
           error={this.state.error} />
+        <div className="trigger-bar">
+          <div className="trigger-bar__switch" onClick={this.toggleMockTriggers}>
+            <div className={triggerHandleClassName}>{this.state.enablingMockTriggers ? 'on' : 'off'}</div>
+          </div>
+          <div className="trigger-bar__text">Use Mock Triggers</div>
+          <button className="trigger-bar__button">Edit Responses</button>
+        </div>
         {this.state.error ? (
           <label>Something went wrong: {this.state.error}</label>
         ) : !this.props.session ? (
@@ -256,6 +267,7 @@ export class RigComponent extends React.Component<Props, State> {
               isLocal={this.state.currentProject.isLocal}
               openEditViewHandler={this.openEditViewHandler}
               openExtensionViewHandler={this.openExtensionViewHandler}
+              mockApiEnabled={this.state.enablingMockTriggers}
             />
             {this.state.showingExtensionsView && (
               <ExtensionViewDialog
@@ -278,6 +290,10 @@ export class RigComponent extends React.Component<Props, State> {
         )}
       </div>
     );
+  }
+
+  private toggleMockTriggers = () => {
+    this.setState((previousState) => ({ enablingMockTriggers: !previousState.enablingMockTriggers }));
   }
 
   public updateExtensionViews(extensionViews: RigExtensionView[]) {

@@ -114,8 +114,9 @@ ShallowWrapper {
                     >
                               Host with Rig
                     </button>
-                    <span
+                    <div
                               className="project-view-property__result"
+                              title="This is the result of the front-end hosting command"
                     />
           </label>
           <label
@@ -141,8 +142,9 @@ ShallowWrapper {
                     >
                               Activate
                     </button>
-                    <span
+                    <div
                               className="project-view-property__result"
+                              title="This is the result of the back-end hosting command"
                     />
           </label>
           <label
@@ -287,8 +289,9 @@ ShallowWrapper {
               >
                             Host with Rig
               </button>
-              <span
+              <div
                             className="project-view-property__result"
+                            title="This is the result of the front-end hosting command"
               />
 </label>,
             <label
@@ -314,8 +317,9 @@ ShallowWrapper {
               >
                             Activate
               </button>
-              <span
+              <div
                             className="project-view-property__result"
+                            title="This is the result of the back-end hosting command"
               />
 </label>,
             <label
@@ -431,8 +435,9 @@ ShallowWrapper {
 >
                   Host with Rig
 </button>,
-                <span
+                <div
                   className="project-view-property__result"
+                  title="This is the result of the front-end hosting command"
 />,
               ],
               "className": "project-view-property",
@@ -488,10 +493,11 @@ ShallowWrapper {
                 "props": Object {
                   "children": "",
                   "className": "project-view-property__result",
+                  "title": "This is the result of the front-end hosting command",
                 },
                 "ref": null,
                 "rendered": "",
-                "type": "span",
+                "type": "div",
               },
             ],
             "type": "label",
@@ -521,8 +527,9 @@ ShallowWrapper {
 >
                   Activate
 </button>,
-                <span
+                <div
                   className="project-view-property__result"
+                  title="This is the result of the back-end hosting command"
 />,
               ],
               "className": "project-view-property",
@@ -578,10 +585,11 @@ ShallowWrapper {
                 "props": Object {
                   "children": "",
                   "className": "project-view-property__result",
+                  "title": "This is the result of the back-end hosting command",
                 },
                 "ref": null,
                 "rendered": "",
-                "type": "span",
+                "type": "div",
               },
             ],
             "type": "label",
@@ -1030,8 +1038,9 @@ ShallowWrapper {
                         >
                                     Host with Rig
                         </button>
-                        <span
+                        <div
                                     className="project-view-property__result"
+                                    title="This is the result of the front-end hosting command"
                         />
             </label>
             <label
@@ -1057,8 +1066,9 @@ ShallowWrapper {
                         >
                                     Activate
                         </button>
-                        <span
+                        <div
                                     className="project-view-property__result"
+                                    title="This is the result of the back-end hosting command"
                         />
             </label>
             <label
@@ -1203,8 +1213,9 @@ ShallowWrapper {
                 >
                                 Host with Rig
                 </button>
-                <span
+                <div
                                 className="project-view-property__result"
+                                title="This is the result of the front-end hosting command"
                 />
 </label>,
               <label
@@ -1230,8 +1241,9 @@ ShallowWrapper {
                 >
                                 Activate
                 </button>
-                <span
+                <div
                                 className="project-view-property__result"
+                                title="This is the result of the back-end hosting command"
                 />
 </label>,
               <label
@@ -1347,8 +1359,9 @@ ShallowWrapper {
 >
                     Host with Rig
 </button>,
-                  <span
+                  <div
                     className="project-view-property__result"
+                    title="This is the result of the front-end hosting command"
 />,
                 ],
                 "className": "project-view-property",
@@ -1404,10 +1417,11 @@ ShallowWrapper {
                   "props": Object {
                     "children": "",
                     "className": "project-view-property__result",
+                    "title": "This is the result of the front-end hosting command",
                   },
                   "ref": null,
                   "rendered": "",
-                  "type": "span",
+                  "type": "div",
                 },
               ],
               "type": "label",
@@ -1437,8 +1451,9 @@ ShallowWrapper {
 >
                     Activate
 </button>,
-                  <span
+                  <div
                     className="project-view-property__result"
+                    title="This is the result of the back-end hosting command"
 />,
                 ],
                 "className": "project-view-property",
@@ -1494,10 +1509,11 @@ ShallowWrapper {
                   "props": Object {
                     "children": "",
                     "className": "project-view-property__result",
+                    "title": "This is the result of the back-end hosting command",
                   },
                   "ref": null,
                   "rendered": "",
-                  "type": "span",
+                  "type": "div",
                 },
               ],
               "type": "label",

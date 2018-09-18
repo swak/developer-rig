@@ -11,6 +11,7 @@ interface ExtensionViewContainerProps {
   deleteExtensionViewHandler: (id: string) => void;
   isLocal: boolean;
   openExtensionViewHandler: Function;
+  mockApiEnabled: boolean;
 }
 
 const ConfigNames: { [key: string]: string; } = {
@@ -44,6 +45,7 @@ export class ExtensionViewContainer extends React.Component<ExtensionViewContain
           orientation={view.orientation}
           openEditViewHandler={this.props.openEditViewHandler}
           deleteViewHandler={this.props.deleteExtensionViewHandler}
+          mockApiEnabled={this.props.mockApiEnabled}
         />
       )));
     }

@@ -28,7 +28,7 @@ export const PanelViewDimensions = Object.freeze({
   height: "300",
 });
 
-interface ExtensionViewProps {
+interface Props {
   id: string;
   channelId: string;
   extension: ExtensionCoordinator.ExtensionObject;
@@ -44,6 +44,7 @@ interface ExtensionViewProps {
   openEditViewHandler?: (id: string) => void;
   position?: ExtensionCoordinator.Position;
   frameSize?: FrameSize;
+  mockApiEnabled: boolean;
 }
 
 interface State {
@@ -65,13 +66,7 @@ const TypeViews: { [key: string]: string; } = {
   [ExtensionPlatform.Mobile]: ExtensionViewType.Mobile,
 };
 
-export interface ReduxStateProps {
-  mockApiEnabled: boolean;
-}
-
-type Props = ExtensionViewProps & ReduxStateProps;
-
-export class ExtensionViewComponent extends React.Component<Props, State> {
+export class ExtensionView extends React.Component<Props, State> {
   public state: State = {
     mousedOver: false,
     iframe: undefined,
