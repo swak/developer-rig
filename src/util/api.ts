@@ -56,6 +56,26 @@ export async function startBackend(backendCommand: string, projectFolderPath: st
   return await API.post(url, { backendCommand, projectFolderPath });
 }
 
+export interface HostingStatus {
+  isBackendRunning: boolean;
+  isFrontendRunning: boolean;
+}
+
+export async function fetchHostingStatus(): Promise<HostingStatus> {
+  const url = 'https://localhost.rig.twitch.tv:3000/status';
+  return await API.get<HostingStatus>(url);
+}
+
+export interface StopResult {
+  backendResult: string;
+  frontendResult: string;
+}
+
+export async function stopHosting(): Promise<StopResult> {
+  const url = 'https://localhost.rig.twitch.tv:3000/stop';
+  return await API.post<StopResult>(url, null);
+}
+
 export interface Example {
   title: string;
   description: string;

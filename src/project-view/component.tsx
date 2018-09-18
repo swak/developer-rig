@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './component.sass';
 import { RigProject } from '../core/models/rig';
-import { startBackend, startFrontend } from '../util/api';
+import { fetchHostingStatus, startBackend, startFrontend } from '../util/api';
 
 export interface ProjectViewProps {
   rigProject: RigProject,
@@ -18,6 +18,16 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     backendResult: '',
     frontendResult: '',
   };
+
+  constructor(props: ProjectViewProps) {
+    super(props);
+    fetchHostingStatus().then((status) => {
+      this.setState({
+        backendResult: props.rigProject.backendCommand ? status.isBackendRunning ? 'running' : 'not running' : '',
+        frontendResult: props.rigProject.frontendFolderName ? status.isFrontendRunning ? 'running' : 'not running' : '',
+      });
+    });
+  }
 
   public onChange = (input: React.FormEvent<HTMLInputElement>) => {
     const { name, value } = input.currentTarget;
@@ -91,13 +101,13 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
             <div className="project-view-property__name">Front-end Files Location</div>
             <input className="project-view-property__input" type="text" name="frontendFolderName" value={rigProject.frontendFolderName} onChange={this.onChange} />
             <button className="project-view__button" title="" onClick={this.startFrontend}>Host with Rig</button>
-            <span className="project-view-property__result">{this.state.frontendResult}</span>
+            <div title="This is the result of the front-end hosting command" className="project-view-property__result">{this.state.frontendResult}</div>
           </label>
           <label className="project-view-property" title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.">
             <div className="project-view-property__name">Back-end Run Command</div>
             <input className="project-view-property__input" type="text" name="backendCommand" value={rigProject.backendCommand} onChange={this.onChange} />
             <button className="project-view__button" title="" onClick={this.startBackend}>Activate</button>
-            <span className="project-view-property__result">{this.state.backendResult}</span>
+            <div title="This is the result of the back-end hosting command" className="project-view-property__result">{this.state.backendResult}</div>
           </label>
           <label className="project-view-property">
             <div className="project-view-property__name">Project Folder</div>

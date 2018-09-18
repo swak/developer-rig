@@ -7,7 +7,7 @@ import { ExtensionViewDialog, ExtensionViewDialogState } from '../extension-view
 import { EditViewDialog, EditViewProps } from '../edit-view-dialog';
 import { ProductManagementViewContainer } from '../product-management-container';
 import { createExtensionObject, fetchUserExtensionManifest } from '../util/extension';
-import { fetchUser } from '../util/api';
+import { fetchUser, stopHosting } from '../util/api';
 import { NavItem } from '../constants/nav-items'
 import { OverlaySizes } from '../constants/overlay-sizes';
 import { IdentityOptions } from '../constants/identity-options';
@@ -175,7 +175,9 @@ export class RigComponent extends React.Component<Props, State> {
       localStorage.setItem('currentProjectIndex', previousProjects.length.toString());
       const projects = [...previousProjects, project];
       localStorage.setItem('projects', JSON.stringify(projects));
-      return { currentProject: project, projects };
+      const selectedView = project.backendCommand || project.frontendFolderName ?
+        NavItem.ProjectOverview : NavItem.ExtensionViews;
+      return { currentProject: project, projects, selectedView, showingCreateProjectDialog: false };
     });
   }
 
@@ -192,10 +194,15 @@ export class RigComponent extends React.Component<Props, State> {
     this.setState({ showingCreateProjectDialog: true });
   }
 
-  public selectProject = (projectIndex: number) => {
+  public selectProject = async (projectIndex: number) => {
     const selectedProject = this.state.projects[projectIndex];
     if (selectedProject !== this.state.currentProject) {
-      // TODO:  shut down any hosting.
+      // Shut down any hosting.
+      const result = await stopHosting();
+      result.backendResult && console.error('backend', result.backendResult);
+      result.frontendResult && console.error('frontend', result.frontendResult);
+      this.setState({ currentProject: selectedProject });
+      localStorage.setItem('currentProjectIndex', this.currentProjectIndex.toString());
     }
   }
 
@@ -278,7 +285,9 @@ export class RigComponent extends React.Component<Props, State> {
     if (projectsValue) {
       const projects = JSON.parse(projectsValue) as RigProject[];
       const currentProject = projects[Number(localStorage.getItem('currentProjectIndex') || 0)];
-      Object.assign(this.state, { currentProject, projects, selectedView: NavItem.ExtensionViews });
+      const selectedView = currentProject.backendCommand || currentProject.frontendFolderName ?
+        NavItem.ProjectOverview : NavItem.ExtensionViews;
+      Object.assign(this.state, { currentProject, projects, selectedView });
     } else if (process.env.EXT_CLIENT_ID && process.env.EXT_SECRET && process.env.EXT_VERSION) {
       const serializedExtensionViews = localStorage.getItem('extensionViews');
       const currentProject: RigProject = {

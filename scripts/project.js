@@ -2,6 +2,10 @@ module.exports = function(app) {
   const childProcess = require('child_process');
   const fs = require('fs');
   const { isAbsolute, join } = require('path');
+  const children = {
+    backend: null,
+    frontend: null,
+  };
 
   app.use(require('body-parser').json());
 
@@ -64,6 +68,7 @@ module.exports = function(app) {
           } else if (child.exitCode) {
             throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
           }
+          children.backend = child;
           fs.unlinkSync(commandFilePath);
         } catch (ex) {
           fs.unlinkSync(commandFilePath);
@@ -113,6 +118,7 @@ module.exports = function(app) {
           } else if (child.exitCode) {
             throw new Error(`Back-end command exited with exit code ${child.exitCode}`);
           }
+          children.frontend = child;
           fs.unlinkSync(commandFilePath);
         } catch (ex) {
           fs.unlinkSync(commandFilePath);
@@ -184,6 +190,50 @@ module.exports = function(app) {
       res.end(JSON.stringify({ name: ex.name, message: ex.message }));
       console.error(ex);
     }
+  });
+
+  app.get('/status', (_, res) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.writeHead(200);
+    const status = {
+      isBackendRunning: !!children.backend,
+      isFrontendRunning: !!children.frontend,
+    };
+    res.end(JSON.stringify(status));
+  });
+
+  app.post('/stop', async (_, res) => {
+    async function stop(child) {
+      if (child) {
+        child.kill();
+        return await new Promise((resolve, _) => {
+          let hasResolved = false;
+          child.stderr.on('data', (data) => process.stderr.write(data.toString()));
+          child.stdout.on('data', (data) => process.stdout.write(data.toString()));
+          child.on('error', (ex) => {
+            hasResolved = hasResolved || (resolve(ex.message), true);
+          });
+          child.on('exit', (_) => {
+            hasResolved = hasResolved || (resolve('exited'), true);
+            if (child === children.backend) {
+              children.backend = null;
+            } else {
+              children.frontend = null;
+            }
+          });
+        });
+      }
+      return 'not running';
+    }
+    const backendResult = await stop(children.backend);
+    const frontendResult = await stop(children.frontend);
+    res.setHeader('Content-Type', 'application/json');
+    res.writeHead(200);
+    const status = {
+      backendResult,
+      frontendResult,
+    };
+    res.end(JSON.stringify(status));
   });
 
   function fetchExample(repository, projectFolderPath) {

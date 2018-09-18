@@ -44,6 +44,9 @@ async function runTests() {
     },
   }, res);
 
+  // Test shut down.
+  await postRoutes['/stop']({}, res);
+
   // Test project creation.
   const projectFolderPath = normalize(join(__dirname, '..', 'build', 'asdf'));
   const req = {
