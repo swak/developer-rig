@@ -169,7 +169,8 @@ export class RigComponent extends React.Component<Props, State> {
     this.closeEditViewHandler();
   }
 
-  public createProject = (project: RigProject) => {
+  public createProject = async (project: RigProject) => {
+    this.state.currentProject && await this.stopHosting();
     this.setState((previousState) => {
       const previousProjects = previousState.currentProject ? previousState.projects : [];
       localStorage.setItem('currentProjectIndex', previousProjects.length.toString());
@@ -197,13 +198,16 @@ export class RigComponent extends React.Component<Props, State> {
   public selectProject = async (projectIndex: number) => {
     const selectedProject = this.state.projects[projectIndex];
     if (selectedProject !== this.state.currentProject) {
-      // Shut down any hosting.
-      const result = await stopHosting();
-      result.backendResult && console.error('backend', result.backendResult);
-      result.frontendResult && console.error('frontend', result.frontendResult);
+      await this.stopHosting();
       this.setState({ currentProject: selectedProject });
       localStorage.setItem('currentProjectIndex', this.currentProjectIndex.toString());
     }
+  }
+
+  private async stopHosting() {
+    const result = await stopHosting();
+    result.backendResult && console.error('backend', result.backendResult);
+    result.frontendResult && console.error('frontend', result.frontendResult);
   }
 
   public closeProjectDialog = () => {
