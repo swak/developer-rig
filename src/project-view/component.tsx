@@ -89,6 +89,14 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     return '';
   }
 
+  private viewDocumentation() {
+    window.open('https://dev.twitch.tv/docs/extensions/', 'developer-rig-help');
+  }
+
+  private viewTutorial() {
+    window.open('https://www.twitch.tv/videos/239080621', 'developer-rig-help');
+  }
+
   public render() {
     const rigProject = this.props.rigProject;
     const manifest = rigProject.manifest;
@@ -136,8 +144,8 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
               <div className="project-view__item-text project-view__item-text--title">Go to Extension Views and add the Extension Types that match your extension.</div>
             </li>
           </ol>
-          <button className="project-view__button project-view__button--first">View Tutorial</button>
-          <button className="project-view__button">Go to Documentation</button>
+          <button className="project-view__button project-view__button--first" onClick={this.viewTutorial}>View Tutorial</button>
+          <button className="project-view__button" onClick={this.viewDocumentation}>Go to Documentation</button>
         </div>
       </div>
     );
