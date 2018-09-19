@@ -71,9 +71,14 @@ export interface StopResult {
   frontendResult: string;
 }
 
-export async function stopHosting(): Promise<StopResult> {
+export enum StopOptions {
+  Backend = 1,
+  Frontend = 2,
+}
+
+export async function stopHosting(stopOptions?: StopOptions): Promise<StopResult> {
   const url = 'https://localhost.rig.twitch.tv:3000/stop';
-  return await API.post<StopResult>(url, null);
+  return await API.post<StopResult>(url, { stopOptions: stopOptions || (StopOptions.Backend | StopOptions.Frontend) });
 }
 
 export interface Example {

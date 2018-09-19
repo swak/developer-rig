@@ -66,5 +66,5 @@ async function runTests() {
   }, res);
 
   // Test shut down.
-  await postRoutes['/stop']({}, res);
+  await postRoutes['/stop']({ body: { stopOptions: 3 } }, res);
 }

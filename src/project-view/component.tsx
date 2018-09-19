@@ -1,11 +1,19 @@
 import * as React from 'react';
 import './component.sass';
 import { RigProject } from '../core/models/rig';
-import { fetchHostingStatus, startBackend, startFrontend } from '../util/api';
+import { fetchHostingStatus, startBackend, startFrontend, stopHosting, StopOptions } from '../util/api';
 
 export interface ProjectViewProps {
   rigProject: RigProject,
   onChange: (rigProject: RigProject) => void,
+}
+
+enum HostingResult {
+  None = '',
+  NotRunning = 'not running',
+  Started = 'started',
+  Running = 'running',
+  Exited = 'exited',
 }
 
 interface State {
@@ -15,17 +23,21 @@ interface State {
 
 export class ProjectView extends React.Component<ProjectViewProps, State>{
   public state: State = {
-    backendResult: '',
-    frontendResult: '',
+    backendResult: HostingResult.None,
+    frontendResult: HostingResult.None,
   };
 
   constructor(props: ProjectViewProps) {
     super(props);
     fetchHostingStatus().then((status) => {
       this.setState({
-        backendResult: props.rigProject.backendCommand ? status.isBackendRunning ? 'running' : 'not running' : '',
-        frontendResult: props.rigProject.frontendFolderName ? status.isFrontendRunning ? 'running' : 'not running' : '',
+        backendResult: getStatus(props.rigProject.backendCommand, status.isBackendRunning),
+        frontendResult: getStatus(props.rigProject.frontendFolderName, status.isFrontendRunning),
       });
+
+      function getStatus(value: string, isRunning: boolean): HostingResult {
+        return value ? isRunning ? HostingResult.Running : HostingResult.NotRunning : HostingResult.None;
+      }
     });
   }
 
@@ -41,38 +53,49 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     }
   }
 
-  private startBackend = async () => {
-    if (this.props.rigProject.backendCommand) {
+  private toggleBackend = async () => {
+    const rigProject = this.props.rigProject;
+    if (rigProject.backendCommand) {
       try {
-        this.setState({ backendResult: '' });
-        await startBackend(this.props.rigProject.backendCommand, this.props.rigProject.projectFolderPath);
-        this.setState({ backendResult: 'started' });
+        this.setState({ backendResult: HostingResult.None });
+        if (this.getIsRunning(this.state.backendResult)) {
+          const { backendResult } = await stopHosting(StopOptions.Backend);
+          this.setState({ backendResult });
+        } else {
+          await startBackend(rigProject.backendCommand, rigProject.projectFolderPath);
+          this.setState({ backendResult: HostingResult.Running });
+        }
       } catch (ex) {
         this.setState({ backendResult: ex.message });
       }
     }
   }
 
-  private startFrontend = async () => {
+  private toggleFrontend = async () => {
     const rigProject = this.props.rigProject;
     if (rigProject.frontendFolderName) {
       try {
-        let frontendPort: number;
-        ['panel', 'component', 'videoOverlay', 'mobile', 'config', 'liveConfig'].some((name) => {
-          const view = (rigProject.manifest.views as any)[name];
-          if (view && view.viewerUrl) {
-            const url = new URL(view.viewerUrl);
-            frontendPort = parseInt(url.port, 10) || (url.protocol === 'http:' ? 80 : 443);
-            return true;
+        this.setState({ frontendResult: HostingResult.None });
+        if (this.getIsRunning(this.state.frontendResult)) {
+          const { frontendResult } = await stopHosting(StopOptions.Frontend);
+          this.setState({ frontendResult });
+        } else {
+          let frontendPort: number;
+          ['panel', 'component', 'videoOverlay', 'mobile', 'config', 'liveConfig'].some((name) => {
+            const view = (rigProject.manifest.views as any)[name];
+            if (view && view.viewerUrl) {
+              const url = new URL(view.viewerUrl);
+              frontendPort = parseInt(url.port, 10) || (url.protocol === 'http:' ? 80 : 443);
+              return true;
+            }
+            return false;
+          });
+          if (!frontendPort) {
+            throw new Error('Cannot determine front-end port from extension');
           }
-          return false;
-        });
-        if (!frontendPort) {
-          throw new Error('Cannot determine front-end port from extension');
+          await startFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
+          this.setState({ frontendResult: HostingResult.Started });
         }
-        this.setState({ frontendResult: '' });
-        await startFrontend(rigProject.frontendFolderName, rigProject.isLocal, frontendPort, rigProject.projectFolderPath);
-        this.setState({ frontendResult: 'started' });
       } catch (ex) {
         this.setState({ frontendResult: ex.message });
       }
@@ -97,26 +120,31 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     window.open('https://www.twitch.tv/videos/239080621', 'developer-rig-help');
   }
 
+  private getIsRunning(result: string) {
+    return result === HostingResult.Started || result === HostingResult.Running;
+  }
+
   public render() {
     const rigProject = this.props.rigProject;
-    const manifest = rigProject.manifest;
+    const frontendText = this.getIsRunning(this.state.frontendResult) ? 'Stop Hosting' : 'Host with Rig';
+    const backendText = this.getIsRunning(this.state.backendResult) ? 'Deactivate' : 'Activate';
     return (
       <div className="project-view">
         <div className="project-view__section project-view__section--left">
           <label className="project-view-property">
             <div className="project-view-property__name">Project Name</div>
-            <input className="project-view-property__input project-view-property__input--half" type="text" name="name" value={manifest.name} onChange={this.onChange} />
+            <input className="project-view-property__input project-view-property__input--half" type="text" name="name" value={rigProject.manifest.name} onChange={this.onChange} />
           </label>
           <label className="project-view-property" title="This is the path to your front-end files relative to the Project Folder.  If there is no Project Folder, ensure this path is absolute.">
             <div className="project-view-property__name">Front-end Files Location</div>
             <input className="project-view-property__input" type="text" name="frontendFolderName" value={rigProject.frontendFolderName} onChange={this.onChange} />
-            <button className="project-view__button" title="" onClick={this.startFrontend}>Host with Rig</button>
+            <button className="project-view__button" title="" onClick={this.toggleFrontend}>{frontendText}</button>
             <div title="This is the result of the front-end hosting command" className="project-view-property__result">{this.state.frontendResult}</div>
           </label>
           <label className="project-view-property" title="This is the command used to run your back-end.  If there is a Project Folder, this command is run with that folder as its current directory.">
             <div className="project-view-property__name">Back-end Run Command</div>
             <input className="project-view-property__input" type="text" name="backendCommand" value={rigProject.backendCommand} onChange={this.onChange} />
-            <button className="project-view__button" title="" onClick={this.startBackend}>Activate</button>
+            <button className="project-view__button" title="" onClick={this.toggleBackend}>{backendText}</button>
             <div title="This is the result of the back-end hosting command" className="project-view-property__result">{this.state.backendResult}</div>
           </label>
           <label className="project-view-property">

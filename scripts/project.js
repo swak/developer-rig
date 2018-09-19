@@ -190,7 +190,23 @@ module.exports = function(app) {
     res.end(JSON.stringify(status));
   });
 
-  app.post('/stop', async (_, res) => {
+  const StopOptions = {
+    Backend: 1,
+    Frontend: 2,
+  };
+
+  app.post('/stop', async (req, res) => {
+    const { stopOptions } = req.body;
+    const backendResult = stopOptions & StopOptions.Backend ? await stop(children.backend) : '';
+    const frontendResult = stopOptions & StopOptions.Frontend ? await stop(children.frontend) : '';
+    res.setHeader('Content-Type', 'application/json');
+    res.writeHead(200);
+    const status = {
+      backendResult,
+      frontendResult,
+    };
+    res.end(JSON.stringify(status));
+
     async function stop(child) {
       if (child) {
         child.kill();
@@ -213,15 +229,6 @@ module.exports = function(app) {
       }
       return 'not running';
     }
-    const backendResult = await stop(children.backend);
-    const frontendResult = await stop(children.frontend);
-    res.setHeader('Content-Type', 'application/json');
-    res.writeHead(200);
-    const status = {
-      backendResult,
-      frontendResult,
-    };
-    res.end(JSON.stringify(status));
   });
 
   function fetchExample(repository, projectFolderPath) {
