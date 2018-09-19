@@ -17,7 +17,7 @@ interface Props {
 
 interface State {
   rigProject: RigProject;
-  name: string;
+  localName: string;
   clientId: string;
   version: string;
   codeGenerationOption: string;
@@ -59,7 +59,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
       frontendFolderName: '',
       backendCommand: '',
     } as RigProject,
-    name: '',
+    localName: '',
     clientId: process.env.EXT_CLIENT_ID || '',
     version: process.env.EXT_VERSION || '',
     codeGenerationOption: CodeGenerationOption.None,
@@ -98,7 +98,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
           }
         });
       }
-    } else if (name !== 'name' || this.state.rigProject.isLocal) {
+    } else if (name !== 'localName' || this.state.rigProject.isLocal) {
       const convert = typeof this.state[name] === 'number' ? (s: string) => Number(s) : (s: string) => s;
       if (Object.getOwnPropertyDescriptor(this.state.rigProject, name)) {
         const rigProject = Object.assign(this.state.rigProject, { [name]: convert(value) }) as RigProject;
@@ -123,18 +123,19 @@ export class CreateProjectDialog extends React.Component<Props, State>{
   }
 
   private canSave = () => {
-    const { name, codeGenerationOption, rigProject, extensionTypes } = this.state;
-
-    // The project must be named.
-    if (!name.trim()) {
-      return false;
-    }
     // The project must have a project folder root if the code generation
     // option is not None.
+    const { localName, codeGenerationOption, rigProject, extensionTypes } = this.state;
     if (codeGenerationOption !== CodeGenerationOption.None && !rigProject.projectFolderPath.trim()) {
       return false;
     }
+
     if (rigProject.isLocal) {
+      // The project must be named.
+      if (!localName.trim()) {
+        return false;
+      }
+
       // At least one extension type must be selected.
       if (!extensionTypes) {
         return false;
@@ -179,7 +180,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
           this.state.rigProject.secret = this.state.rigProject.secret || 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk';
           const ownerName: string = JSON.parse(localStorage.getItem('rigLogin')).login;
           this.state.rigProject.manifest = generateManifest('https://localhost.rig.twitch.tv:8080',
-            ownerName, this.state.name.trim(), this.getTypes());
+            ownerName, this.state.localName.trim(), this.getTypes());
         }
         const { codeGenerationOption, exampleIndex, examples } = this.state;
         if (codeGenerationOption !== CodeGenerationOption.None) {
@@ -204,18 +205,31 @@ export class CreateProjectDialog extends React.Component<Props, State>{
     try {
       const manifest = await fetchUserExtensionManifest(isLocal, this.props.userId, secret, clientId, version);
       const rigProject = Object.assign({}, this.state.rigProject, { manifest });
-      this.setState({
-        rigProject,
-        name: manifest.name,
-      });
+      this.setState({ rigProject });
     } catch (ex) {
       const rigProject = Object.assign({}, this.state.rigProject, { manifest: ex.message });
       this.setState({ rigProject });
     }
   }
 
+  private constructStringClassName(condition: boolean | string, name: string, modifier?: string) {
+    return `${name}${modifier ? ` ${name}--${modifier}` : ''}` + (condition ? '' : ` ${name}--error`);
+  }
+
   public render() {
-    const saveClassName = 'bottom-bar__save' + (this.canSave() ? '' : ' disabled');
+    const pdp = 'project-dialog-property';
+    const [pdpi, pdpri] = [`${pdp}__input`, `${pdp}__right-input`];
+    const { codeGenerationOption, extensionTypes, rigProject } = this.state;
+    const nameInputClassName = this.constructStringClassName(!rigProject.isLocal || this.state.localName.trim(), pdpi, 'half');
+    const localName = rigProject.isLocal ? this.state.localName : rigProject.manifest.name || '';
+    const typesClassName = this.constructStringClassName(extensionTypes !== 0, `${pdp}__name`);
+    const clientIdClassName = this.constructStringClassName(this.state.clientId.trim(), pdpri, 'grid');
+    const secretClassName = this.constructStringClassName(rigProject.secret.trim(), pdpri, 'grid');
+    const versionClassName = this.constructStringClassName(this.state.version.trim(), pdpri, 'grid');
+    const manifestClassName = this.constructStringClassName(rigProject.manifest.id, `${pdp}__textarea`);
+    const projectFolderClassName = pdpi +
+      (codeGenerationOption === CodeGenerationOption.None || rigProject.projectFolderPath.trim() ? '' : ` ${pdpi}--error`);
+    const saveClassName = 'bottom-bar__save' + (this.canSave() ? '' : ' bottom-bar__save--disabled');
     return (
       <div className="project-dialog">
         <div className="project-dialog__background" />
@@ -230,77 +244,77 @@ export class CreateProjectDialog extends React.Component<Props, State>{
             <div className="project-dialog__section project-dialog__section--left">
               <label className="project-dialog-property">
                 <div className="project-dialog-property__name">Extension Project Name</div>
-                <input className="project-dialog-property__input project-dialog-property__input--half" type="text" name="name" value={this.state.name} onChange={this.onChange} />
+                <input className={nameInputClassName} type="text" name="localName" value={localName} onChange={this.onChange} />
               </label>
               <div className="project-dialog-property">
                 <div className="project-dialog-property__name">Choose Extension</div>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={1} checked={this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
+                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={1} checked={rigProject.isLocal} onChange={this.onChangeIsLocal} />
                   <span className="project-dialog-property__right-text">Create Local Extension</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={0} checked={!this.state.rigProject.isLocal} onChange={this.onChangeIsLocal} />
+                  <input className="project-dialog-property__left-input" type="radio" name="isLocal" value={0} checked={!rigProject.isLocal} onChange={this.onChangeIsLocal} />
                   <span className="project-dialog-property__right-text">Use Already Created Online Extension</span>
                 </label>
               </div>
-              {this.state.rigProject.isLocal && <div className="project-dialog-property">
-                <div className="project-dialog-property__name">Extension Types</div>
+              {rigProject.isLocal && <div className="project-dialog-property">
+                <div className={typesClassName}>Extension Types</div>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Overlay} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Overlay)} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Overlay} checked={Boolean(extensionTypes & ExtensionTypes.Overlay)} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Video Overlay</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Panel} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Panel)} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Panel} checked={Boolean(extensionTypes & ExtensionTypes.Panel)} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Panel</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Component} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Component)} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Component} checked={Boolean(extensionTypes & ExtensionTypes.Component)} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Component</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Mobile} checked={Boolean(this.state.extensionTypes & ExtensionTypes.Mobile)} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="checkbox" name="extensionTypes" value={ExtensionTypes.Mobile} checked={Boolean(extensionTypes & ExtensionTypes.Mobile)} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Mobile</span>
                 </label>
               </div>}
-              {!this.state.rigProject.isLocal && <div className="project-dialog-property">
+              {!rigProject.isLocal && <div className="project-dialog-property">
                 <label className="project-dialog-property__value project-dialog-property__value--grid">
                   <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Client ID</span>
-                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="clientId" value={this.state.clientId} onChange={this.onChange} />
+                  <input className={clientIdClassName} type="text" name="clientId" value={this.state.clientId} onChange={this.onChange} />
                 </label>
                 <label className="project-dialog-property__value project-dialog-property__value--grid">
                   <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Secret</span>
-                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="secret" value={this.state.rigProject.secret} onChange={this.onChange} />
+                  <input className={secretClassName} type="text" name="secret" value={rigProject.secret} onChange={this.onChange} />
                 </label>
                 <label className="project-dialog-property__value project-dialog-property__value--grid">
                   <span className="project-dialog-property__left-text project-dialog-property__left-text--grid">Version</span>
-                  <input className="project-dialog-property__right-input project-dialog-property__right-input--grid" type="text" name="version" value={this.state.version} onChange={this.onChange} />
+                  <input className={versionClassName} type="text" name="version" value={this.state.version} onChange={this.onChange} />
                 </label>
                 <button className="project-dialog-property__button" onClick={this.fetchExtensionManifest}>Fetch</button>
-                <textarea className="project-dialog-property__textarea" value={JSON.stringify(this.state.rigProject.manifest)} disabled={true} />
+                <textarea className={manifestClassName} value={JSON.stringify(rigProject.manifest)} disabled={true} />
               </div>}
               <label className="project-dialog-property" title="This is the folder we will create to contain your project. You must have already created its parent folder.">
                 <div className="project-dialog-property__name">Project Folder</div>
-                <input className="project-dialog-property__input" type="text" name="projectFolderPath" value={this.state.rigProject.projectFolderPath} onChange={this.onChange} />
+                <input className={projectFolderClassName} type="text" name="projectFolderPath" value={rigProject.projectFolderPath} onChange={this.onChange} />
               </label>
               <div className="project-dialog-property">
                 <div className="project-dialog-property__name">Add Code to Project</div>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.None} checked={this.state.codeGenerationOption === CodeGenerationOption.None} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.None} checked={codeGenerationOption === CodeGenerationOption.None} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">None (Just Create Project Folder)</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Scaffolding} checked={this.state.codeGenerationOption === CodeGenerationOption.Scaffolding} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Scaffolding} checked={codeGenerationOption === CodeGenerationOption.Scaffolding} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Generate Scaffolding</span>
                 </label>
                 <label className="project-dialog-property__value">
-                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Template} checked={this.state.codeGenerationOption === CodeGenerationOption.Template} onChange={this.onChange} />
+                  <input className="project-dialog-property__left-input" type="radio" name="codeGenerationOption" value={CodeGenerationOption.Template} checked={codeGenerationOption === CodeGenerationOption.Template} onChange={this.onChange} />
                   <span className="project-dialog-property__right-text">Use Existing Sample Template</span>
                 </label>
               </div>
             </div>
             <div className="project-dialog__vertical-bar" />
             <div className="project-dialog__section project-dialog__section--right">
-              {this.state.codeGenerationOption === CodeGenerationOption.Scaffolding ? (
+              {codeGenerationOption === CodeGenerationOption.Scaffolding ? (
                 <>
                   <div className="project-dialog__section-header">Tell us more about what your extension will do</div>
                   <div className="project-dialog__section-text">(We’ll automatically provide basic React-based scaffolding, but we want to provide extras where useful!)</div>
@@ -313,7 +327,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
                     <span className="project-dialog-property__right-text">Retrieve Configuration on Load</span>
                   </label>
                 </>
-              ) : this.state.codeGenerationOption === CodeGenerationOption.Template ? (
+              ) : codeGenerationOption === CodeGenerationOption.Template ? (
                 <>
                   <div className="project-dialog__section-header">Start from an existing extension sample from Twitch or the Developer Community</div>
                   <label className="project-dialog-property">

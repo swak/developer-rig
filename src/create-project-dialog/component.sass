@@ -1,6 +1,11 @@
+$error-color: #d33232
+
 @import "../dialog-component/component.sass"
 .project-dialog
   display: block
+
+  &--error
+    border: 2px solid $error-color
 
   &__background
     @extend .dialog__backdrop
@@ -81,6 +86,9 @@
       display: inline
       width: 90%
 
+      &--error
+        @extend .project-dialog--error
+
       &--half
         width: 50%
 
@@ -95,6 +103,9 @@
 
     &__name
       display: block
+
+      &--error
+        color: $error-color
 
     &__option
       padding: .2em
@@ -119,12 +130,18 @@
     &__right-input
       display: inline
 
+      &--error
+        @extend .project-dialog--error
+
       &--grid
         grid-column: 3
 
     &__textarea
       display: block
       width: 90%
+
+      &--error
+        @extend .project-dialog--error
 
     &__value
       display: block
@@ -141,6 +158,9 @@
 .bottom-bar__save
   @include bottom-bar-box(white, #7D55C7)
   margin: 0
+
+  &--disabled
+    background-color: grey
 
 .dialog__bottom-bar
   @extend .container__left-block
