@@ -230,11 +230,13 @@ ShallowWrapper {
           </ol>
           <button
                     className="project-view__button project-view__button--first"
+                    onClick={[Function]}
           >
                     View Tutorial
           </button>
           <button
                     className="project-view__button"
+                    onClick={[Function]}
           >
                     Go to Documentation
           </button>
@@ -761,11 +763,13 @@ ShallowWrapper {
 </ol>,
             <button
               className="project-view__button project-view__button--first"
+              onClick={[Function]}
 >
               View Tutorial
 </button>,
             <button
               className="project-view__button"
+              onClick={[Function]}
 >
               Go to Documentation
 </button>,
@@ -966,6 +970,7 @@ ShallowWrapper {
             "props": Object {
               "children": "View Tutorial",
               "className": "project-view__button project-view__button--first",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "View Tutorial",
@@ -978,6 +983,7 @@ ShallowWrapper {
             "props": Object {
               "children": "Go to Documentation",
               "className": "project-view__button",
+              "onClick": [Function],
             },
             "ref": null,
             "rendered": "Go to Documentation",
@@ -1154,11 +1160,13 @@ ShallowWrapper {
             </ol>
             <button
                         className="project-view__button project-view__button--first"
+                        onClick={[Function]}
             >
                         View Tutorial
             </button>
             <button
                         className="project-view__button"
+                        onClick={[Function]}
             >
                         Go to Documentation
             </button>
@@ -1685,11 +1693,13 @@ ShallowWrapper {
 </ol>,
               <button
                 className="project-view__button project-view__button--first"
+                onClick={[Function]}
 >
                 View Tutorial
 </button>,
               <button
                 className="project-view__button"
+                onClick={[Function]}
 >
                 Go to Documentation
 </button>,
@@ -1890,6 +1900,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "View Tutorial",
                 "className": "project-view__button project-view__button--first",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "View Tutorial",
@@ -1902,6 +1913,7 @@ ShallowWrapper {
               "props": Object {
                 "children": "Go to Documentation",
                 "className": "project-view__button",
+                "onClick": [Function],
               },
               "ref": null,
               "rendered": "Go to Documentation",

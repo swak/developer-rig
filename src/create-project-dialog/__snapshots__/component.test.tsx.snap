@@ -64,8 +64,8 @@ ShallowWrapper {
                                                   Extension Project Name
                                         </div>
                                         <input
-                                                  className="project-dialog-property__input project-dialog-property__input--half"
-                                                  name="name"
+                                                  className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                  name="localName"
                                                   onChange={[Function]}
                                                   type="text"
                                                   value=""
@@ -289,7 +289,7 @@ ShallowWrapper {
                     className="project-dialog__footer"
           >
                     <div
-                              className="bottom-bar__save disabled"
+                              className="bottom-bar__save bottom-bar__save--disabled"
                               onClick={[Function]}
                     >
                               Save
@@ -361,8 +361,8 @@ ShallowWrapper {
                                                         Extension Project Name
                                           </div>
                                           <input
-                                                        className="project-dialog-property__input project-dialog-property__input--half"
-                                                        name="name"
+                                                        className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                        name="localName"
                                                         onChange={[Function]}
                                                         type="text"
                                                         value=""
@@ -586,7 +586,7 @@ ShallowWrapper {
               className="project-dialog__footer"
 >
               <div
-                            className="bottom-bar__save disabled"
+                            className="bottom-bar__save bottom-bar__save--disabled"
                             onClick={[Function]}
               >
                             Save
@@ -700,8 +700,8 @@ ShallowWrapper {
                                                       Extension Project Name
                                     </div>
                                     <input
-                                                      className="project-dialog-property__input project-dialog-property__input--half"
-                                                      name="name"
+                                                      className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                      name="localName"
                                                       onChange={[Function]}
                                                       type="text"
                                                       value=""
@@ -937,8 +937,8 @@ ShallowWrapper {
                                             Extension Project Name
                       </div>
                       <input
-                                            className="project-dialog-property__input project-dialog-property__input--half"
-                                            name="name"
+                                            className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                            name="localName"
                                             onChange={[Function]}
                                             type="text"
                                             value=""
@@ -1159,8 +1159,8 @@ ShallowWrapper {
                           Extension Project Name
 </div>,
                         <input
-                          className="project-dialog-property__input project-dialog-property__input--half"
-                          name="name"
+                          className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                          name="localName"
                           onChange={[Function]}
                           type="text"
                           value=""
@@ -1187,8 +1187,8 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "className": "project-dialog-property__input project-dialog-property__input--half",
-                          "name": "name",
+                          "className": "project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error",
+                          "name": "localName",
                           "onChange": [Function],
                           "type": "text",
                           "value": "",
@@ -2058,7 +2058,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <div
-                  className="bottom-bar__save disabled"
+                  className="bottom-bar__save bottom-bar__save--disabled"
                   onClick={[Function]}
 >
                   Save
@@ -2080,7 +2080,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Save",
-                  "className": "bottom-bar__save disabled",
+                  "className": "bottom-bar__save bottom-bar__save--disabled",
                   "onClick": [Function],
                 },
                 "ref": null,
@@ -2158,8 +2158,8 @@ ShallowWrapper {
                                                             Extension Project Name
                                                 </div>
                                                 <input
-                                                            className="project-dialog-property__input project-dialog-property__input--half"
-                                                            name="name"
+                                                            className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                            name="localName"
                                                             onChange={[Function]}
                                                             type="text"
                                                             value=""
@@ -2383,7 +2383,7 @@ ShallowWrapper {
                         className="project-dialog__footer"
             >
                         <div
-                                    className="bottom-bar__save disabled"
+                                    className="bottom-bar__save bottom-bar__save--disabled"
                                     onClick={[Function]}
                         >
                                     Save
@@ -2455,8 +2455,8 @@ ShallowWrapper {
                                                                 Extension Project Name
                                                 </div>
                                                 <input
-                                                                className="project-dialog-property__input project-dialog-property__input--half"
-                                                                name="name"
+                                                                className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                                name="localName"
                                                                 onChange={[Function]}
                                                                 type="text"
                                                                 value=""
@@ -2680,7 +2680,7 @@ ShallowWrapper {
                 className="project-dialog__footer"
 >
                 <div
-                                className="bottom-bar__save disabled"
+                                className="bottom-bar__save bottom-bar__save--disabled"
                                 onClick={[Function]}
                 >
                                 Save
@@ -2794,8 +2794,8 @@ ShallowWrapper {
                                                             Extension Project Name
                                         </div>
                                         <input
-                                                            className="project-dialog-property__input project-dialog-property__input--half"
-                                                            name="name"
+                                                            className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                            name="localName"
                                                             onChange={[Function]}
                                                             type="text"
                                                             value=""
@@ -3031,8 +3031,8 @@ ShallowWrapper {
                                                 Extension Project Name
                         </div>
                         <input
-                                                className="project-dialog-property__input project-dialog-property__input--half"
-                                                name="name"
+                                                className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                name="localName"
                                                 onChange={[Function]}
                                                 type="text"
                                                 value=""
@@ -3253,8 +3253,8 @@ ShallowWrapper {
                             Extension Project Name
 </div>,
                           <input
-                            className="project-dialog-property__input project-dialog-property__input--half"
-                            name="name"
+                            className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                            name="localName"
                             onChange={[Function]}
                             type="text"
                             value=""
@@ -3281,8 +3281,8 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "host",
                           "props": Object {
-                            "className": "project-dialog-property__input project-dialog-property__input--half",
-                            "name": "name",
+                            "className": "project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error",
+                            "name": "localName",
                             "onChange": [Function],
                             "type": "text",
                             "value": "",
@@ -4152,7 +4152,7 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   <div
-                    className="bottom-bar__save disabled"
+                    className="bottom-bar__save bottom-bar__save--disabled"
                     onClick={[Function]}
 >
                     Save
@@ -4174,7 +4174,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": "Save",
-                    "className": "bottom-bar__save disabled",
+                    "className": "bottom-bar__save bottom-bar__save--disabled",
                     "onClick": [Function],
                   },
                   "ref": null,

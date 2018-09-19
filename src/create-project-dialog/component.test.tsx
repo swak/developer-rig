@@ -71,7 +71,7 @@ describe('<CreateProjectDialog />', () => {
         });
       }),
     }))();
-    ['name', 'projectFolderPath'].forEach((name: string) => {
+    ['localName', 'projectFolderPath'].forEach((name: string) => {
       wrapper.find('input[name="' + name + '"]').simulate('change', { currentTarget: { name, value } });
     })
     wrapper.find('.bottom-bar__save').simulate('click');
