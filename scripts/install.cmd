@@ -26,32 +26,7 @@ ECHO $client = new-object System.Net.WebClient >> %DL%
 ECHO $client.DownloadFile^($args[0], $args[1]^) >> %DL%
 SET DL=powershell -file %DL%
 
-REM Download and invoke the installers for Git, Node, Python 2, and Yarn.
-git --version > NUL 2> NUL
-IF NOT ERRORLEVEL 1 (
-	ECHO Git is already installed.
-	GOTO skip_git
-)
-ECHO Downloading Git...
-SET GIT_VERSION=2.18.0
-%DL% "https://github.com/git-for-windows/git/releases/download/v%GIT_VERSION%.windows.1/Git-%GIT_VERSION%-64-bit.exe" "%T%\Git-%GIT_VERSION%-64-bit.exe"
-IF ERRORLEVEL 1 GOTO done
-ECHO Installing Git...
-SET INFO="%T%\git.info"
-ECHO [Setup]>> %INFO%
-ECHO Components=icons,icons\desktop,ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh>> %INFO%
-ECHO SSHOption=OpenSSH>> %INFO%
-ECHO CURLOption=WinSSL>> %INFO%
-ECHO PerformanceTweaksFSCache=Enabled>> %INFO%
-ECHO UseCredentialManager=Enabled>> %INFO%
-ECHO EnableSymlinks=Enabled>> %INFO%
-"%T%\Git-%GIT_VERSION%-64-bit.exe" /LOADINF=%INFO% /VERYSILENT /NORESTART /RESTARTEXITCODE=3
-IF %ERRORLEVEL% == 3 (
-	SET MUST_RESTART=yes
-) ELSE IF ERRORLEVEL 1 (
-	GOTO done
-)
-:skip_git
+REM Download and invoke the installers for Node, Python 2, and Yarn.
 node -v > NUL 2> NUL
 IF NOT ERRORLEVEL 1 (
 	ECHO Node is already installed.

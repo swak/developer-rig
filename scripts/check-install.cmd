@@ -21,8 +21,6 @@ IF ERRORLEVEL 1 (
 	PAUSE
 	EXIT /B
 )
-git --version > NUL 2> NUL
-IF ERRORLEVEL 1 EXIT /B 2
 python --version > NUL 2> NUL
 IF ERRORLEVEL 1 EXIT /B 2
 CALL yarn --version > NUL 2> NUL
