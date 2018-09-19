@@ -2,6 +2,16 @@ import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { ProjectView } from './component';
 import { createExtensionManifestForTest } from '../tests/constants/extension';
 
+function mockApiFunctions() {
+  const original = require.requireActual('../util/api');
+  return {
+    ...original,
+    fetchHostingStatus: jest.fn().mockImplementation(() => Promise.resolve({})),
+  }
+}
+jest.mock('../util/api', () => mockApiFunctions());
+const api = require.requireMock('../util/api');
+
 describe('<ProjectView />', () => {
   const setupShallow = setupShallowTest(ProjectView, () => ({
     rigProject: {
