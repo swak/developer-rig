@@ -10,10 +10,10 @@
     grid-template-columns: 1fr 1px 1fr
     grid-gap: 1em
     grid-auto-rows: min-content
+    padding: 0 .7em
 
   &__dialog
     @extend .dialog
-    height: 650px
 
   &__divider
     @extend .dialog__divider-width
@@ -22,11 +22,26 @@
     height: 1px
     margin-top: 0
 
+  &__escape
+    cursor: pointer
+    grid-column: 2
+
+  &__footer
+    display: grid
+    grid-template-columns: 5em 5em 1fr
+    grid-gap: 1em
+    grid-auto-rows: min-content
+    margin-bottom: .6em
+    padding-left: 1em
+
   &__header
     display: grid
     grid-template-columns: 1fr
     font-size: larger
     padding: .5em 1em
+
+  &__project-name-input
+    width: 15em
 
   &__section
     display: block
@@ -39,6 +54,18 @@
 
   &__title
     grid-column: 1
+
+  &__vertical-bar
+    background-color: #DAD8DE
+    grid-column: 2
+    height: 100%
+    width: 1px;
+    span
+      grid-column: 2
+      margin-right: 3px
+      text-align: right
+    input
+      grid-column: 3
 
   &-property
     display: block
@@ -107,26 +134,13 @@
         grid-gap: 3px
         grid-template-columns: 7px 5em 1fr 5em
 
-  &__project-name-input
-    width: 15em
-
-  &__vertical-bar
-    background-color: #DAD8DE
-    grid-column: 2
-    height: 100%
-    width: 1px;
-    span
-      grid-column: 2
-      margin-right: 3px
-      text-align: right
-    input
-      grid-column: 3
-
 .bottom-bar__cancel
   @include bottom-bar-box(#7D55C7, white)
+  margin: 0
 
 .bottom-bar__save
   @include bottom-bar-box(white, #7D55C7)
+  margin: 0
 
 .dialog__bottom-bar
   @extend .container__left-block
@@ -140,7 +154,3 @@
   @extend .top-bar-element-left
   margin-top: 5px
   width: 100%
-
-.project-dialog__escape
-  cursor: pointer
-  grid-column: 2
