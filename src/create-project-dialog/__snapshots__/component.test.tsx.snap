@@ -65,8 +65,10 @@ ShallowWrapper {
                                         </div>
                                         <input
                                                   className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                  disabled={false}
                                                   name="localName"
                                                   onChange={[Function]}
+                                                  title="Enter a name for your project.  This is set for you for online extensions."
                                                   type="text"
                                                   value=""
                                         />
@@ -362,8 +364,10 @@ ShallowWrapper {
                                           </div>
                                           <input
                                                         className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                        disabled={false}
                                                         name="localName"
                                                         onChange={[Function]}
+                                                        title="Enter a name for your project.  This is set for you for online extensions."
                                                         type="text"
                                                         value=""
                                           />
@@ -701,8 +705,10 @@ ShallowWrapper {
                                     </div>
                                     <input
                                                       className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                      disabled={false}
                                                       name="localName"
                                                       onChange={[Function]}
+                                                      title="Enter a name for your project.  This is set for you for online extensions."
                                                       type="text"
                                                       value=""
                                     />
@@ -938,8 +944,10 @@ ShallowWrapper {
                       </div>
                       <input
                                             className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                            disabled={false}
                                             name="localName"
                                             onChange={[Function]}
+                                            title="Enter a name for your project.  This is set for you for online extensions."
                                             type="text"
                                             value=""
                       />
@@ -1160,8 +1168,10 @@ ShallowWrapper {
 </div>,
                         <input
                           className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                          disabled={false}
                           name="localName"
                           onChange={[Function]}
+                          title="Enter a name for your project.  This is set for you for online extensions."
                           type="text"
                           value=""
 />,
@@ -1188,8 +1198,10 @@ ShallowWrapper {
                         "nodeType": "host",
                         "props": Object {
                           "className": "project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error",
+                          "disabled": false,
                           "name": "localName",
                           "onChange": [Function],
+                          "title": "Enter a name for your project.  This is set for you for online extensions.",
                           "type": "text",
                           "value": "",
                         },
@@ -2159,8 +2171,10 @@ ShallowWrapper {
                                                 </div>
                                                 <input
                                                             className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                            disabled={false}
                                                             name="localName"
                                                             onChange={[Function]}
+                                                            title="Enter a name for your project.  This is set for you for online extensions."
                                                             type="text"
                                                             value=""
                                                 />
@@ -2456,8 +2470,10 @@ ShallowWrapper {
                                                 </div>
                                                 <input
                                                                 className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                                disabled={false}
                                                                 name="localName"
                                                                 onChange={[Function]}
+                                                                title="Enter a name for your project.  This is set for you for online extensions."
                                                                 type="text"
                                                                 value=""
                                                 />
@@ -2795,8 +2811,10 @@ ShallowWrapper {
                                         </div>
                                         <input
                                                             className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                            disabled={false}
                                                             name="localName"
                                                             onChange={[Function]}
+                                                            title="Enter a name for your project.  This is set for you for online extensions."
                                                             type="text"
                                                             value=""
                                         />
@@ -3032,8 +3050,10 @@ ShallowWrapper {
                         </div>
                         <input
                                                 className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                                                disabled={false}
                                                 name="localName"
                                                 onChange={[Function]}
+                                                title="Enter a name for your project.  This is set for you for online extensions."
                                                 type="text"
                                                 value=""
                         />
@@ -3254,8 +3274,10 @@ ShallowWrapper {
 </div>,
                           <input
                             className="project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error"
+                            disabled={false}
                             name="localName"
                             onChange={[Function]}
+                            title="Enter a name for your project.  This is set for you for online extensions."
                             type="text"
                             value=""
 />,
@@ -3282,8 +3304,10 @@ ShallowWrapper {
                           "nodeType": "host",
                           "props": Object {
                             "className": "project-dialog-property__input project-dialog-property__input--half project-dialog-property__input--error",
+                            "disabled": false,
                             "name": "localName",
                             "onChange": [Function],
+                            "title": "Enter a name for your project.  This is set for you for online extensions.",
                             "type": "text",
                             "value": "",
                           },

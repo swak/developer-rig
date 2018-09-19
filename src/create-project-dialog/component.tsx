@@ -244,7 +244,7 @@ export class CreateProjectDialog extends React.Component<Props, State>{
             <div className="project-dialog__section project-dialog__section--left">
               <label className="project-dialog-property">
                 <div className="project-dialog-property__name">Extension Project Name</div>
-                <input className={nameInputClassName} type="text" name="localName" value={localName} onChange={this.onChange} />
+                <input className={nameInputClassName} type="text" name="localName" value={localName} onChange={this.onChange} disabled={!rigProject.isLocal} title="Enter a name for your project.  This is set for you for online extensions." />
               </label>
               <div className="project-dialog-property">
                 <div className="project-dialog-property__name">Choose Extension</div>
