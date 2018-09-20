@@ -69,7 +69,6 @@ export class ExtensionViewContainer extends React.Component<Props, State> {
             <div className={triggerHandleClassName}>{this.state.mockTriggersEnabled ? 'on' : 'off'}</div>
           </div>
           <div className="trigger-bar__text">Use Mock Triggers</div>
-          <button className="trigger-bar__button">Edit Responses</button>
         </div>
         <div className="view-container">
           {extensionViews}
