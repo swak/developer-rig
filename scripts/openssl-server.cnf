@@ -23,7 +23,7 @@ localityName                   = Locality Name (eg, city)
 localityName_default           = San Francisco
 
 organizationName               = Organization Name (eg, company)
-organizationName_default       = Twtich
+organizationName_default       = Twitch
 
 organizationalUnitName         = Organizational Unit (eg, division)
 organizationalUnitName_default = Twitch Developer Rig
