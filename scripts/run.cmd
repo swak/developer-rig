@@ -23,7 +23,7 @@ IF ERRORLEVEL 1 (
 	EXIT /B
 )
 
-# Start the Developer Rig.
+REM Start the Developer Rig.
 yarn start
 EXIT /B
 
