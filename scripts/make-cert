@@ -84,8 +84,7 @@ if $NEEDS_INSTALLATION; then
 	# machine's root certificate store.
 	FF=/Applications/Firefox.app/Contents/Resources
 	if [ -d $FF ]; then
-		FF_PREF=$FF/defaults/pref
-		FF_RIG=$FF_PREF/twitch-developer-rig.js
+		FF_RIG=twitch-developer-rig.js
 		cat > $FF_RIG <<- EOF
 			// Twitch preferences
 			pref("security.enterprise_roots.enabled", true);'
@@ -108,16 +107,20 @@ if $NEEDS_INSTALLATION; then
 			"";
 			certdb.addCertFromBase64(twitchCert, "C,C,C", "");
 		EOF
-		mv cfg $FF_CFG
+		sudo mv cfg $FF_CFG
 		check "update $FF_CFG"
 
 		# Ensure Firefox uses the above file.
+		FF_PREF=$FF/defaults/pref
 		if ! grep -Fq general.config $FF_PREF/*; then
 			cat >> $FF_RIG <<- EOF
 				pref("general.config.obscure_value",0);
 				pref("general.config.filename","mozilla.cfg");
 			EOF
 		fi
+
+		# Update Firefox's preferences.
+		sudo mv $FF_RIG $FF_PREF
 	fi
 
 	# The user must restart their browser for these changes to take effect.
