@@ -24,7 +24,7 @@ SET DL="%T%\dl.ps1"
 ECHO [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls" >> %DL%
 ECHO $client = new-object System.Net.WebClient >> %DL%
 ECHO $client.DownloadFile^($args[0], $args[1]^) >> %DL%
-SET DL=powershell -file %DL%
+SET DL=powershell -ExecutionPolicy Bypass -file %DL%
 
 REM Download and invoke the installers for Node, Python 2, and Yarn.
 node -v > NUL 2> NUL
