@@ -38,6 +38,7 @@ ShallowWrapper {
           projects={
                     Array [
                               Object {},
+                              Object {},
                             ]
           }
           selectProject={[Function]}
@@ -71,6 +72,7 @@ ShallowWrapper {
           "error": undefined,
           "manifest": undefined,
           "projects": Array [
+            Object {},
             Object {},
           ],
           "selectProject": [Function],
@@ -152,6 +154,7 @@ ShallowWrapper {
             projects={
                         Array [
                                     Object {},
+                                    Object {},
                                   ]
             }
             selectProject={[Function]}
@@ -185,6 +188,7 @@ ShallowWrapper {
             "error": undefined,
             "manifest": undefined,
             "projects": Array [
+              Object {},
               Object {},
             ],
             "selectProject": [Function],

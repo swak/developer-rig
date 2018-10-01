@@ -21,21 +21,21 @@ export const createExtensionManifestForTest = (): ExtensionManifest => ({
     panel: {
       canLinkExternalContent: false,
       height: 300,
-      viewerUrl: 'test'
+      viewerUrl: 'https://test:8080',
     },
     config: {
       canLinkExternalContent: false,
-      viewerUrl: 'test'
+      viewerUrl: 'https://test:8080',
     },
     liveConfig: {
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
     component: {
       aspectHeight: 3000,
       aspectWidth: 2500,
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
       size: 1024,
       zoom: false,
       zoomPixels: 24,
@@ -64,31 +64,31 @@ export const createExtensionForTest = (): ExtensionCoordinator.ExtensionObject =
   views: {
     config: {
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
     component: {
       aspectHeight: 3000,
       aspectWidth: 2500,
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
       zoom: false,
       zoomPixels: 100,
     },
     liveConfig: {
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
     mobile: {
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
     panel: {
       canLinkExternalContent: false,
       height: 300,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
     videoOverlay: {
       canLinkExternalContent: false,
-      viewerUrl: 'test',
+      viewerUrl: 'https://test:8080',
     },
   },
   whitelistedConfigUrls: ['foo'],

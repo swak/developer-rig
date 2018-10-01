@@ -78,8 +78,9 @@ export class ProjectView extends React.Component<ProjectViewProps, State>{
     const rigProject = this.props.rigProject;
     if (rigProject.frontendFolderName || rigProject.frontendCommand) {
       try {
+        const frontendState = this.state.frontendResult;
         this.setState({ frontendResult: HostingResult.None });
-        if (this.getIsRunning(this.state.frontendResult)) {
+        if (this.getIsRunning(frontendState)) {
           const { frontendResult } = await stopHosting(StopOptions.Frontend);
           this.setState({ frontendResult });
         } else if (rigProject.frontendCommand) {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ProjectView /> config mode views renders correctly 1`] = `
+exports[`<ProjectView /> renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -34,22 +34,22 @@ ShallowWrapper {
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
                   "size": 1024,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 24,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [],

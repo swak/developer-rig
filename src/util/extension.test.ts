@@ -1,4 +1,4 @@
-import { createExtensionObject, createExtensionToken } from './extension';
+import { createExtensionObject, createExtensionToken, fetchUserExtensionManifest } from './extension';
 import { ExtensionManifest } from '../core/models/manifest';
 import { RigRole } from '../constants/rig';
 import { TokenPayload } from './token';
@@ -54,6 +54,14 @@ describe('extension', () => {
   const channelId = 'test';
   const secret = 'test';
   const opaqueId = 'testOpaqueId';
+
+  it("fetches a user's extension with the correct data", async () => {
+    const globalAny = global as any;
+    const expected = { id: 'test' };
+    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve({ extensions: [expected]}) }));
+    const actual = await fetchUserExtensionManifest(true, 'userId', 'secret', 'clientId', 'version');
+    expect(actual).toEqual(expected);
+  });
 
   it('creates an extension with the correct data', () => {
     const expected = {

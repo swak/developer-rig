@@ -77,4 +77,8 @@ async function runTests() {
       projectFolderPath,
     },
   }, res);
+
+  rmrf(projectFolderPath);
+  req.body.exampleIndex = 1;
+  await postRoutes['/project'](req, res);
 }

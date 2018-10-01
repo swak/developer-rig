@@ -5,6 +5,8 @@ import {
   fetchProducts,
   fetchNewRelease,
   saveProduct,
+  startFrontend,
+  startBackend,
 } from './api';
 import {
   mockFetchError,
@@ -156,6 +158,36 @@ describe('api', () => {
       fetchNewRelease().catch((error) => {
         expect(error).toEqual('Fake error');
       });
+    });
+  });
+
+  it('starts back end', async () => {
+    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve({}) }));
+    await startBackend('backendCommand', 'projectFolderPath');
+    expect(globalAny.fetch).toHaveBeenCalledWith('https://localhost.rig.twitch.tv:3000/backend', {
+      body: JSON.stringify({ backendCommand: 'backendCommand', projectFolderPath: 'projectFolderPath' }),
+      headers: {
+        Accept: 'application/vnd.twitchtv.v5+json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
+    });
+  });
+
+  it('starts front end', async () => {
+    globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 200, json: () => Promise.resolve({}) }));
+    await startFrontend('frontendFolderPath', 'frontendCommand', 'projectFolderPath');
+    expect(globalAny.fetch).toHaveBeenCalledWith('https://localhost.rig.twitch.tv:3000/frontend', {
+      body: JSON.stringify({
+        frontendFolderPath: 'frontendFolderPath',
+        frontendCommand: 'frontendCommand',
+        projectFolderPath: 'projectFolderPath',
+      }),
+      headers: {
+        Accept: 'application/vnd.twitchtv.v5+json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      method: 'POST',
     });
   });
 });

@@ -60,31 +60,31 @@ describe('<ExtensionFrame />', () => {
           views: {
             config: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             component: {
               aspectHeight: 3000,
               aspectWidth: 2500,
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
               zoom: false,
               zoomPixels: 100,
             },
             liveConfig: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             mobile: {
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             panel: {
               canLinkExternalContent: false,
               height: 300,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             videoOverlay: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
           },
           whitelistedConfigUrls: ['foo'],
@@ -143,31 +143,31 @@ describe('<ExtensionFrame />', () => {
           views: {
             config: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             component: {
               aspectHeight: 3000,
               aspectWidth: 2500,
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
               zoom: false,
               zoomPixels: 100,
             },
             liveConfig: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             mobile: {
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             panel: {
               canLinkExternalContent: false,
               height: 300,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
             videoOverlay: {
               canLinkExternalContent: false,
-              viewerUrl: 'test',
+              viewerUrl: 'https://test:8080',
             },
           },
           whitelistedConfigUrls: ['foo'],

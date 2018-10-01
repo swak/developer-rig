@@ -161,7 +161,7 @@ export class RigComponent extends React.Component<Props, State> {
   }
 
   public createProject = async (project: RigProject) => {
-    this.state.currentProject && await this.stopHosting();
+    this.state.currentProject && await stopHosting();
     this.setState((previousState) => {
       const previousProjects = previousState.currentProject ? previousState.projects : [];
       localStorage.setItem('currentProjectIndex', previousProjects.length.toString());
@@ -189,16 +189,10 @@ export class RigComponent extends React.Component<Props, State> {
   public selectProject = async (projectIndex: number) => {
     const selectedProject = this.state.projects[projectIndex];
     if (selectedProject !== this.state.currentProject) {
-      await this.stopHosting();
+      await stopHosting();
       this.setState({ currentProject: selectedProject });
       localStorage.setItem('currentProjectIndex', this.currentProjectIndex.toString());
     }
-  }
-
-  private async stopHosting() {
-    const result = await stopHosting();
-    result.backendResult && console.error('backend', result.backendResult);
-    result.frontendResult && console.error('frontend', result.frontendResult);
   }
 
   public closeProjectDialog = () => {

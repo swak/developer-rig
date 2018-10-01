@@ -1,18 +1,22 @@
-import { setupShallowTest } from '../tests/enzyme-util/shallow';
 import { RunListTrigger } from './component';
 import { setupMountTest } from '../tests/enzyme-util/mount';
-import { runInContext } from 'vm';
+import { OnAuthorizedResponse, OnContextResponse } from '../core/models/run-list';
 
 describe('<RunListTrigger />', () => {
   const setupShallow = setupMountTest(RunListTrigger, () => ({
     runList: {
       'onContext': [{
         'name': 'testContext',
-      }],
+      } as OnContextResponse],
       'onAuthorized': [{
         'name': 'testAuth',
-      }],
-    }
+      } as OnAuthorizedResponse],
+    },
+    iframe: {
+      contentWindow: {
+        postMessage: jest.fn(),
+      },
+    } as any as HTMLIFrameElement,
   }));
 
   it('renders correctly', () => {
@@ -22,7 +26,7 @@ describe('<RunListTrigger />', () => {
 
   it('changing different triggers sets state correctly', () => {
     const { wrapper } = setupShallow();
-    let instance = wrapper.instance() as RunListTrigger;
+    const instance = wrapper.instance() as RunListTrigger;
     const opts = wrapper.find('option');
     expect(instance.state.selectedTrigger).toEqual('testContext');
 
@@ -34,5 +38,14 @@ describe('<RunListTrigger />', () => {
     } as React.FormEvent<HTMLSelectElement>);
 
     expect(instance.state.selectedTrigger).toEqual('testAuth');
+  });
+
+  it('does it', () => {
+    const globalAny = global as any;
+    globalAny.setTimeout = jest.fn();
+    const { wrapper } = setupShallow();
+    const instance = wrapper.instance() as RunListTrigger;
+    wrapper.find('.runlist-trigger__button').simulate('click');
+    expect(instance.props.iframe.contentWindow.postMessage).toHaveBeenCalled();
   });
 });

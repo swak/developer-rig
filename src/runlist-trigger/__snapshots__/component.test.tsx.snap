@@ -4,6 +4,13 @@ exports[`<RunListTrigger /> renders correctly 1`] = `
 ReactWrapper {
   "length": 1,
   Symbol(enzyme.__unrendered__): <RunListTrigger
+    iframe={
+        Object {
+            "contentWindow": Object {
+              "postMessage": [Function],
+            },
+          }
+    }
     runList={
         Object {
             "onAuthorized": Array [
@@ -51,6 +58,11 @@ ReactWrapper {
             "Component": [Function],
             "context": null,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -69,6 +81,11 @@ ReactWrapper {
             "context": null,
             "mount": true,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -89,6 +106,11 @@ ReactWrapper {
             "Component": [Function],
             "context": null,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -198,6 +220,11 @@ ReactWrapper {
                       context={null}
                       props={
                                             Object {
+                                                                  "iframe": Object {
+                                                                    "contentWindow": Object {
+                                                                      "postMessage": [Function],
+                                                                    },
+                                                                  },
                                                                   "runList": Object {
                                                                     "onAuthorized": Array [
                                                                       Object {
@@ -230,6 +257,11 @@ ReactWrapper {
                       context={null}
                       props={
                                             Object {
+                                                                  "iframe": Object {
+                                                                    "contentWindow": Object {
+                                                                      "postMessage": [Function],
+                                                                    },
+                                                                  },
                                                                   "runList": Object {
                                                                     "onAuthorized": Array [
                                                                       Object {
@@ -264,6 +296,11 @@ ReactWrapper {
                 context={null}
                 props={
                                 Object {
+                                                "iframe": Object {
+                                                  "contentWindow": Object {
+                                                    "postMessage": [Function],
+                                                  },
+                                                },
                                                 "runList": Object {
                                                   "onAuthorized": Array [
                                                     Object {
@@ -340,6 +377,11 @@ ReactWrapper {
                   context={null}
                   props={
                                     Object {
+                                                      "iframe": Object {
+                                                        "contentWindow": Object {
+                                                          "postMessage": [Function],
+                                                        },
+                                                      },
                                                       "runList": Object {
                                                         "onAuthorized": Array [
                                                           Object {
@@ -377,6 +419,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -396,6 +443,11 @@ ReactWrapper {
               "context": null,
               "mount": true,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -748,6 +800,11 @@ ReactWrapper {
         "key": null,
         "lastEffect": null,
         "memoizedProps": Object {
+          "iframe": Object {
+            "contentWindow": Object {
+              "postMessage": [Function],
+            },
+          },
           "runList": Object {
             "onAuthorized": Array [
               Object {
@@ -780,6 +837,11 @@ ReactWrapper {
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {
+          "iframe": Object {
+            "contentWindow": Object {
+              "postMessage": [Function],
+            },
+          },
           "runList": Object {
             "onAuthorized": Array [
               Object {
@@ -813,6 +875,11 @@ ReactWrapper {
             "Component": [Function],
             "context": null,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -831,6 +898,11 @@ ReactWrapper {
             "context": null,
             "mount": true,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -851,6 +923,11 @@ ReactWrapper {
             "Component": [Function],
             "context": null,
             "props": Object {
+              "iframe": Object {
+                "contentWindow": Object {
+                  "postMessage": [Function],
+                },
+              },
               "runList": Object {
                 "onAuthorized": Array [
                   Object {
@@ -960,6 +1037,11 @@ ReactWrapper {
                       context={null}
                       props={
                                             Object {
+                                                                  "iframe": Object {
+                                                                    "contentWindow": Object {
+                                                                      "postMessage": [Function],
+                                                                    },
+                                                                  },
                                                                   "runList": Object {
                                                                     "onAuthorized": Array [
                                                                       Object {
@@ -992,6 +1074,11 @@ ReactWrapper {
                       context={null}
                       props={
                                             Object {
+                                                                  "iframe": Object {
+                                                                    "contentWindow": Object {
+                                                                      "postMessage": [Function],
+                                                                    },
+                                                                  },
                                                                   "runList": Object {
                                                                     "onAuthorized": Array [
                                                                       Object {
@@ -1026,6 +1113,11 @@ ReactWrapper {
                 context={null}
                 props={
                                 Object {
+                                                "iframe": Object {
+                                                  "contentWindow": Object {
+                                                    "postMessage": [Function],
+                                                  },
+                                                },
                                                 "runList": Object {
                                                   "onAuthorized": Array [
                                                     Object {
@@ -1102,6 +1194,11 @@ ReactWrapper {
                   context={null}
                   props={
                                     Object {
+                                                      "iframe": Object {
+                                                        "contentWindow": Object {
+                                                          "postMessage": [Function],
+                                                        },
+                                                      },
                                                       "runList": Object {
                                                         "onAuthorized": Array [
                                                           Object {
@@ -1139,6 +1236,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -1158,6 +1260,11 @@ ReactWrapper {
               "context": null,
               "mount": true,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -1195,6 +1302,11 @@ ReactWrapper {
       "_reactInternalInstance": Object {},
       "context": Object {},
       "props": Object {
+        "iframe": Object {
+          "contentWindow": Object {
+            "postMessage": [Function],
+          },
+        },
         "runList": Object {
           "onAuthorized": Array [
             Object {
@@ -1235,6 +1347,11 @@ ReactWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "iframe": Object {
+        "contentWindow": Object {
+          "postMessage": [Function],
+        },
+      },
       "runList": Object {
         "onAuthorized": Array [
           Object {
@@ -1432,6 +1549,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -1450,6 +1572,11 @@ ReactWrapper {
               "context": null,
               "mount": true,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -1470,6 +1597,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -1579,6 +1711,11 @@ ReactWrapper {
                         context={null}
                         props={
                                                 Object {
+                                                                        "iframe": Object {
+                                                                          "contentWindow": Object {
+                                                                            "postMessage": [Function],
+                                                                          },
+                                                                        },
                                                                         "runList": Object {
                                                                           "onAuthorized": Array [
                                                                             Object {
@@ -1611,6 +1748,11 @@ ReactWrapper {
                         context={null}
                         props={
                                                 Object {
+                                                                        "iframe": Object {
+                                                                          "contentWindow": Object {
+                                                                            "postMessage": [Function],
+                                                                          },
+                                                                        },
                                                                         "runList": Object {
                                                                           "onAuthorized": Array [
                                                                             Object {
@@ -1645,6 +1787,11 @@ ReactWrapper {
                   context={null}
                   props={
                                     Object {
+                                                      "iframe": Object {
+                                                        "contentWindow": Object {
+                                                          "postMessage": [Function],
+                                                        },
+                                                      },
                                                       "runList": Object {
                                                         "onAuthorized": Array [
                                                           Object {
@@ -1721,6 +1868,11 @@ ReactWrapper {
                     context={null}
                     props={
                                         Object {
+                                                            "iframe": Object {
+                                                              "contentWindow": Object {
+                                                                "postMessage": [Function],
+                                                              },
+                                                            },
                                                             "runList": Object {
                                                               "onAuthorized": Array [
                                                                 Object {
@@ -1758,6 +1910,11 @@ ReactWrapper {
                 "Component": [Function],
                 "context": null,
                 "props": Object {
+                  "iframe": Object {
+                    "contentWindow": Object {
+                      "postMessage": [Function],
+                    },
+                  },
                   "runList": Object {
                     "onAuthorized": Array [
                       Object {
@@ -1777,6 +1934,11 @@ ReactWrapper {
                 "context": null,
                 "mount": true,
                 "props": Object {
+                  "iframe": Object {
+                    "contentWindow": Object {
+                      "postMessage": [Function],
+                    },
+                  },
                   "runList": Object {
                     "onAuthorized": Array [
                       Object {
@@ -2129,6 +2291,11 @@ ReactWrapper {
           "key": null,
           "lastEffect": null,
           "memoizedProps": Object {
+            "iframe": Object {
+              "contentWindow": Object {
+                "postMessage": [Function],
+              },
+            },
             "runList": Object {
               "onAuthorized": Array [
                 Object {
@@ -2161,6 +2328,11 @@ ReactWrapper {
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
+            "iframe": Object {
+              "contentWindow": Object {
+                "postMessage": [Function],
+              },
+            },
             "runList": Object {
               "onAuthorized": Array [
                 Object {
@@ -2194,6 +2366,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -2212,6 +2389,11 @@ ReactWrapper {
               "context": null,
               "mount": true,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -2232,6 +2414,11 @@ ReactWrapper {
               "Component": [Function],
               "context": null,
               "props": Object {
+                "iframe": Object {
+                  "contentWindow": Object {
+                    "postMessage": [Function],
+                  },
+                },
                 "runList": Object {
                   "onAuthorized": Array [
                     Object {
@@ -2341,6 +2528,11 @@ ReactWrapper {
                         context={null}
                         props={
                                                 Object {
+                                                                        "iframe": Object {
+                                                                          "contentWindow": Object {
+                                                                            "postMessage": [Function],
+                                                                          },
+                                                                        },
                                                                         "runList": Object {
                                                                           "onAuthorized": Array [
                                                                             Object {
@@ -2373,6 +2565,11 @@ ReactWrapper {
                         context={null}
                         props={
                                                 Object {
+                                                                        "iframe": Object {
+                                                                          "contentWindow": Object {
+                                                                            "postMessage": [Function],
+                                                                          },
+                                                                        },
                                                                         "runList": Object {
                                                                           "onAuthorized": Array [
                                                                             Object {
@@ -2407,6 +2604,11 @@ ReactWrapper {
                   context={null}
                   props={
                                     Object {
+                                                      "iframe": Object {
+                                                        "contentWindow": Object {
+                                                          "postMessage": [Function],
+                                                        },
+                                                      },
                                                       "runList": Object {
                                                         "onAuthorized": Array [
                                                           Object {
@@ -2483,6 +2685,11 @@ ReactWrapper {
                     context={null}
                     props={
                                         Object {
+                                                            "iframe": Object {
+                                                              "contentWindow": Object {
+                                                                "postMessage": [Function],
+                                                              },
+                                                            },
                                                             "runList": Object {
                                                               "onAuthorized": Array [
                                                                 Object {
@@ -2520,6 +2727,11 @@ ReactWrapper {
                 "Component": [Function],
                 "context": null,
                 "props": Object {
+                  "iframe": Object {
+                    "contentWindow": Object {
+                      "postMessage": [Function],
+                    },
+                  },
                   "runList": Object {
                     "onAuthorized": Array [
                       Object {
@@ -2539,6 +2751,11 @@ ReactWrapper {
                 "context": null,
                 "mount": true,
                 "props": Object {
+                  "iframe": Object {
+                    "contentWindow": Object {
+                      "postMessage": [Function],
+                    },
+                  },
                   "runList": Object {
                     "onAuthorized": Array [
                       Object {
@@ -2576,6 +2793,11 @@ ReactWrapper {
         "_reactInternalInstance": Object {},
         "context": Object {},
         "props": Object {
+          "iframe": Object {
+            "contentWindow": Object {
+              "postMessage": [Function],
+            },
+          },
           "runList": Object {
             "onAuthorized": Array [
               Object {
@@ -2616,6 +2838,11 @@ ReactWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "iframe": Object {
+          "contentWindow": Object {
+            "postMessage": [Function],
+          },
+        },
         "runList": Object {
           "onAuthorized": Array [
             Object {

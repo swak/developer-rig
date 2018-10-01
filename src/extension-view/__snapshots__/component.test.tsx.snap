@@ -31,29 +31,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -115,7 +115,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
                     <div
                               className="view__edit_button"
@@ -162,29 +162,29 @@ ShallowWrapper {
                                   "aspectHeight": 3000,
                                   "aspectWidth": 2500,
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                   "zoom": false,
                                   "zoomPixels": 100,
                                 },
                                 "config": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "liveConfig": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "mobile": Object {
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "panel": Object {
                                   "canLinkExternalContent": false,
                                   "height": 300,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "videoOverlay": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                               },
                               "whitelistedConfigUrls": Array [
@@ -236,7 +236,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
               <div
                             className="view__edit_button"
@@ -269,7 +269,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 <div
@@ -292,7 +292,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -301,7 +301,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -383,29 +383,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -453,7 +453,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
                         <div
                                     className="view__edit_button"
@@ -500,29 +500,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -574,7 +574,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
                 <div
                                 className="view__edit_button"
@@ -607,7 +607,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   <div
@@ -630,7 +630,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -639,7 +639,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -721,29 +721,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -816,29 +816,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -900,7 +900,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -950,29 +950,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -1018,7 +1018,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -1045,7 +1045,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -1063,7 +1063,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -1072,7 +1072,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -1144,29 +1144,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -1225,29 +1225,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -1291,7 +1291,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -1341,29 +1341,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -1409,7 +1409,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -1436,7 +1436,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -1454,7 +1454,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -1463,7 +1463,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -1535,29 +1535,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -1616,29 +1616,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -1707,29 +1707,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -1791,7 +1791,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -1841,29 +1841,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -1906,7 +1906,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -1933,7 +1933,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -1951,7 +1951,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -1960,7 +1960,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -2032,29 +2032,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -2113,29 +2113,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -2179,7 +2179,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -2229,29 +2229,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -2294,7 +2294,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -2321,7 +2321,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -2339,7 +2339,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -2348,7 +2348,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -2420,29 +2420,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -2501,29 +2501,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -2592,29 +2592,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -2677,7 +2677,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
                     <div
                               className="view__edit_button"
@@ -2724,29 +2724,29 @@ ShallowWrapper {
                                   "aspectHeight": 3000,
                                   "aspectWidth": 2500,
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                   "zoom": false,
                                   "zoomPixels": 100,
                                 },
                                 "config": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "liveConfig": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "mobile": Object {
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "panel": Object {
                                   "canLinkExternalContent": false,
                                   "height": 300,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                                 "videoOverlay": Object {
                                   "canLinkExternalContent": false,
-                                  "viewerUrl": "test",
+                                  "viewerUrl": "https://test:8080",
                                 },
                               },
                               "whitelistedConfigUrls": Array [
@@ -2799,7 +2799,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
               <div
                             className="view__edit_button"
@@ -2832,7 +2832,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 <div
@@ -2855,7 +2855,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -2864,7 +2864,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -2946,29 +2946,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -3017,7 +3017,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
                         <div
                                     className="view__edit_button"
@@ -3064,29 +3064,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -3139,7 +3139,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
                 <div
                                 className="view__edit_button"
@@ -3172,7 +3172,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   <div
@@ -3195,7 +3195,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -3204,7 +3204,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -3286,29 +3286,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -3382,29 +3382,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -3466,7 +3466,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -3516,29 +3516,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -3581,7 +3581,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -3608,7 +3608,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -3626,7 +3626,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -3635,7 +3635,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -3707,29 +3707,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -3788,29 +3788,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -3854,7 +3854,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -3904,29 +3904,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -3969,7 +3969,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -3996,7 +3996,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -4014,7 +4014,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -4023,7 +4023,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -4095,29 +4095,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -4176,29 +4176,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -4267,29 +4267,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -4352,7 +4352,7 @@ ShallowWrapper {
                     >
                               Logged-In Viewer
                                Linked
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -4402,29 +4402,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -4468,7 +4468,7 @@ ShallowWrapper {
               >
                             Logged-In Viewer
                              Linked
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -4496,7 +4496,7 @@ ShallowWrapper {
 >
                   Logged-In Viewer
                    Linked
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -4514,7 +4514,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Linked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -4523,7 +4523,7 @@ ShallowWrapper {
                   "Logged-In Viewer",
                   " Linked",
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -4595,29 +4595,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -4676,29 +4676,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -4743,7 +4743,7 @@ ShallowWrapper {
                         >
                                     Logged-In Viewer
                                      Linked
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -4793,29 +4793,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -4859,7 +4859,7 @@ ShallowWrapper {
                 >
                                 Logged-In Viewer
                                  Linked
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -4887,7 +4887,7 @@ ShallowWrapper {
 >
                     Logged-In Viewer
                      Linked
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -4905,7 +4905,7 @@ ShallowWrapper {
                       "Logged-In Viewer",
                       " Linked",
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -4914,7 +4914,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Linked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -4986,29 +4986,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -5067,29 +5067,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -5158,29 +5158,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -5243,7 +5243,7 @@ ShallowWrapper {
                     >
                               Logged-In Viewer
                                Unlinked
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -5293,29 +5293,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -5359,7 +5359,7 @@ ShallowWrapper {
               >
                             Logged-In Viewer
                              Unlinked
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -5387,7 +5387,7 @@ ShallowWrapper {
 >
                   Logged-In Viewer
                    Unlinked
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -5405,7 +5405,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Unlinked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -5414,7 +5414,7 @@ ShallowWrapper {
                   "Logged-In Viewer",
                   " Unlinked",
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -5486,29 +5486,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -5567,29 +5567,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -5634,7 +5634,7 @@ ShallowWrapper {
                         >
                                     Logged-In Viewer
                                      Unlinked
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -5684,29 +5684,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -5750,7 +5750,7 @@ ShallowWrapper {
                 >
                                 Logged-In Viewer
                                  Unlinked
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -5778,7 +5778,7 @@ ShallowWrapper {
 >
                     Logged-In Viewer
                      Unlinked
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -5796,7 +5796,7 @@ ShallowWrapper {
                       "Logged-In Viewer",
                       " Unlinked",
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -5805,7 +5805,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Unlinked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -5877,29 +5877,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -5958,29 +5958,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -6049,29 +6049,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -6133,7 +6133,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Logged-Out Viewer
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -6183,29 +6183,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -6248,7 +6248,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Logged-Out Viewer
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -6275,7 +6275,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Logged-Out Viewer
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -6293,7 +6293,7 @@ ShallowWrapper {
                     "Logged-Out Viewer",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -6302,7 +6302,7 @@ ShallowWrapper {
                   "Logged-Out Viewer",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -6374,29 +6374,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -6455,29 +6455,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -6521,7 +6521,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Logged-Out Viewer
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -6571,29 +6571,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -6636,7 +6636,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Logged-Out Viewer
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -6663,7 +6663,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Logged-Out Viewer
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -6681,7 +6681,7 @@ ShallowWrapper {
                       "Logged-Out Viewer",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -6690,7 +6690,7 @@ ShallowWrapper {
                     "Logged-Out Viewer",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -6762,29 +6762,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -6843,29 +6843,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -6934,29 +6934,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -7018,7 +7018,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Broadcaster
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -7068,29 +7068,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -7133,7 +7133,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Broadcaster
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -7160,7 +7160,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Broadcaster
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -7178,7 +7178,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -7187,7 +7187,7 @@ ShallowWrapper {
                   "Broadcaster",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -7259,29 +7259,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -7340,29 +7340,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -7406,7 +7406,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Broadcaster
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -7456,29 +7456,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -7521,7 +7521,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Broadcaster
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -7548,7 +7548,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Broadcaster
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -7566,7 +7566,7 @@ ShallowWrapper {
                       "Broadcaster",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -7575,7 +7575,7 @@ ShallowWrapper {
                     "Broadcaster",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -7647,29 +7647,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -7728,29 +7728,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -7819,29 +7819,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -7904,7 +7904,7 @@ ShallowWrapper {
                     >
                               Logged-In Viewer
                                Linked
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -7954,29 +7954,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -8020,7 +8020,7 @@ ShallowWrapper {
               >
                             Logged-In Viewer
                              Linked
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -8048,7 +8048,7 @@ ShallowWrapper {
 >
                   Logged-In Viewer
                    Linked
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -8066,7 +8066,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Linked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -8075,7 +8075,7 @@ ShallowWrapper {
                   "Logged-In Viewer",
                   " Linked",
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -8147,29 +8147,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -8228,29 +8228,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -8295,7 +8295,7 @@ ShallowWrapper {
                         >
                                     Logged-In Viewer
                                      Linked
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -8345,29 +8345,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -8411,7 +8411,7 @@ ShallowWrapper {
                 >
                                 Logged-In Viewer
                                  Linked
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -8439,7 +8439,7 @@ ShallowWrapper {
 >
                     Logged-In Viewer
                      Linked
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -8457,7 +8457,7 @@ ShallowWrapper {
                       "Logged-In Viewer",
                       " Linked",
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -8466,7 +8466,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Linked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -8538,29 +8538,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -8619,29 +8619,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -8710,29 +8710,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -8795,7 +8795,7 @@ ShallowWrapper {
                     >
                               Logged-In Viewer
                                Unlinked
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -8845,29 +8845,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -8911,7 +8911,7 @@ ShallowWrapper {
               >
                             Logged-In Viewer
                              Unlinked
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -8939,7 +8939,7 @@ ShallowWrapper {
 >
                   Logged-In Viewer
                    Unlinked
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -8957,7 +8957,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Unlinked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -8966,7 +8966,7 @@ ShallowWrapper {
                   "Logged-In Viewer",
                   " Unlinked",
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -9038,29 +9038,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -9119,29 +9119,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -9186,7 +9186,7 @@ ShallowWrapper {
                         >
                                     Logged-In Viewer
                                      Unlinked
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -9236,29 +9236,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -9302,7 +9302,7 @@ ShallowWrapper {
                 >
                                 Logged-In Viewer
                                  Unlinked
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -9330,7 +9330,7 @@ ShallowWrapper {
 >
                     Logged-In Viewer
                      Unlinked
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -9348,7 +9348,7 @@ ShallowWrapper {
                       "Logged-In Viewer",
                       " Unlinked",
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -9357,7 +9357,7 @@ ShallowWrapper {
                     "Logged-In Viewer",
                     " Unlinked",
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -9429,29 +9429,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -9510,29 +9510,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [
@@ -9601,29 +9601,29 @@ ShallowWrapper {
                 "aspectHeight": 3000,
                 "aspectWidth": 2500,
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
                 "zoom": false,
                 "zoomPixels": 100,
               },
               "config": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "liveConfig": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "mobile": Object {
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "panel": Object {
                 "canLinkExternalContent": false,
                 "height": 300,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
               "videoOverlay": Object {
                 "canLinkExternalContent": false,
-                "viewerUrl": "test",
+                "viewerUrl": "https://test:8080",
               },
             },
             "whitelistedConfigUrls": Array [
@@ -9685,7 +9685,7 @@ ShallowWrapper {
                               className="view__descriptor"
                     >
                               Logged-Out Viewer
-                               (test)
+                               (test:8080)
                     </div>
           </div>
           <div
@@ -9735,29 +9735,29 @@ ShallowWrapper {
                                             "aspectHeight": 3000,
                                             "aspectWidth": 2500,
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                             "zoom": false,
                                             "zoomPixels": 100,
                                           },
                                           "config": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "liveConfig": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "mobile": Object {
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "panel": Object {
                                             "canLinkExternalContent": false,
                                             "height": 300,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                           "videoOverlay": Object {
                                             "canLinkExternalContent": false,
-                                            "viewerUrl": "test",
+                                            "viewerUrl": "https://test:8080",
                                           },
                                         },
                                         "whitelistedConfigUrls": Array [
@@ -9800,7 +9800,7 @@ ShallowWrapper {
                             className="view__descriptor"
               >
                             Logged-Out Viewer
-                             (test)
+                             (test:8080)
               </div>
 </div>,
             <div
@@ -9827,7 +9827,7 @@ ShallowWrapper {
                   className="view__descriptor"
 >
                   Logged-Out Viewer
-                   (test)
+                   (test:8080)
 </div>,
                 false,
                 false,
@@ -9845,7 +9845,7 @@ ShallowWrapper {
                     "Logged-Out Viewer",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "className": "view__descriptor",
                 },
@@ -9854,7 +9854,7 @@ ShallowWrapper {
                   "Logged-Out Viewer",
                   null,
                   null,
-                  " (test)",
+                  " (test:8080)",
                 ],
                 "type": "div",
               },
@@ -9926,29 +9926,29 @@ ShallowWrapper {
                                         "aspectHeight": 3000,
                                         "aspectWidth": 2500,
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                         "zoom": false,
                                         "zoomPixels": 100,
                                       },
                                       "config": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "liveConfig": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "mobile": Object {
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "panel": Object {
                                         "canLinkExternalContent": false,
                                         "height": 300,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                       "videoOverlay": Object {
                                         "canLinkExternalContent": false,
-                                        "viewerUrl": "test",
+                                        "viewerUrl": "https://test:8080",
                                       },
                                     },
                                     "whitelistedConfigUrls": Array [
@@ -10007,29 +10007,29 @@ ShallowWrapper {
                   "aspectHeight": 3000,
                   "aspectWidth": 2500,
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                   "zoom": false,
                   "zoomPixels": 100,
                 },
                 "config": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "liveConfig": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "mobile": Object {
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "panel": Object {
                   "canLinkExternalContent": false,
                   "height": 300,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
                 "videoOverlay": Object {
                   "canLinkExternalContent": false,
-                  "viewerUrl": "test",
+                  "viewerUrl": "https://test:8080",
                 },
               },
               "whitelistedConfigUrls": Array [
@@ -10073,7 +10073,7 @@ ShallowWrapper {
                                     className="view__descriptor"
                         >
                                     Logged-Out Viewer
-                                     (test)
+                                     (test:8080)
                         </div>
             </div>
             <div
@@ -10123,29 +10123,29 @@ ShallowWrapper {
                                                     "aspectHeight": 3000,
                                                     "aspectWidth": 2500,
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                     "zoom": false,
                                                     "zoomPixels": 100,
                                                   },
                                                   "config": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "liveConfig": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "mobile": Object {
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "panel": Object {
                                                     "canLinkExternalContent": false,
                                                     "height": 300,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                   "videoOverlay": Object {
                                                     "canLinkExternalContent": false,
-                                                    "viewerUrl": "test",
+                                                    "viewerUrl": "https://test:8080",
                                                   },
                                                 },
                                                 "whitelistedConfigUrls": Array [
@@ -10188,7 +10188,7 @@ ShallowWrapper {
                                 className="view__descriptor"
                 >
                                 Logged-Out Viewer
-                                 (test)
+                                 (test:8080)
                 </div>
 </div>,
               <div
@@ -10215,7 +10215,7 @@ ShallowWrapper {
                     className="view__descriptor"
 >
                     Logged-Out Viewer
-                     (test)
+                     (test:8080)
 </div>,
                   false,
                   false,
@@ -10233,7 +10233,7 @@ ShallowWrapper {
                       "Logged-Out Viewer",
                       null,
                       null,
-                      " (test)",
+                      " (test:8080)",
                     ],
                     "className": "view__descriptor",
                   },
@@ -10242,7 +10242,7 @@ ShallowWrapper {
                     "Logged-Out Viewer",
                     null,
                     null,
-                    " (test)",
+                    " (test:8080)",
                   ],
                   "type": "div",
                 },
@@ -10314,29 +10314,29 @@ ShallowWrapper {
                                               "aspectHeight": 3000,
                                               "aspectWidth": 2500,
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                               "zoom": false,
                                               "zoomPixels": 100,
                                             },
                                             "config": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "liveConfig": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "mobile": Object {
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "panel": Object {
                                               "canLinkExternalContent": false,
                                               "height": 300,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                             "videoOverlay": Object {
                                               "canLinkExternalContent": false,
-                                              "viewerUrl": "test",
+                                              "viewerUrl": "https://test:8080",
                                             },
                                           },
                                           "whitelistedConfigUrls": Array [
@@ -10395,29 +10395,29 @@ ShallowWrapper {
                     "aspectHeight": 3000,
                     "aspectWidth": 2500,
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                     "zoom": false,
                     "zoomPixels": 100,
                   },
                   "config": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "liveConfig": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "mobile": Object {
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "panel": Object {
                     "canLinkExternalContent": false,
                     "height": 300,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                   "videoOverlay": Object {
                     "canLinkExternalContent": false,
-                    "viewerUrl": "test",
+                    "viewerUrl": "https://test:8080",
                   },
                 },
                 "whitelistedConfigUrls": Array [

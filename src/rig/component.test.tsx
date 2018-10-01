@@ -11,7 +11,7 @@ import { ExtensionAnchor, ExtensionViewType } from '../constants/extension-coord
 
 let globalAny = global as any;
 
-localStorage.setItem('projects', '[{}]');
+localStorage.setItem('projects', '[{},{}]');
 
 const setupShallow = setupShallowTest(RigComponent, () => ({
   session: { displayName: 'test', login: 'test', id: 'test', profileImageUrl: 'test.png', authToken: 'test' },
@@ -121,65 +121,83 @@ describe('<RigComponent />', () => {
     expect(instance.state.currentProject.extensionViews).toEqual(testViews);
   });
 
-  describe('gets frame size from dialog ref correctly', () => {
-    it('returns correct data for mobile ', () => {
-      const { wrapper } = setupShallow();
-      const testDialogState = {
-        width: 0,
-        height: 0,
-        frameSize: 'iPhone X (375x822)',
-        extensionViewType: ExtensionViewType.Mobile
-      } as ExtensionViewDialogState;
-      const expectedMobileFrameSize = {
-        width: 375,
-        height: 822,
-      };
-      const instance = wrapper.instance() as RigComponent;
+  it('returns correct data for mobile ', () => {
+    const { wrapper } = setupShallow();
+    const testDialogState = {
+      width: 0,
+      height: 0,
+      frameSize: 'iPhone X (375x822)',
+      extensionViewType: ExtensionViewType.Mobile
+    } as ExtensionViewDialogState;
+    const expectedMobileFrameSize = {
+      width: 375,
+      height: 822,
+    };
+    const instance = wrapper.instance() as RigComponent;
 
-      let frameSize = instance.getFrameSizeFromDialog(testDialogState);
-      expect(frameSize).toEqual(expectedMobileFrameSize);
-    });
+    let frameSize = instance.getFrameSizeFromDialog(testDialogState);
+    expect(frameSize).toEqual(expectedMobileFrameSize);
+  });
 
-    it('returns correct data for other types', () => {
-      const { wrapper } = setupShallow();
-      const overlayTestDialogState = {
-        width: 0,
-        height: 0,
-        frameSize: '640x480',
-        extensionViewType: ExtensionViewType.Overlay
-      } as ExtensionViewDialogState;
-      const expectedOverlayFrameSize = {
-        width: 640,
-        height: 480,
-      };
-      const instance = wrapper.instance() as RigComponent;
-      const frameSize = instance.getFrameSizeFromDialog(overlayTestDialogState);
-      expect(frameSize).toEqual(expectedOverlayFrameSize);
-    });
+  it('returns correct data for other types', () => {
+    const { wrapper } = setupShallow();
+    const overlayTestDialogState = {
+      width: 0,
+      height: 0,
+      frameSize: '640x480',
+      extensionViewType: ExtensionViewType.Overlay
+    } as ExtensionViewDialogState;
+    const expectedOverlayFrameSize = {
+      width: 640,
+      height: 480,
+    };
+    const instance = wrapper.instance() as RigComponent;
+    const frameSize = instance.getFrameSizeFromDialog(overlayTestDialogState);
+    expect(frameSize).toEqual(expectedOverlayFrameSize);
+  });
 
-    it('returns correct data for custom size', () => {
-      const { wrapper } = setupShallow();
-      const overlayTestDialogState = {
-        width: 100,
-        height: 100,
-        frameSize: 'Custom',
-        extensionViewType: ExtensionViewType.Overlay
-      } as ExtensionViewDialogState;
-      const expectedOverlayFrameSize = {
-        width: 100,
-        height: 100,
-      };
-      const instance = wrapper.instance() as RigComponent;
-      const frameSize = instance.getFrameSizeFromDialog(overlayTestDialogState);
-      expect(frameSize).toEqual(expectedOverlayFrameSize);
-    });
+  it('returns correct data for custom size', () => {
+    const { wrapper } = setupShallow();
+    const overlayTestDialogState = {
+      width: 100,
+      height: 100,
+      frameSize: 'Custom',
+      extensionViewType: ExtensionViewType.Overlay
+    } as ExtensionViewDialogState;
+    const expectedOverlayFrameSize = {
+      width: 100,
+      height: 100,
+    };
+    const instance = wrapper.instance() as RigComponent;
+    const frameSize = instance.getFrameSizeFromDialog(overlayTestDialogState);
+    expect(frameSize).toEqual(expectedOverlayFrameSize);
+  });
 
-    it('correctly fetches user info if login not in localStorage', () => {
-      globalAny.fetch = jest.fn().mockImplementation(mockFetchForUserInfo);
-      globalAny.window.location.hash = 'access_token=test&';
+  it('correctly fetches user info if login not in localStorage', () => {
+    globalAny.fetch = jest.fn().mockImplementation(mockFetchForUserInfo);
+    globalAny.window.location.hash = 'access_token=test&';
 
-      setupShallow();
-      expect(globalAny.fetch).toHaveBeenCalled();
-    });
+    setupShallow();
+    expect(globalAny.fetch).toHaveBeenCalled();
+  });
+
+  globalAny.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+    status: 200,
+    json: () => Promise.resolve({}),
+  }));
+
+  it('creates project', async () => {
+    const { wrapper } = setupShallow();
+    const instance = wrapper.instance() as RigComponent;
+    const extensionViews = createViewsForTest(1, ExtensionAnchors[ExtensionAnchor.Panel], ViewerTypes.LoggedOut);
+    await instance.createProject({ extensionViews } as RigProject);
+    expect(globalAny.fetch).toHaveBeenCalled();
+  });
+
+  it('selects project', async () => {
+    const { wrapper } = setupShallow();
+    const instance = wrapper.instance() as RigComponent;
+    await instance.selectProject(1);
+    expect(globalAny.fetch).toHaveBeenCalled();
   });
 });

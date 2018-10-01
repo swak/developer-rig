@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { RunList, GenericResponse } from '../core/models/run-list';
 import './component.sass';
-import { setTimeout } from 'timers';
 
 const ExtensionOnContext = 'twitch-ext-context';
 const ExtensionOnAuthorized = 'twitch-ext-auth';
